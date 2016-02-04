@@ -25,13 +25,13 @@ import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
 /**
  * The Class SpringWebConfig.
  */
-@ComponentScan (basePackages = { "com.dappermoose.sbsmsimplefinance.data",
-        "com.dappermoose.sbsmsimplefinance.action",
-        "com.dappermoose.sbsmsimplefinance.init",
-        "com.dappermoose.sbsmsimplefinance.security" })
-@EnableJpaRepositories (basePackages = { "com.dappermoose.sbsmsimplefinance.dao" })
+@ComponentScan (basePackages = { "com.dappermoose.stsimplefinance.data",
+        "com.dappermoose.stsimplefinance.action",
+        "com.dappermoose.stsimplefinance.init",
+        "com.dappermoose.stsimplefinance.security" })
+@EnableJpaRepositories (basePackages = { "com.dappermoose.stsimplefinance.dao" })
 @Configuration
-@EntityScan (basePackages = "com.dappermoose.sbsmsimplefinance.data")
+@EntityScan (basePackages = "com.dappermoose.stsimplefinance.data")
 public class SpringWebConfig extends WebMvcConfigurerAdapter
 {
     /*
