@@ -38,7 +38,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter
         .and ()
            .authorizeRequests ()
                .antMatchers ("/images/**", "/css/**", "**/favicon.ico",
-                             "/webjarslocator/**", "/register").permitAll ()
+                             "/webjars/**", "/register").permitAll ()
                .anyRequest ().authenticated ()
         .and ()
             .csrf ()
