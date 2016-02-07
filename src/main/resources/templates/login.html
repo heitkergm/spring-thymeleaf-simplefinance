@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="www.thymeleaf.org"
+<html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       xmlns="http://www.w3.org/1999/xhtml"
       layout:decorator="decorator">
@@ -7,39 +7,43 @@
 <meta charset="UTF-8" />
 <title th:text="#{login.title}">Title</title>
 </head>
-<body>
+<body><div layout:fragment="content">
 	<div class="center">
-			<div th:text="#{message.login.header}"></div>
-		<form:form method="POST" autocomplete="off"
-			action="${pageContext.request.contextPath}/login"
+			<div th:text="#{login.header}"></div>
+		<form method="POST" autocomplete="off"
+			action="login"
+                        th:href="@{/login}"
 			name="loginform" id="login-user-form"
 			cssClass="pure-form pure-form-aligned">
 			<fieldset>
 			    <div class="pure-control-group">
-				    <Label><spring:message code="login.username" /></Label>
+				    <Label th:text="#{login.username}"></Label>
 				    <input id="username" name="username" type="text" size="32" maxlength="32" />
 				</div>
 				<div class="pure-control-group">
-				    <Label><spring:message code="login.password" /></Label>
+				    <Label th:text="#{login.password}"></Label>
 				    <input id="password" name="password" type="password" size="32" maxlength="32" />
 				</div>
 				<div class="pure-controls">
-                                    <p><span class="error">
-                                        <c:if test="${param.error != null}">
-                                            <spring:message code="login.combo.bad" />
-                                        </c:if>
+                                    <p><span class="error"
+                                             th:text="#{login.combo.bad}"
+                                             th:if="${param.error != null}">
                                      </span></p>
-				    <button class="pure-button pure-button-primary button-small" type="submit"><spring:message code="login.button"/></button>
-	                <p><spring:message code="login.register" />
-					<br /><a href="${pageContext.request.contextPath}/register" class="pure-button button-small"><spring:message
-					code="login.reglink" /></a></p>
+				    <button class="pure-button pure-button-primary button-small" type="submit"
+                                            th:text="#{login.button}"></button>
+                                    <p><span th:text="#{login.register}"></span>
+					<br /><a href="register" class="pure-button button-small"
+                                                 th:href="@{/register}"
+                                                 th:text="#{login.reglink}"></a></p>
 				</div>
 			</fieldset>
-                </form:form>
+                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+                </form>
 
 	</div>
 	<script type="text/javascript">
 	    document.getElementById('username').focus();
 	</script>
+    </div>
 </body>
 </html>

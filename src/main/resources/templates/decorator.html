@@ -1,3 +1,58 @@
-<html>
-    <body>hello index</body>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>decorator title</title>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="images/favicon.ico"
+              th:href="@{/images/favicon.ico}" type="image/x-icon" />
+        <link type="text/css" rel="stylesheet" href="webjars/pure/pure-min.css"
+              th:href="@{/webjars/pure/pure-min.css}" />
+        <link type="text/css" rel="stylesheet" href="webjars/font-awesome/css/font-awesone.min.css"
+              th:href="@{/webjars/font-awesome/css/font-awesome.min.css}" />
+        <link type="text/css" rel="stylesheet" href="css/style.css"
+              th:href="@{/css/style.css}" />
+        <link type="text/css" rel="stylesheet" href="css/style-black.css"
+              th:href="@{|/css/style-${#themes.code('name')}.css|}" />
+    </head>
+    <body>
+        <div class="center pure-menu pure-menu-horizontal">
+        <a href="#" class="pure-menu-heading">
+            <span class="bold"> <span th:text="#{decorator.header}"></span>
+                <i class="fa fa-money fa-lg"></i></span>
+        </a>
+        <ul  class="pure-menu-list">
+                <li class="pure-menu-item"
+                    th:if="${#authorization.expression('isAuthenticated()')}">
+                        <a href="?theme=black" class="pure-menu-link"
+                           th:href="@{(theme=black)}"
+                           th:text="#{decorator.theme.black}"
+                           th:if="${#themes.code('name')} == 'blue'"></a>
+                        <a href="?theme=blue" class="pure-menu-link"
+                           th:href="@{(theme=blue}}"
+                           th:text="#{decorator.theme.blue}"
+                           th:if="${#themes.code('name')} == 'black'">
+                        </a>
+                </li>
+                 <li class="pure-menu-item"
+                    th:if="${#authorization.expression('isAuthenticated()')}">
+                     <a href="changepwd" class="pure-menu-link"
+                        th:href="@{/changepwd}"
+                        th:text="#{decorator.changepwd}"></a>
+                </li>
+                <li class="pure-menu-item"
+                    th:if="${#authorization.expression('isAuthenticated()')}">
+                    <a onclick="document.logoutForm.submit()" class="pure-menu-link"
+                       th:text="#{decorator.logout}">
+                    </a>
+               </li>
+        </ul>
+    </div>
+        <div layout:fragment="content">content</div>
+    <div class="center">
+        <p th:utext="#{decorator.footer}">footer</p>
+    </div>
+</body>
 </html>
