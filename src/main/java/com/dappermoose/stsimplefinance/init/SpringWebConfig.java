@@ -93,7 +93,6 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter
     {
         registry.addRedirectViewController ("/", "/main");
         registry.addViewController ("/login");
-        registry.addViewController ("/prelogout");
     }
 
     // beans for i18n
