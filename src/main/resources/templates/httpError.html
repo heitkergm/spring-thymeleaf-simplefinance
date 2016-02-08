@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns="http://www.w3.org/1999/xhtml"
+      layout:decorator="decorator">
+
+<head>
+    <meta charset="UTF-8" />
+    <title th:text="#{error.title}">
+    </title>
+</head>
+    <body>
+        <span layout:fragment="menu"></span>
+        <div layout:fragment="content">
+<div class="center">
+    <h1 th:text="#{error.header}" ></h1>
+    <p th:text="#{httpError.text}" ></p>
+    <p> <span th:text="#{httpError.status}" /> <span th:text="${status}"/></p>
+<p><span th:text="#{httpError.reason}" /> <span th:text="${reason}"/></p>
+</div>
+        </div>
+    </body>
+</html>

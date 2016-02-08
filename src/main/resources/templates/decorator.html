@@ -6,6 +6,7 @@
     <head>
         <title>decorator title</title>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" href="images/favicon.ico"
               th:href="@{/images/favicon.ico}" type="image/x-icon" />
         <link type="text/css" rel="stylesheet" href="webjars/pure/pure-min.css"
@@ -23,21 +24,20 @@
             <span class="bold"> <span th:text="#{decorator.header}"></span>
                 <i class="fa fa-money fa-lg"></i></span>
         </a>
+            <span layout:fragment="menu">
         <ul  class="pure-menu-list">
                 <li class="pure-menu-item"
                     th:if="${#authorization.expression('isAuthenticated()')}">
                         <a href="?theme=black" class="pure-menu-link"
-                           th:href="@{(theme=black)}"
                            th:text="#{decorator.theme.black}"
                            th:if="${#themes.code('name')} == 'blue'"></a>
                         <a href="?theme=blue" class="pure-menu-link"
-                           th:href="@{(theme=blue}}"
                            th:text="#{decorator.theme.blue}"
                            th:if="${#themes.code('name')} == 'black'">
                         </a>
                 </li>
                  <li class="pure-menu-item"
-                    th:if="${#authorization.expression('isAuthenticated()')}">
+                     th:if="${#authorization.expression('isAuthenticated()')}">
                      <a href="changepwd" class="pure-menu-link"
                         th:href="@{/changepwd}"
                         th:text="#{decorator.changepwd}"></a>
@@ -49,6 +49,7 @@
                     </a>
                </li>
         </ul>
+            </span>
     </div>
         <div layout:fragment="content">content</div>
     <div class="center">
