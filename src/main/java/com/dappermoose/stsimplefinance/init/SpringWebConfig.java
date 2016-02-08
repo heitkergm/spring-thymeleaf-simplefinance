@@ -107,7 +107,7 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter
     {
         final ReloadableResourceBundleMessageSource source = new ReloadableResourceBundleMessageSource ();
         source.setCacheSeconds (60);
-        source.setBasenames ("/WEB-INF/messages",
+        source.setBasenames ("classpath:messages",
                 "classpath:ValidationMessages");
         return source;
     }
