@@ -45,8 +45,8 @@
                     </select>
                </div>
  				<div class="pure-controls">
-                                    <p th:if="${#fields.hasAnyErrors()}">
-                                       <span class="error" id="errors" th:errors="*{all}"></span>
+                                    <p class="error" id="errors">
+                                       <span th:errors="*{all}"></span>
                                     </p>
  				    <button class="pure-button pure-button-primary button-small" type="submit"
                                             th:text="#{changepwd.button}"></button>
@@ -54,8 +54,68 @@
 			</fieldset>
 		</form>
 	</div>
-	<script type="text/javascript">
+	<script src="webjars/jquery/jquery.min.js" th:src="@{/webjars/jquery/jquery.min.js}"
+                type="text/javascript"></script>
+	<script src="webjars/jquery-validation/jquery.validate.min.js"
+                th:src="@{/webjars/jquery-validation/jquery.validate.min.js}"
+                type="text/javascript"></script>
+	<script type="text/javascript" th:inline="javascript">
 	    document.getElementById('currentPassword').focus();
+    $(document).ready(function()
+    {
+        $("#changepwd-user-form").validate(
+        {
+            rules:
+            {
+                currentPassword:
+                {
+                    required: true
+                },
+                password:
+                {
+                    required: true
+                },
+                repeatedPassword:
+                {
+                    equalTo: "#password",
+                    required: true
+                },
+                tzone:
+                {
+                    required: true
+                }
+            },
+            messages:
+            {
+                currentPassword:
+                {
+                    required: [[#{changePwd.currentPassword.size}]] + "<br />"
+                },
+                password:
+                {
+                    required: [[#{login.password.size}]] + "<br />"
+                },
+                repeatedPassword:
+                {
+                    required: [[#{register.secondPassword.size}]] + "<br />",
+                    equalTo: [[#{register.pwd.notmatch}]] + "<br />"
+                },
+                tzone:
+                {
+                   required: [[#{register.tzone.size}]] + "<br />"
+                }
+            },
+            invalidHandler: function(event, validator)
+            {
+                $("#errors").empty();
+            },
+            submitHandler: function(form)
+            {
+                form.submit();
+            },
+            errorLabelContainer: '#errors'
+        });
+    });
         </script>
 </div>
 </body>
