@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns="http://www.w3.org/1999/xhtml"
+      layout:decorator="decorator">
+<head>
+<title th:text="register.title"></title>
+</head>
+<body>
+    <div layout:fragment="content">
+	<div class="center">
+		<p th:text="#{register.header}">
+		</p>
+		<form th:object="${register}" method="POST" autocomplete="off"
+			action="register"
+			id="register-user-form" name="registerform"
+                        th:action="@{/register}"
+			class="pure-form pure-form-aligned">
+			<fieldset>
+			    <div class="pure-control-group">
+				    <label th:text="#{register.username}"></label>
+				    <input th:field="*{userName}" type="text" size="32" maxlength="32" />
+				</div>
+                <div class="pure-control-group">
+                    <label th:text="#{register.password}"></label>
+                    <input th:field="*{password}" type="password" size="32" maxlength="32" />
+                </div>
+                <div class="pure-control-group">
+                    <label th:text="#{register.repeatedPassword}"></label>
+                    <input th:field="*{repeatedPassword}" type="password" size="32" maxlength="32" />
+                </div>
+                 <div class="pure-control-group">
+                    <label th:text="#{register.tzone}"></label>
+                    <select th:field="*{tzone}">
+                        <option th:each="tz:${tzones}" th:value="${tz}" th:text="${tz}">
+                        </option>
+                    </select>
+                </div>
+				<div class="pure-controls">
+                                    <p th:if="${#fields.hasAnyErrors()}">
+                                        <span class="error" id="errors"
+                                              th:errors="*{all}"></span></p>
+ 				    <button class="pure-button pure-button-primary button-small" type="submit"
+                                            th:text="#{register.button}">
+			            </button>
+                </div>
+			</fieldset>
+		</form>
+	</div>
+    </div>
+	<script type="text/javascript">
+	    document.getElementById('userName').focus();
+ 	</script>
+</body>
+</html>
