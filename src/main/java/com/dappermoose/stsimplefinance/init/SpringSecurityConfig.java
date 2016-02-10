@@ -41,8 +41,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter
                              "/webjars/**", "/register").permitAll ()
                .anyRequest ().authenticated ()
         .and ()
-            .csrf ()
-        .and ()
             .requiresChannel ()
                 .anyRequest ().requiresSecure ()
         .and ()

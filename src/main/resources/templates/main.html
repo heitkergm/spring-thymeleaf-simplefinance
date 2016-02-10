@@ -10,7 +10,6 @@
 <body>
     <div layout:fragment="content">
         <form name="logoutForm" method="POST" action="logout" th:action="@{/logout}">
-            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
         </form>
 	<div class="center">
 	    <table class="pure-table pure-table-striped">
