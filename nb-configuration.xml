@@ -16,4 +16,11 @@ Any value defined here will override the pom.xml file value but is only applicab
         <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
         <org-netbeans-modules-javascript2-requirejs.enabled>true</org-netbeans-modules-javascript2-requirejs.enabled>
     </properties>
+    <spring-data xmlns="http://www.netbeans.org/ns/spring-data/1">
+        <config-files>
+            <config-file>src/main/java/com/dappermoose/stsimplefinance/init/SpringSecurityConfig.java</config-file>
+            <config-file>src/main/java/com/dappermoose/stsimplefinance/init/SpringWebConfig.java</config-file>
+        </config-files>
+        <config-file-groups/>
+    </spring-data>
 </project-shared-configuration>

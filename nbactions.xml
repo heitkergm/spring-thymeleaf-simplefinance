@@ -6,7 +6,7 @@
                 <packaging>*</packaging>
             </packagings>
             <goals>
-                <goal>ipackage</goal>
+                <goal>package</goal>
             </goals>
         </action>
         <action>
