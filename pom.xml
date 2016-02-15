@@ -19,7 +19,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <checkstyle.version>6.15</checkstyle.version>
-        <groovy.version>2.4.5</groovy.version>
         <hibernate.version>5.1.0.Final</hibernate.version>
         <javassist.version>3.20.0-GA</javassist.version>
         <logback.version>1.1.4</logback.version>
@@ -91,11 +90,6 @@
             <groupId>net.sf.ehcache</groupId>
             <artifactId>ehcache-core</artifactId>
             <version>2.6.11</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy</artifactId>
             <scope>runtime</scope>
         </dependency>
         <dependency>

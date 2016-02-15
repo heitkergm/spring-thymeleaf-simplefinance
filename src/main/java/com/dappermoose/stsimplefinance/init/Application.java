@@ -3,7 +3,7 @@ package com.dappermoose.stsimplefinance.init;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Arrays;
+// import java.util.Arrays;
 import java.util.TimeZone;
 
 import org.apache.catalina.connector.Connector;
@@ -42,6 +42,7 @@ public class Application
 
         ApplicationContext ctx = SpringApplication.run (Application.class, args);
 
+        /*
         System.out.println ("Let's inspect the beans provided by Spring Boot:");
 
         String[] beanNames = ctx.getBeanDefinitionNames ();
@@ -50,6 +51,7 @@ public class Application
         {
             System.out.println (beanName);
         }
+        */
     }
 
     /**
