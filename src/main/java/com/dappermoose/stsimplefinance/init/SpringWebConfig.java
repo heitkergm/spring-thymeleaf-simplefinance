@@ -16,9 +16,9 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
-import org.springframework.web.servlet.theme.CookieThemeResolver;
+import org.springframework.web.servlet.i18n.SessionLocaleResolver;
+import org.springframework.web.servlet.theme.SessionThemeResolver;
 import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
 
 // TODO: Auto-generated Javadoc
@@ -117,9 +117,9 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter
      * @return the session locale resolver
      */
     @Bean
-    CookieLocaleResolver localeResolver ()
+    SessionLocaleResolver localeResolver ()
     {
-        final CookieLocaleResolver resolver = new CookieLocaleResolver ();
+        final SessionLocaleResolver resolver = new SessionLocaleResolver ();
         return resolver;
     }
 
@@ -143,9 +143,9 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter
      * @return the session theme resolver
      */
     @Bean
-    CookieThemeResolver themeResolver ()
+    SessionThemeResolver themeResolver ()
     {
-        final CookieThemeResolver resolver = new CookieThemeResolver ();
+        final SessionThemeResolver resolver = new SessionThemeResolver ();
         resolver.setDefaultThemeName ("blue");
         return resolver;
     }
