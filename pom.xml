@@ -22,6 +22,7 @@
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>6.15</checkstyle.version>
         <hibernate.version>5.1.0.Final</hibernate.version>
+        <hibernate-validator.version>5.2.4.Final</hibernate-validator.version>
         <javassist.version>3.20.0-GA</javassist.version>
         <logback.version>1.1.5</logback.version>
         <postgresql.version>9.4.1208</postgresql.version>
@@ -291,6 +292,23 @@
                             <failsOnError>true</failsOnError>
                             <linkXRef>false</linkXRef>
                         </configuration>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>3.0.3</version>
+                <configuration>
+                    <excludeFilterFile>excludeFindbugs.xml</excludeFilterFile>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>validate</id>
+                        <phase>process-classes</phase>
                         <goals>
                             <goal>check</goal>
                         </goals>

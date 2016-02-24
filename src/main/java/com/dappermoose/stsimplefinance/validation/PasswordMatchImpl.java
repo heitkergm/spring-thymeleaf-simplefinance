@@ -1,5 +1,7 @@
 package com.dappermoose.stsimplefinance.validation;
 
+import java.lang.reflect.InvocationTargetException;
+
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
@@ -49,7 +51,7 @@ public class PasswordMatchImpl implements
             final Object rpw = BeanUtils.getProperty (obj, repassword);
             return pw != null && rpw != null && pw.equals (rpw);
         }
-        catch (final Exception ex)
+        catch (final IllegalAccessException | InvocationTargetException | NoSuchMethodException iae)
         {
             return false;
         }
