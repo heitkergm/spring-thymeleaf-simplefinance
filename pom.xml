@@ -24,9 +24,9 @@
         <hibernate.version>5.1.0.Final</hibernate.version>
         <jackson.version>2.7.3</jackson.version>
         <javassist.version>3.20.0-GA</javassist.version>
-        <logback.version>1.1.6</logback.version>
+        <logback.version>1.1.7</logback.version>
         <postgresql.version>9.4.1208</postgresql.version>
-        <slf4j.version>1.7.19</slf4j.version>
+        <slf4j.version>1.7.20</slf4j.version>
         <snakeyaml.version>1.17</snakeyaml.version>
         <spring-security.version>4.0.4.RELEASE</spring-security.version>
         <spring-session.version>1.1.1.RELEASE</spring-session.version>
