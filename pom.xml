@@ -20,19 +20,21 @@
         <java.version>1.8</java.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>6.17</checkstyle.version>
+        <checkstyle.version>6.19</checkstyle.version>
         <ehcache.version>2.10.2</ehcache.version>
         <hibernate.version>5.1.0.Final</hibernate.version>
-        <jackson.version>2.7.3</jackson.version>
+        <jackson.version>2.7.4</jackson.version>
         <javassist.version>3.20.0-GA</javassist.version>
         <logback.version>1.1.7</logback.version>
         <postgresql.version>9.4.1208</postgresql.version>
         <slf4j.version>1.7.21</slf4j.version>
         <snakeyaml.version>1.17</snakeyaml.version>
+        <spring.version>4.2.6.RELEASE</spring.version>
         <spring-data-releasetrain.version>Hopper-SR1</spring-data-releasetrain.version>
-        <spring-security.version>4.0.4.RELEASE</spring-security.version>
-        <spring-session.version>1.1.1.RELEASE</spring-session.version>
-        <tomcat.version>8.5.0</tomcat.version>
+        <spring-security.version>4.1.0.RELEASE</spring-security.version>
+        <spring-session.version>1.2.0.RELEASE</spring-session.version>
+        <thymeleaf-layout-dialect.version>1.4.0</thymeleaf-layout-dialect.version>
+        <tomcat.version>8.5.2</tomcat.version>
         <webjars-locator.version>0.31</webjars-locator.version>
         <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
     </properties>
@@ -80,6 +82,18 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.tomcat.embed</groupId>
+                    <artifactId>tomcat-embed-logging-juli</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-logging-log4j</artifactId>
+            <scope>provided</scope>
+            <version>${tomcat.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -103,6 +117,12 @@
         <dependency>
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-data-redis</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -116,7 +136,7 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>font-awesome</artifactId>
-            <version>4.6.1</version>
+            <version>4.6.3</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -143,7 +163,7 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
-            <version>2.2.3</version>
+            <version>2.2.4</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -221,7 +241,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>2.7</version>
+                <version>3.0.0</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -319,6 +339,22 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.jboss.tattletale</groupId>
+                <artifactId>tattletale-maven</artifactId>
+                <version>1.2.0.Beta2</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <source>${basedir}/target/${project.artifactId}-${project.version}</source>
+                    <destination>${basedir}/target/tattletale-report</destination>
+                </configuration>
             </plugin>
         </plugins>
     </build>
