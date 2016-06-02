@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.3.RELEASE</version>
+        <version>1.3.5.RELEASE</version>
     </parent>
 
     <properties>
@@ -21,15 +21,11 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>6.19</checkstyle.version>
-        <ehcache.version>2.10.2</ehcache.version>
         <hibernate.version>5.1.0.Final</hibernate.version>
         <jackson.version>2.7.4</jackson.version>
         <javassist.version>3.20.0-GA</javassist.version>
-        <logback.version>1.1.7</logback.version>
         <postgresql.version>9.4.1208</postgresql.version>
-        <slf4j.version>1.7.21</slf4j.version>
         <snakeyaml.version>1.17</snakeyaml.version>
-        <spring.version>4.2.6.RELEASE</spring.version>
         <spring-data-releasetrain.version>Hopper-SR1</spring-data-releasetrain.version>
         <spring-security.version>4.1.0.RELEASE</spring-security.version>
         <spring-session.version>1.2.0.RELEASE</spring-session.version>
@@ -171,10 +167,6 @@
             <artifactId>jquery-validation</artifactId>
             <version>1.15.0</version>
             <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-rest-hal-browser</artifactId>
         </dependency>
     </dependencies>
 
