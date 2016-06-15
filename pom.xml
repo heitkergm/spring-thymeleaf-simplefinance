@@ -21,6 +21,7 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>6.19</checkstyle.version>
+        <groovy.version>2.4.7</groovy.version>
         <hibernate.version>5.1.0.Final</hibernate.version>
         <jackson.version>2.7.4</jackson.version>
         <javassist.version>3.20.0-GA</javassist.version>
@@ -71,6 +72,10 @@
                 <exclusion>
                     <groupId>xml-apis</groupId>
                     <artifactId>xml-apis</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.tomcat</groupId>
+                    <artifactId>tomcat-juli</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
