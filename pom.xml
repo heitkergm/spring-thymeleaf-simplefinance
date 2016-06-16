@@ -31,7 +31,7 @@
         <spring-security.version>4.1.0.RELEASE</spring-security.version>
         <spring-session.version>1.2.0.RELEASE</spring-session.version>
         <thymeleaf-layout-dialect.version>1.4.0</thymeleaf-layout-dialect.version>
-        <tomcat.version>8.5.2</tomcat.version>
+        <tomcat.version>9.0.0.M6</tomcat.version>
         <webjars-locator.version>0.31</webjars-locator.version>
         <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
     </properties>
