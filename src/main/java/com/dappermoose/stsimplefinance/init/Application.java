@@ -63,7 +63,20 @@ public class Application
     @Bean
     public EmbeddedServletContainerFactory servletContainer ()
     {
-        TomcatEmbeddedServletContainerFactory tomcat = new MyServletFactory ();
+        TomcatEmbeddedServletContainerFactory tomcat;
+        tomcat = new TomcatEmbeddedServletContainerFactory ()
+        {
+            @Override
+            protected void postProcessContext (final Context context)
+            {
+                SecurityConstraint securityConstraint = new SecurityConstraint ();
+                securityConstraint.setUserConstraint ("CONFIDENTIAL");
+                SecurityCollection collection = new SecurityCollection ();
+                collection.addPattern ("/*");
+                securityConstraint.addCollection (collection);
+                context.addConstraint (securityConstraint);
+            }
+        };
 
         tomcat.addConnectorCustomizers ((TomcatConnectorCustomizer) (final Connector connector) ->
         {
@@ -111,24 +124,4 @@ public class Application
             return temp;
         }
     }
-
-    private static class MyServletFactory extends TomcatEmbeddedServletContainerFactory
-    {
-        MyServletFactory ()
-        {
-            super ();
-        }
-
-        @Override
-        protected void postProcessContext (final Context context)
-        {
-            SecurityConstraint securityConstraint = new SecurityConstraint ();
-            securityConstraint.setUserConstraint ("CONFIDENTIAL");
-            SecurityCollection collection = new SecurityCollection ();
-            collection.addPattern ("/*");
-            securityConstraint.addCollection (collection);
-            context.addConstraint (securityConstraint);
-        }
-    }
 }
-
