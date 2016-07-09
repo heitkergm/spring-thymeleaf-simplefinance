@@ -21,14 +21,14 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>7.0</checkstyle.version>
-        <hibernate.version>5.1.0.Final</hibernate.version>
+        <hibernate.version>5.2.1.Final</hibernate.version>
         <jackson.version>2.7.5</jackson.version>
         <javassist.version>3.20.0-GA</javassist.version>
         <postgresql.version>9.4.1208</postgresql.version>
         <snakeyaml.version>1.17</snakeyaml.version>
         <spring.version>4.3.1.RELEASE</spring.version>
         <spring-data-releasetrain.version>Hopper-SR2</spring-data-releasetrain.version>
-        <spring-security.version>4.1.0.RELEASE</spring-security.version>
+        <spring-security.version>4.1.1.RELEASE</spring-security.version>
         <spring-session.version>1.2.1.RELEASE</spring-session.version>
         <thymeleaf.version>3.0.0.RELEASE</thymeleaf.version>
         <thymeleaf-extras-springsecurity4.version>3.0.0.RELEASE</thymeleaf-extras-springsecurity4.version>
@@ -190,7 +190,7 @@
                 <artifactId>tomcat-embed-logging-juli</artifactId>
                 <version>${tomcat-logging.version}</version>
             </dependency>
-        </dependencies>
+       </dependencies>
     </dependencyManagement>
 
     <build>
@@ -360,6 +360,13 @@
                     <source>${basedir}/target/${project.artifactId}-${project.version}</source>
                     <destination>${basedir}/target/tattletale-report</destination>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.javassist</groupId>
+                        <artifactId>javassist</artifactId>
+                        <version>${javassist.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
