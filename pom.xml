@@ -30,7 +30,9 @@
         <spring-data-releasetrain.version>Hopper-SR2</spring-data-releasetrain.version>
         <spring-security.version>4.1.0.RELEASE</spring-security.version>
         <spring-session.version>1.2.1.RELEASE</spring-session.version>
-        <thymeleaf-layout-dialect.version>1.4.0</thymeleaf-layout-dialect.version>
+        <thymeleaf.version>3.0.0.RELEASE</thymeleaf.version>
+        <thymeleaf-extras-springsecurity4.version>3.0.0.RELEASE</thymeleaf-extras-springsecurity4.version>
+        <thymeleaf-layout-dialect.version>2.0.0</thymeleaf-layout-dialect.version>
         <tomcat.version>9.0.0.M8</tomcat.version>
         <tomcat-logging.version>9.0.0.M6</tomcat-logging.version>
         <webjars-locator.version>0.32</webjars-locator.version>
