@@ -22,11 +22,11 @@
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>7.0</checkstyle.version>
         <errorprone.version>2.8</errorprone.version>
-        <errorprone-core.version>2.0.10</errorprone-core.version>
+        <errorprone-core.version>2.0.11</errorprone-core.version>
         <hibernate.version>5.2.1.Final</hibernate.version>
         <jackson.version>2.7.5</jackson.version>
         <javassist.version>3.20.0-GA</javassist.version>
-        <postgresql.version>9.4.1208</postgresql.version>
+        <postgresql.version>9.4.1209</postgresql.version>
         <snakeyaml.version>1.17</snakeyaml.version>
         <spring.version>4.3.1.RELEASE</spring.version>
         <spring-data-releasetrain.version>Hopper-SR2</spring-data-releasetrain.version>
@@ -297,7 +297,7 @@
                                     <version>3.3.9</version>
                                 </requireMavenVersion>
                                 <requireJavaVersion>
-                                    <version>1.8.0-92</version>
+                                    <version>1.8.0-102</version>
                                 </requireJavaVersion>
                                 <bannedDependencies>
                                     <excludes>
