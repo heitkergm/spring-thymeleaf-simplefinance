@@ -3,7 +3,7 @@ package com.dappermoose.stsimplefinance.init;
 import java.util.TimeZone;
 
 import org.springframework.beans.BeansException;
-import org.springframework.boot.orm.jpa.EntityScan;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.MessageSource;
