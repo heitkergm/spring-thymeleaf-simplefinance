@@ -26,6 +26,7 @@ import org.springframework.web.servlet.theme.SessionThemeResolver;
 import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
 
 import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.extras.java8time.dialect.Java8TimeDialect;
 import org.thymeleaf.extras.springsecurity4.dialect.SpringSecurityDialect;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
@@ -221,6 +222,7 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter
         engine.setEnableSpringELCompiler (true);
         engine.addDialect (new LayoutDialect ());
         engine.addDialect (new SpringSecurityDialect ());
+        engine.addDialect (new Java8TimeDialect ());
 
         return engine;
     }
