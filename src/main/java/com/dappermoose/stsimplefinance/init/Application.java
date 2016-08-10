@@ -14,7 +14,6 @@ import org.apache.tomcat.util.descriptor.web.SecurityConstraint;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
 import org.springframework.boot.context.embedded.tomcat.TomcatConnectorCustomizer;
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
@@ -28,7 +27,7 @@ import org.springframework.util.FileCopyUtils;
 /**
  * This is the class containing the main program for spring boot.
  */
-@SpringBootApplication (exclude = {ThymeleafAutoConfiguration.class})
+@SpringBootApplication
 @EnableRedisHttpSession
 @ServletComponentScan
 public class Application
