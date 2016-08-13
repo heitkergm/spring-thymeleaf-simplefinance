@@ -27,6 +27,7 @@
         <jackson.version>2.7.5</jackson.version>
         <javassist.version>3.20.0-GA</javassist.version>
         <postgresql.version>9.4.1209</postgresql.version>
+        <spring-security.version>4.1.2.RELEASE</spring-security.version>
         <thymeleaf.version>3.0.1.RELEASE</thymeleaf.version>
         <thymeleaf-extras-springsecurity4.version>3.0.0.RELEASE</thymeleaf-extras-springsecurity4.version>
         <thymeleaf-extras-java8time.version>3.0.0.RELEASE</thymeleaf-extras-java8time.version>
