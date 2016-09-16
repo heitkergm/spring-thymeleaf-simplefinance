@@ -33,7 +33,7 @@
         <thymeleaf-extras-springsecurity4.version>3.0.0.RELEASE</thymeleaf-extras-springsecurity4.version>
         <thymeleaf-extras-java8time.version>3.0.0.RELEASE</thymeleaf-extras-java8time.version>
         <thymeleaf-layout-dialect.version>2.0.1</thymeleaf-layout-dialect.version>
-        <tomcat.version>9.0.0.M10</tomcat.version>
+        <tomcat.version>8.5.5</tomcat.version>
         <webjars-locator.version>0.32</webjars-locator.version>
         <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
     </properties>
