@@ -6,6 +6,7 @@ import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Index;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
@@ -18,7 +19,8 @@ import org.hibernate.annotations.Check;
  * The Class LoginEvent.
  */
 @Entity
-@Table (name = "LOGIN_EVENT")
+@Table (name = "LOGIN_EVENT",
+        indexes = @Index (columnList = "USER_ID", name = "LOGIN_EVENT_FKEY_USER"))
 @Check (constraints = "SUCCESS IN ('Y', 'N')")
 public class LoginEvent extends AbstractBaseEntity
 {

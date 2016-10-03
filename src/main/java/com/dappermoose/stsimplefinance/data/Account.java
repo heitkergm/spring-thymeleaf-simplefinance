@@ -8,6 +8,7 @@ import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Index;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
@@ -21,7 +22,8 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
  * The Class Account.
  */
 @Entity
-@Table (name = "ACCOUNT")
+@Table (name = "ACCOUNT",
+        indexes = @Index (columnList = "USER_ID", name = "ACCOUNT_FKEY_USER"))
 @Cache (usage = CacheConcurrencyStrategy.READ_WRITE, region = "accounts")
 public class Account extends AbstractBaseModifiableEntity
 {
