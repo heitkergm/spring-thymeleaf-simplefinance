@@ -30,7 +30,7 @@
         <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
         <thymeleaf-extras-springsecurity4.version>3.0.0.RELEASE</thymeleaf-extras-springsecurity4.version>
         <thymeleaf-extras-java8time.version>3.0.0.RELEASE</thymeleaf-extras-java8time.version>
-        <thymeleaf-layout-dialect.version>2.0.3</thymeleaf-layout-dialect.version>
+        <thymeleaf-layout-dialect.version>2.0.4</thymeleaf-layout-dialect.version>
         <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
     </properties>
 
