@@ -14,6 +14,9 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.Check;
 
+import lombok.Getter;
+import lombok.Setter;
+
 // TODO: Auto-generated Javadoc
 /**
  * The Class LoginEvent.
@@ -22,6 +25,8 @@ import org.hibernate.annotations.Check;
 @Table (name = "LOGIN_EVENT",
         indexes = @Index (columnList = "USER_ID", name = "LOGIN_EVENT_FKEY_USER"))
 @Check (constraints = "SUCCESS IN ('Y', 'N')")
+@Getter
+@Setter
 public class LoginEvent extends AbstractBaseEntity
 {
     private static final long serialVersionUID = -5740191601882965493L;
@@ -38,64 +43,4 @@ public class LoginEvent extends AbstractBaseEntity
 
     @Column (name = "SUCCESS", nullable = false, length = 1, updatable = false)
     private YesNoEnum success;
-
-    /**
-     * Gets the login event id.
-     *
-     * @return the login event id
-     */
-    public Long getLoginEventId ()
-    {
-        return loginEventId;
-    }
-
-    /**
-     * Sets the login event id.
-     *
-     * @param loginEventIdNew the new login event id
-     */
-    public void setLoginEventId (final Long loginEventIdNew)
-    {
-        loginEventId = loginEventIdNew;
-    }
-
-    /**
-     * Gets the user.
-     *
-     * @return the user
-     */
-    public LoginUser getUser ()
-    {
-        return user;
-    }
-
-    /**
-     * Sets the user.
-     *
-     * @param userNew the new user
-     */
-    public void setUser (final LoginUser userNew)
-    {
-        user = userNew;
-    }
-
-    /**
-     * Gets the success string.
-     *
-     * @return the password
-     */
-    public YesNoEnum getSuccess ()
-    {
-        return success;
-    }
-
-    /**
-     * Sets the success.
-     *
-     * @param successNew the new success
-     */
-    public void setSuccess (final YesNoEnum successNew)
-    {
-        success = successNew;
-    }
 }

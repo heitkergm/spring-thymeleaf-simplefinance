@@ -7,19 +7,17 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * The BaseEntity class.
  */
 @MappedSuperclass
+@Slf4j
 public abstract class AbstractBaseModifiableEntity extends AbstractBaseEntity
 {
     private static final long serialVersionUID = 1446802725141477516L;
-    
-    private static final Logger LOG = LoggerFactory.getLogger (AbstractBaseModifiableEntity.class);
-    
+
     // database will set a default value
     @Column (name = "MODIFIED_AT", nullable = false)
     private Instant modified;
@@ -35,7 +33,7 @@ public abstract class AbstractBaseModifiableEntity extends AbstractBaseEntity
     @PreUpdate
     public void setupPersist ()
     {
-        LOG.debug ("entering AbtractBaseModifiableEntity.setupPersist");
+        log.debug ("entering AbtractBaseModifiableEntity.setupPersist");
         super.setupPersist ();
         if (modified == null)
         {
@@ -45,7 +43,7 @@ public abstract class AbstractBaseModifiableEntity extends AbstractBaseEntity
         {
             modified = Instant.now ();
         }
-        LOG.debug ("leaving AbtractBaseModifiableEntity.setupPersist");
+        log.debug ("leaving AbtractBaseModifiableEntity.setupPersist");
     }
 
     /**

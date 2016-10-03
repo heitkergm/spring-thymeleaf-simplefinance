@@ -17,8 +17,7 @@ import org.hibernate.annotations.Check;
 
 import org.mindrot.jbcrypt.BCrypt;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -28,11 +27,10 @@ import org.slf4j.LoggerFactory;
 @Table (name = "USER", uniqueConstraints = @UniqueConstraint (columnNames = "USER_NAME"))
 @Cache (usage = CacheConcurrencyStrategy.READ_WRITE, region = "users")
 @Check (constraints = "ENABLED IN ('Y', 'N')")
+@Slf4j
 public class LoginUser extends AbstractBaseModifiableEntity
 {
     private static final long serialVersionUID = 8751044063686185076L;
-    
-    private static final Logger LOG = LoggerFactory.getLogger (LoginUser.class);
 
     /** The user id. */
     @Id
@@ -72,14 +70,14 @@ public class LoginUser extends AbstractBaseModifiableEntity
     @PreUpdate
     public void setupPersist ()
     {
-        LOG.debug ("entering LoginUser.setupPersist");        
+        log.debug ("entering LoginUser.setupPersist");
         super.setupPersist ();
 
         if (enabled == null)
         {
             enabled = YesNoEnum.YES;
         }
-        LOG.debug ("leaving LoginUser.setupPersist");        
+        log.debug ("leaving LoginUser.setupPersist");
     }
 
     /**

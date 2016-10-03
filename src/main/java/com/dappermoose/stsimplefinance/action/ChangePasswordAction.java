@@ -8,9 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 import javax.validation.Valid;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.MessageSource;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -27,15 +24,16 @@ import com.dappermoose.stsimplefinance.dao.LoginUserRepository;
 import com.dappermoose.stsimplefinance.data.LoginUser;
 import com.dappermoose.stsimplefinance.formbean.ChangePwd;
 
+import lombok.extern.slf4j.Slf4j;
+
 // TODO: Auto-generated Javadoc
 /**
  * The Class ChangePasswordAction.
  */
 @Controller
+@Slf4j
 public class ChangePasswordAction
 {
-    private static final Logger LOG = LoggerFactory.getLogger (ChangePasswordAction.class.getName ());
-
     /** The user repository. */
     @Inject
     private LoginUserRepository userRepository;
@@ -126,7 +124,7 @@ public class ChangePasswordAction
         }
         catch (ServletException se)
         {
-            LOG.info ("Servlet exception upon logout " + se.getMessage ());
+            log.info ("Servlet exception upon logout " + se.getMessage ());
         }
 
         return "redirect:/main";

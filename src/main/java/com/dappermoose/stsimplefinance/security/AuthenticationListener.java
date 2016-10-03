@@ -6,9 +6,6 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import org.springframework.context.ApplicationListener;
 import org.springframework.security.authentication.event.AbstractAuthenticationEvent;
 import org.springframework.security.authentication.event.AbstractAuthenticationFailureEvent;
@@ -21,15 +18,16 @@ import com.dappermoose.stsimplefinance.data.LoginEvent;
 import com.dappermoose.stsimplefinance.data.LoginUser;
 import com.dappermoose.stsimplefinance.data.YesNoEnum;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * listening for authentication events and logging them to the login event table.
  *
  * @author matthewheitker
  */
+@Slf4j
 public class AuthenticationListener implements ApplicationListener<AbstractAuthenticationEvent>
 {
-    private static final Logger  LOG = LoggerFactory.getLogger (AbstractAuthenticationEvent.class.getName ());
-
     @Inject
     private LoginUserRepository loginUserRepository;
 
@@ -40,7 +38,7 @@ public class AuthenticationListener implements ApplicationListener<AbstractAuthe
     @Transactional
     public void onApplicationEvent (final AbstractAuthenticationEvent e)
     {
-        LOG.debug ("login event + " + e.toString ());
+        log.debug ("login event + " + e.toString ());
 
         if (!((e instanceof AuthenticationSuccessEvent) ||
                 (e instanceof AbstractAuthenticationFailureEvent)))

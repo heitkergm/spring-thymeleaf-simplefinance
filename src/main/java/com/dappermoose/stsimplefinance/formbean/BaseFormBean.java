@@ -1,32 +1,17 @@
 package com.dappermoose.stsimplefinance.formbean;
 
-// TODO: Auto-generated Javadoc
+
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * The Class BaseFormBean.
  */
+@Getter
+@Setter
 public class BaseFormBean
 {
 
     /** The nonce. */
     private String nonce;
-
-    /**
-     * Gets the nonce.
-     *
-     * @return the nonce
-     */
-    public String getNonce ()
-    {
-        return nonce;
-    }
-
-    /**
-     * Sets the nonce.
-     *
-     * @param nonceNew the new nonce
-     */
-    public void setNonce (final String nonceNew)
-    {
-        nonce = nonceNew;
-    }
 }
