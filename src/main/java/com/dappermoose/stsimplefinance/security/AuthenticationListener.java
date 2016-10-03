@@ -38,7 +38,7 @@ public class AuthenticationListener implements ApplicationListener<AbstractAuthe
     @Transactional
     public void onApplicationEvent (final AbstractAuthenticationEvent e)
     {
-        log.debug ("login event + " + e.toString ());
+        LOG.debug ("login event + " + e.toString ());
 
         if (!((e instanceof AuthenticationSuccessEvent) ||
                 (e instanceof AbstractAuthenticationFailureEvent)))

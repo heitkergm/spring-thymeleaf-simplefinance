@@ -124,7 +124,7 @@ public class ChangePasswordAction
         }
         catch (ServletException se)
         {
-            log.info ("Servlet exception upon logout " + se.getMessage ());
+            LOG.info ("Servlet exception upon logout " + se.getMessage ());
         }
 
         return "redirect:/main";

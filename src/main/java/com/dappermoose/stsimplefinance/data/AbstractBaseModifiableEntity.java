@@ -33,7 +33,7 @@ public abstract class AbstractBaseModifiableEntity extends AbstractBaseEntity
     @PreUpdate
     public void setupPersist ()
     {
-        log.debug ("entering AbtractBaseModifiableEntity.setupPersist");
+        LOG.debug ("entering AbtractBaseModifiableEntity.setupPersist");
         super.setupPersist ();
         if (modified == null)
         {
@@ -43,7 +43,7 @@ public abstract class AbstractBaseModifiableEntity extends AbstractBaseEntity
         {
             modified = Instant.now ();
         }
-        log.debug ("leaving AbtractBaseModifiableEntity.setupPersist");
+        LOG.debug ("leaving AbtractBaseModifiableEntity.setupPersist");
     }
 
     /**

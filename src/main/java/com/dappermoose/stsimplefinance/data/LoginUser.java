@@ -70,14 +70,14 @@ public class LoginUser extends AbstractBaseModifiableEntity
     @PreUpdate
     public void setupPersist ()
     {
-        log.debug ("entering LoginUser.setupPersist");
+        LOG.debug ("entering LoginUser.setupPersist");
         super.setupPersist ();
 
         if (enabled == null)
         {
             enabled = YesNoEnum.YES;
         }
-        log.debug ("leaving LoginUser.setupPersist");
+        LOG.debug ("leaving LoginUser.setupPersist");
     }
 
     /**
