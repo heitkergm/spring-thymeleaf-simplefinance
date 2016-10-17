@@ -7,5 +7,8 @@
         <appender-ref ref="CONSOLE" />
     </root>
 
-    <logger name="org.springframework.web" level="INFO"/>
+    <logger name="org.springframework.web" level="INFO" />
+    <logger name="org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor"
+            level="INFO" />
+    <logger name="org.ehcache.core.EhcacheManager" level="DEBUG" />
 </configuration>
