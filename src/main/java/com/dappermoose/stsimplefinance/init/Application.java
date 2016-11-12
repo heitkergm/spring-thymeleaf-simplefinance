@@ -64,19 +64,7 @@ public class Application
     public EmbeddedServletContainerFactory servletContainer ()
     {
         TomcatEmbeddedServletContainerFactory tomcat;
-        tomcat = new TomcatEmbeddedServletContainerFactory ()
-        {
-            @Override
-            protected void postProcessContext (final Context context)
-            {
-                SecurityConstraint securityConstraint = new SecurityConstraint ();
-                securityConstraint.setUserConstraint ("CONFIDENTIAL");
-                SecurityCollection collection = new SecurityCollection ();
-                collection.addPattern ("/*");
-                securityConstraint.addCollection (collection);
-                context.addConstraint (securityConstraint);
-            }
-        };
+        tomcat = new TomcatEmbeddedServletContainerFactoryImpl ();
 
         tomcat.addConnectorCustomizers ((TomcatConnectorCustomizer) (final Connector connector) ->
         {
@@ -122,6 +110,25 @@ public class Application
             File temp = File.createTempFile ("keystore", ".tmp");
             FileCopyUtils.copy (resource.getInputStream (), new FileOutputStream (temp));
             return temp;
+        }
+    }
+
+    private static class TomcatEmbeddedServletContainerFactoryImpl extends TomcatEmbeddedServletContainerFactory
+    {
+
+        TomcatEmbeddedServletContainerFactoryImpl ()
+        {
+        }
+
+        @Override
+        protected void postProcessContext (final Context context)
+        {
+            SecurityConstraint securityConstraint = new SecurityConstraint ();
+            securityConstraint.setUserConstraint ("CONFIDENTIAL");
+            SecurityCollection collection = new SecurityCollection ();
+            collection.addPattern ("/*");
+            securityConstraint.addCollection (collection);
+            context.addConstraint (securityConstraint);
         }
     }
 }
