@@ -204,6 +204,8 @@
                     <target>1.8</target>
                     <showDeprecation>true</showDeprecation>
                     <forceJavacCompilerUse>true</forceJavacCompilerUse>
+                    <compilerId>javac-with-errorprone</compilerId>
+                    <useIncrementalCompilation>false</useIncrementalCompilation>
                 </configuration>
                 <dependencies>
                     <dependency>
