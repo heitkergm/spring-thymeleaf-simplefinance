@@ -13,9 +13,11 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-@PasswordMatch (password = "passwor1d", repassword = "repeatedPassword", message = "{register.pwd.notmatch}")
+@PasswordMatch (password = "password", repassword = "repeatedPassword", message = "{register.pwd.notmatch}")
 public class RegisterUser extends BaseFormBean
 {
+    private static final long serialVersionUID = 1L;
+
     @Size (min = 1, max = 32, message = "{login.user.size}")
     private String userName;
 

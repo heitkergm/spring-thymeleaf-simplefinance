@@ -7,10 +7,13 @@ import javax.validation.ConstraintValidatorContext;
 
 import org.apache.commons.beanutils.BeanUtils;
 
+import lombok.extern.slf4j.Slf4j;
+
 // TODO: Auto-generated Javadoc
 /**
  * The Class PasswordMatchImpl.
  */
+@Slf4j
 public class PasswordMatchImpl implements
     ConstraintValidator<PasswordMatch, Object>
 {
@@ -32,6 +35,8 @@ public class PasswordMatchImpl implements
     {
         password = pm.password ();
         repassword = pm.repassword ();
+        LOG.debug ("password is: " + password);
+        LOG.debug ("repassword is: " + repassword);
     }
 
     /*
@@ -49,6 +54,8 @@ public class PasswordMatchImpl implements
             // get field value
             final Object pw = BeanUtils.getProperty (obj, password);
             final Object rpw = BeanUtils.getProperty (obj, repassword);
+            LOG.debug ("password is " + ((String) pw));
+            LOG.debug ("repeated password is " + ((String) rpw));
             return pw != null && rpw != null && pw.equals (rpw);
         }
         catch (final IllegalAccessException | InvocationTargetException | NoSuchMethodException iae)
