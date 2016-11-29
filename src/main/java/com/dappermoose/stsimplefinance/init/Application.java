@@ -43,6 +43,7 @@ public class Application
     {
         TimeZone.setDefault (TimeZone.getTimeZone ("UTC"));
 
+        System.setProperty ("spring.devtools.restart.enabled", "false");
         ApplicationContext ctx = SpringApplication.run (Application.class, args);
 
         System.out.println ("Let's inspect the beans provided by Spring Boot:");
