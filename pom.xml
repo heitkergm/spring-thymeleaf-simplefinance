@@ -27,6 +27,7 @@
         <hibernate.version>5.2.5.Final</hibernate.version>
         <hibernate-validator.version>5.3.3.Final</hibernate-validator.version>
         <jackson.version>2.8.5</jackson.version>
+        <lombok.version>1.16.12</lombok.version>
         <postgresql.version>9.4.1212</postgresql.version>
         <spring-security.version>4.2.0.RELEASE</spring-security.version>
         <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
