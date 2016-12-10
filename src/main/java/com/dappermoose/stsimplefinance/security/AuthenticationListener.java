@@ -40,8 +40,8 @@ public class AuthenticationListener implements ApplicationListener<AbstractAuthe
     {
         LOG.debug ("login event + " + e.toString ());
 
-        if (!((e instanceof AuthenticationSuccessEvent) ||
-                (e instanceof AbstractAuthenticationFailureEvent)))
+        if (!(e instanceof AuthenticationSuccessEvent ||
+                e instanceof AbstractAuthenticationFailureEvent))
         {
             return;
         }
