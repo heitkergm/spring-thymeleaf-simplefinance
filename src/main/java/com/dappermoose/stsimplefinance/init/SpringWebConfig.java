@@ -13,7 +13,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.ui.context.support.ResourceBundleThemeSource;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
@@ -47,22 +46,6 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter
             final DefaultServletHandlerConfigurer configurer)
     {
         configurer.enable ();
-    }
-
-    /*
-     * (non-Javadoc)
-     *
-     * @see
-     * org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
-     * #addResourceHandlers(org.springframework.web.servlet.config.annotation.
-     * ResourceHandlerRegistry)
-     */
-    @Override
-    public void addResourceHandlers (final ResourceHandlerRegistry registry)
-    {
-        registry.addResourceHandler ("/css/**").addResourceLocations ("/css/");
-        registry.addResourceHandler ("/images/**").addResourceLocations (
-                "/images/");
     }
 
     /*
