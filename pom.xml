@@ -201,6 +201,10 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <addResources>true</addResources>
+                    <fork>true</fork>
+                    <!-- <jvmArguments>
+                        -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005
+                    </jvmArguments> -->
                 </configuration>
             </plugin>
             <plugin>
@@ -448,6 +452,11 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>io.takari</groupId>
+                <artifactId>maven</artifactId>
+                <version>0.3.4</version>
             </plugin>
         </plugins>
     </build>
