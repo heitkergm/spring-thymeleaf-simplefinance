@@ -7,18 +7,27 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 /**
  * The BaseEntity class.
  */
 @MappedSuperclass
+@Getter
+@Setter
 @Slf4j
 public abstract class AbstractBaseModifiableEntity extends AbstractBaseEntity
 {
     private static final long serialVersionUID = 1446802725141477516L;
 
-    // database will set a default value
+    /**
+     * The modified timestamp.
+     * 
+     * @param modified the new value
+     * @return the value of modified
+     */
     @Column (name = "MODIFIED_AT", nullable = false)
     private Instant modified;
 
@@ -44,25 +53,5 @@ public abstract class AbstractBaseModifiableEntity extends AbstractBaseEntity
             modified = Instant.now ();
         }
         LOG.debug ("leaving AbtractBaseModifiableEntity.setupPersist");
-    }
-
-    /**
-     * Gets the modified.
-     *
-     * @return the modified
-     */
-    public Instant getModified ()
-    {
-        return modified;
-    }
-
-    /**
-     * Sets the modified.
-     *
-     * @param modifiedNew the new modified
-     */
-    public void setModified (final Instant modifiedNew)
-    {
-        modified = modifiedNew;
     }
 }

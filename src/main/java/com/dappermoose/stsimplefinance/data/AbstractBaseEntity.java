@@ -24,10 +24,21 @@ public abstract class AbstractBaseEntity implements Serializable
 {
     private static final long serialVersionUID = 8250446686147979986L;
 
-    /** The created. */
+    /**
+     * The created timestamp field.
+     * 
+     * @param created new value
+     * @return value of created
+     */
     @Column (name = "CREATED_AT", nullable = false, updatable = false)
     private Instant created;
 
+    /**
+     * The version field.
+     * 
+     * @param version new value
+     * @return value of version
+     */
     @Version
     @Column (name = "VERSION", nullable = false)
     private Long version;

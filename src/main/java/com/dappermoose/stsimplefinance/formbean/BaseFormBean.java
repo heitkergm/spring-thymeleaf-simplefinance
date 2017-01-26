@@ -14,6 +14,11 @@ public class BaseFormBean implements Serializable
 {
     private static final long serialVersionUID = 1L;
     
-    /** The nonce. */
+    /**
+     * The nonce.
+     * 
+     * @param nonce the new value
+     * @return the nonce value
+     */
     private String nonce;
 }
