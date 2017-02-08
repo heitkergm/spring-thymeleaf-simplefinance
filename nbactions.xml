@@ -30,4 +30,14 @@
                 <goal>spring-boot:run</goal>
             </goals>
         </action>
+        <action>
+            <actionName>CUSTOM-resolve javadoc</actionName>
+            <displayName>resolve javadoc</displayName>
+            <goals>
+                <goal>dependency:resolve</goal>
+            </goals>
+            <properties>
+                <classifier>javadoc</classifier>
+            </properties>
+        </action>
     </actions>
