@@ -1,52 +1,49 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      xmlns="http://www.w3.org/1999/xhtml"
-      layout:decorate="~{decorator}">
+<html data-layout-decorate="~{decorator}">
 <head>
-<title th:text="#{login.title}">Title</title>
+<title data-th-text="#{login.title}">Title</title>
 </head>
-<body><div layout:fragment="content">
+<body><div data-layout-fragment="content">
 	<div class="center">
-			<div th:text="#{login.header}"></div>
+			<div data-th-text="#{login.header}"></div>
 		<form method="POST" autocomplete="off"
 			action="login"
-                        th:action="@{/login}"
+                        data-th-action="@{/login}"
 			name="loginform" id="login-user-form"
 			class="pure-form pure-form-aligned">
 			<fieldset>
 			    <div class="pure-control-group">
-				    <Label th:text="#{login.username}"></Label>
+				    <Label data-th-text="#{login.username}"></Label>
 				    <input id="username" name="username" type="text" size="32" maxlength="32" />
 				</div>
 				<div class="pure-control-group">
-				    <Label th:text="#{login.password}"></Label>
+				    <Label data-th-text="#{login.password}"></Label>
 				    <input id="password" name="password" type="password" size="32" maxlength="32" />
 				</div>
 				<div class="pure-controls">
                                     <p class="error" id="errors">
-                                       <span th:text="#{login.combo.bad}"
-                                             th:if="${param.error != null}">
+                                       <span data-th-text="#{login.combo.bad}"
+                                             data-th-if="${param.error != null}">
                                        </span>
                                     </p>
 				    <button class="pure-button pure-button-primary button-small" type="submit"
-                                            th:text="#{login.button}"></button>
-                                    <p><span th:text="#{login.register}"></span>
+                                            data-th-text="#{login.button}"></button>
+                                    <p><span data-th-text="#{login.register}"></span>
 					<br /><a href="register" class="pure-button button-small"
-                                                 th:href="@{/register}"
-                                                 th:text="#{login.reglink}"></a></p>
+                                                 data-th-href="@{/register}"
+                                                 data-th-text="#{login.reglink}"></a></p>
 				</div>
 			</fieldset>
-                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+                    <input type="hidden" data-th-name="${_csrf.parameterName}" data-th-value="${_csrf.token}" />
                </form>
 
 	</div>
-	<script src="webjars/jquery/jquery.min.js" th:src="@{/webjars/jquery/jquery.min.js}"
+	<script src="webjars/jquery/jquery.min.js" data-th-src="@{/webjars/jquery/jquery.min.js}"
                 type="text/javascript"></script>
 	<script src="webjars/jquery-validation/jquery.validate.min.js"
-                th:src="@{/webjars/jquery-validation/jquery.validate.min.js}"
+                data-th-src="@{/webjars/jquery-validation/jquery.validate.min.js}"
                 type="text/javascript"></script>
-	<script type="text/javascript" th:inline="javascript">
+	<script type="text/javascript" data-th-inline="javascript">
 	    document.getElementById('username').focus();
     $(document).ready(function()
     {

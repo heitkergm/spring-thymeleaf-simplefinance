@@ -4,4 +4,5 @@ label {font-weight:bold;}
 .bold {font-weight: bold;}
 .button-small {font-size: 90%;}
 .pure-form fieldset{display: inline-block; border: 1px solid silver;}
+a.pure-menu-link {cursor: pointer;}
 table {margin:auto;}

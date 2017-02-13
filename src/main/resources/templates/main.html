@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html
-      xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      xmlns="http://www.w3.org/1999/xhtml"
-      layout:decorate="~{decorator}">
+<html data-layout-decorate="~{decorator}">
 <head>
-<title th:text="#{main.title}"></title>
+<title data-th-text="#{main.title}"></title>
 </head>
 <body>
-    <div layout:fragment="content">
-        <form name="logoutForm" method="POST" action="logout" th:action="@{/logout}">
+    <div data-layout-fragment="content">
+        <form name="logoutForm" method="POST" action="logout" data-th-action="@{/logout}">
         </form>
 	<div class="center">
 	    <table class="pure-table pure-table-striped">
@@ -20,18 +16,18 @@
 	            </tr>
 	        </thead>
 	        <tbody>
-                <tr th:each="account : ${accounts}">
+                <tr data-th-each="account : ${accounts}">
                 </tr>
             </tbody>
             <tfoot>
                 <tr>
-                    <td th:text="#{main.total}"></td>
-                    <td th:text="${#numbers.formatDecimal(balance, 3, 'COMMA', 2, 'POINT')}"></td>
+                    <td data-th-text="#{main.total}"></td>
+                    <td data-th-text="${#numbers.formatCurrency(balance)}"></td>
                 </tr>
             </tfoot>
         </table>
-        <br /><a href="acct/add" th:href="@{/acct/add}" class="pure-button button-small"
-                 th:text="#{main.addAcctLink}"></a>
+        <br /><a href="acct/add" data-th-href="@{/acct/add}" class="pure-button button-small"
+                 data-th-text="#{main.addAcctLink}"></a>
 	</div>
     </div>
 </body>
