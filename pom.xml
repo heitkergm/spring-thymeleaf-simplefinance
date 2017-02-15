@@ -30,7 +30,9 @@
         <hibernate-validator.version>5.4.0.Final</hibernate-validator.version>
         <json.version>20160810</json.version>
         <logback.version>1.2.1</logback.version>
+        <nu-validator.version>17.2.1</nu-validator.version>
         <postgresql.version>9.4.1212</postgresql.version>
+        <slf4j.version>1.7.23</slf4j.version>
         <thymeleaf.version>3.0.3.RELEASE</thymeleaf.version>
         <thymeleaf-extras-springsecurity4.version>3.0.2.RELEASE</thymeleaf-extras-springsecurity4.version>
         <thymeleaf-extras-java8time.version>3.0.0.RELEASE</thymeleaf-extras-java8time.version>
@@ -42,7 +44,7 @@
         <dependency>
             <groupId>org.mindrot</groupId>
             <artifactId>jbcrypt</artifactId>
-            <version>0.3m</version>
+            <version>0.4</version>
         </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -208,6 +210,11 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-annotations</artifactId>
                 <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>nu.validator</groupId>
+                <artifactId>validator</artifactId>
+                <version>${nu-validator.version}</version>
             </dependency>
        </dependencies>
     </dependencyManagement>
@@ -497,7 +504,7 @@
                     <dependency>
                         <groupId>nu.validator</groupId>
                         <artifactId>validator</artifactId>
-                        <version>17.2.1</version>
+                        <version>${nu-validator.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>
