@@ -7,6 +7,7 @@
             </packagings>
             <goals>
                 <goal>package</goal>
+                <goal>exec:java</goal>
             </goals>
         </action>
         <action>
@@ -17,6 +18,7 @@
             <goals>
                 <goal>clean</goal>
                 <goal>package</goal>
+                <goal>exec;java</goal>
             </goals>
         </action>
         <action>

@@ -17,12 +17,11 @@
     </head>
     <body>
         <div class="center pure-menu pure-menu-horizontal">
-        <a href="meni" class="pure-menu-heading" data-th-href="@{/main}">
+        <a href="main" class="pure-menu-heading" data-th-href="@{/main}">
             <span class="bold"> <span data-th-text="#{decorator.header}"></span>
                 <i class="fa fa-money fa-lg"></i></span>
         </a>
-            <span data-layout-fragment="menu">
-        <ul  class="pure-menu-list">
+        <ul  class="pure-menu-list" data-layout-fragment="menu">
                 <li class="pure-menu-item"
                     data-th-if="${#authorization.expression('isAuthenticated()')}">
                         <a href="?theme=black" class="pure-menu-link"
@@ -46,7 +45,6 @@
                     </a>
                </li>
         </ul>
-            </span>
     </div>
         <div data-layout-fragment="content">content</div>
     <div class="center">

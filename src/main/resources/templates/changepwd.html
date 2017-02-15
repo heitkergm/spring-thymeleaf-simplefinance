@@ -2,7 +2,7 @@
 
 <html data-layout-decorate="~{decorator}">
 <head>
-<title data-th-text="#{changepwd.title}"></title>
+<title data-th-text="#{changepwd.title}">Title</title>
 </head>
 <body>
     <div data-layout-fragment="content">
@@ -18,7 +18,7 @@
 			<fieldset>
                 <div class="pure-control-group">
                     <label data-th-text="#{changepwd.username}"></label>
-                    <input data-th-field="*{userName}" type="text" size="32" maxlength="32" readonly="true" />
+                    <input data-th-field="*{userName}" type="text" size="32" maxlength="32" />
                 </div>
                 <div class="pure-control-group">
                     <label data-th-text="#{changepwd.currpwd}"></label>
@@ -35,8 +35,8 @@
                 <div class="pure-control-group">
                     <label data-th-text="#{changepwd.tzone}"></label>
                      <select data-th-field="*{tzone}">
-                        <option data-th-each="tz:${tzones}" data-th-value="${tz}" data-th-text="${tz}">
-                        </option>
+                        <option data-th-each="tz:${tzones}" data-th-value="${tz}"
+                                data-th-text="${tz}">Option</option>
                     </select>
                </div>
  				<div class="pure-controls">

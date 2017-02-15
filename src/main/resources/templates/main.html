@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-layout-decorate="~{decorator}">
 <head>
-<title data-th-text="#{main.title}"></title>
+<title data-th-text="#{main.title}">title</title>
 </head>
 <body>
     <div data-layout-fragment="content">
@@ -17,6 +17,8 @@
 	        </thead>
 	        <tbody>
                 <tr data-th-each="account : ${accounts}">
+                    <td data-th-text="${account.accountName}">name</td>
+                    <td data-th-text="${account.startingBalance}">balance</td>
                 </tr>
             </tbody>
             <tfoot>

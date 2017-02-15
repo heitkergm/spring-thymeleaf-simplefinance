@@ -2,7 +2,7 @@
 
 <html data-layout-decorate="~{decorator}">
 <head>
-<title data-th-text="#{register.title}"></title>
+<title data-th-text="#{register.title}">Title</title>
 </head>
 <body>
     <div data-layout-fragment="content">
@@ -30,8 +30,8 @@
                  <div class="pure-control-group">
                     <label data-th-text="#{register.tzone}"></label>
                     <select data-th-field="*{tzone}">
-                        <option data-th-each="tz:${tzones}" data-th-value="${tz}" data-th-text="${tz}">
-                        </option>
+                        <option data-th-each="tz:${tzones}" data-th-value="${tz}"
+                                data-th-text="${tz}">Option</option>
                     </select>
                 </div>
 				<div class="pure-controls">

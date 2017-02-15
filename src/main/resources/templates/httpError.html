@@ -3,17 +3,18 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title data-th-text="#{error.title}">
-    </title>
+    <title data-th-text="#{error.title}">Title</title>
 </head>
     <body>
         <span data-layout-fragment="menu"></span>
         <div data-layout-fragment="content">
 <div class="center">
-    <h1 data-th-text="#{error.header}" ></h1>
+    <h1 data-th-text="#{error.header}" >Header 1</h1>
     <p data-th-text="#{httpError.text}" ></p>
-    <p> <span data-th-text="#{httpError.status}" /> <span data-th-text="${status}"/></p>
-<p><span data-th-text="#{httpError.reason}" /> <span data-th-text="${reason}"/></p>
+    <p> <span data-th-text="#{httpError.status}"></span>
+        <span data-th-text="${status}"></span></p>
+    <p><span data-th-text="#{httpError.reason}"></span>
+        <span data-th-text="${reason}"></span></p>
 </div>
         </div>
     </body>
