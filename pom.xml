@@ -23,14 +23,13 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>7.5.1</checkstyle.version>
-        <errorprone.version>2.8.1</errorprone.version>
-        <errorprone-core.version>2.0.15</errorprone-core.version>
         <groovy.version>2.4.8</groovy.version>
         <hibernate.version>5.2.7.Final</hibernate.version>
         <hibernate-validator.version>5.4.0.Final</hibernate-validator.version>
         <json.version>20160810</json.version>
         <logback.version>1.2.1</logback.version>
         <nu-validator.version>17.2.1</nu-validator.version>
+        <plexus-javac.version>2.8.1</plexus-javac.version>
         <postgresql.version>9.4.1212</postgresql.version>
         <slf4j.version>1.7.23</slf4j.version>
         <thymeleaf.version>3.0.3.RELEASE</thymeleaf.version>
@@ -198,13 +197,8 @@
             </dependency>
             <dependency>
                 <groupId>org.codehaus.plexus</groupId>
-                <artifactId>plexus-compiler-javac-errorprone</artifactId>
-                <version>${errorprone.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.errorprone</groupId>
-                <artifactId>error_prone_core</artifactId>
-                <version>${errorprone-core.version}</version>
+                <artifactId>plexus-compiler-javac</artifactId>
+                <version>${plexus-javac.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
@@ -275,7 +269,7 @@
                     <target>1.8</target>
                     <showDeprecation>true</showDeprecation>
                     <forceJavacCompilerUse>true</forceJavacCompilerUse>
-                    <compilerId>javac-with-errorprone</compilerId>
+                    <compilerId>javac</compilerId>
                     <useIncrementalCompilation>yes</useIncrementalCompilation>
                     <compilerArgs>
                         <arg>-Xpkginfo:always</arg>
@@ -284,15 +278,8 @@
                 <dependencies>
                     <dependency>
                         <groupId>org.codehaus.plexus</groupId>
-                        <artifactId>plexus-compiler-javac-errorprone</artifactId>
-                        <version>${errorprone.version}</version>
-                    </dependency>
-          <!-- override plexus-compiler-javac-errorprone's dependency on
-               Error Prone with the latest version -->
-                    <dependency>
-                        <groupId>com.google.errorprone</groupId>
-                        <artifactId>error_prone_core</artifactId>
-                        <version>${errorprone-core.version}</version>
+                        <artifactId>plexus-compiler-javac</artifactId>
+                        <version>${plexus-javac.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>
