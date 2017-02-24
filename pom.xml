@@ -32,7 +32,8 @@
         <nu-validator.version>17.2.1</nu-validator.version>
         <plexus-javac.version>2.8.1</plexus-javac.version>
         <postgresql.version>42.0.0</postgresql.version>
-        <slf4j.version>1.7.23</slf4j.version>
+        <slf4j.version>1.7.24</slf4j.version>
+        <snakeyaml.version>1.18</snakeyaml.version>
         <thymeleaf.version>3.0.3.RELEASE</thymeleaf.version>
         <thymeleaf-extras-springsecurity4.version>3.0.2.RELEASE</thymeleaf-extras-springsecurity4.version>
         <thymeleaf-extras-java8time.version>3.0.0.RELEASE</thymeleaf-extras-java8time.version>
