@@ -35,6 +35,8 @@
         <postgresql.version>42.0.0</postgresql.version>
         <slf4j.version>1.7.24</slf4j.version>
         <spring.version>4.3.7.RELEASE</spring.version>
+        <spring-data-releasetrain.version>Ingalls-SR1</spring-data-releasetrain.version>
+        <spring-security.version>4.2.2.RELEASE</spring-security.version>
         <snakeyaml.version>1.18</snakeyaml.version>
         <thymeleaf.version>3.0.3.RELEASE</thymeleaf.version>
         <thymeleaf-extras-springsecurity4.version>3.0.2.RELEASE</thymeleaf-extras-springsecurity4.version>
