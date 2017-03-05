@@ -15,6 +15,69 @@
         <version>1.5.2.RELEASE</version>
     </parent>
 
+    <profiles>
+        <profile>
+            <id>skip-checks</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <skip-checks>true</skip-checks>
+            </properties>
+        </profile>
+        <profile>
+            <id>check-for-vnu</id>
+            <activation>
+                <property>
+                    <name>env.VNU_HOME</name>
+                </property>
+            </activation>
+            <properties>
+                <skip-checks>false</skip-checks>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.jboss.tattletale</groupId>
+                        <artifactId>tattletale-maven</artifactId>
+                        <version>1.2.0.Beta2</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>report</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <source>${basedir}/target/${project.artifactId}-${project.version}</source>
+                            <destination>${basedir}/target/tattletale-report</destination>
+                        </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.javassist</groupId>
+                                <artifactId>javassist</artifactId>
+                                <version>${javassist.version}</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jdeps-plugin</artifactId>
+                        <version>3.0.0</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>jdkinternals</goal>
+                                    <goal>test-jdkinternals</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+     </profiles>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
@@ -28,7 +91,6 @@
         <hibernate-validator.version>5.4.0.Final</hibernate-validator.version>
         <json.version>20160810</json.version>
         <logback.version>1.2.1</logback.version>
-        <nu-validator.version>17.2.1</nu-validator.version>
         <plexus-javac.version>2.8.1</plexus-javac.version>
         <postgresql.version>42.0.0</postgresql.version>
         <snakeyaml.version>1.18</snakeyaml.version>
@@ -205,11 +267,6 @@
                 <artifactId>jackson-annotations</artifactId>
                 <version>${jackson.version}</version>
             </dependency>
-            <dependency>
-                <groupId>nu.validator</groupId>
-                <artifactId>validator</artifactId>
-                <version>${nu-validator.version}</version>
-            </dependency>
        </dependencies>
     </dependencyManagement>
 
@@ -248,6 +305,7 @@
                             <consoleOutput>true</consoleOutput>
                             <failsOnError>true</failsOnError>
                             <linkXRef>false</linkXRef>
+                            <skip>${skip-checks}</skip>
                         </configuration>
                         <goals>
                             <goal>check</goal>
@@ -321,6 +379,7 @@
                                 </bannedDependencies>
                             </rules>
                             <fail>true</fail>
+                            <skip>${skip-checks}</skip>
                         </configuration>
                     </execution>
                 </executions>
@@ -345,24 +404,12 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jdeps-plugin</artifactId>
-                <version>3.0.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>jdkinternals</goal>
-                            <goal>test-jdkinternals</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
                 <version>3.7</version>
                 <configuration>
                     <verbose>true</verbose>
                     <linkXRef>false</linkXRef>
+                    <skip>${skip-checks}</skip>
                 </configuration>
                 <executions>
                     <execution>
@@ -398,6 +445,7 @@
                 <version>3.0.4</version>
                 <configuration>
                     <excludeFilterFile>excludeFindbugs.xml</excludeFilterFile>
+                    <skip>${skip-checks}</skip>
                 </configuration>
                 <executions>
                     <execution>
@@ -408,29 +456,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.jboss.tattletale</groupId>
-                <artifactId>tattletale-maven</artifactId>
-                <version>1.2.0.Beta2</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <source>${basedir}/target/${project.artifactId}-${project.version}</source>
-                    <destination>${basedir}/target/tattletale-report</destination>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.javassist</groupId>
-                        <artifactId>javassist</artifactId>
-                        <version>${javassist.version}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
             <plugin>
                 <groupId>org.projectlombok</groupId>
@@ -475,32 +500,14 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <skip>${skip-checks}</skip>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>io.takari</groupId>
                 <artifactId>maven</artifactId>
                 <version>0.3.4</version>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>nu.validator.client.SimpleCommandLineValidator</mainClass>
-                    <includeProjectDependencies>false</includeProjectDependencies>
-                    <includePluginDependencies>true</includePluginDependencies>
-                    <executableDependency>
-                        <groupId>nu.validator</groupId>
-                        <artifactId>validator</artifactId>
-                    </executableDependency>
-                    <commandlineArgs>src/main/resources/templates</commandlineArgs>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>nu.validator</groupId>
-                        <artifactId>validator</artifactId>
-                        <version>${nu-validator.version}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>
