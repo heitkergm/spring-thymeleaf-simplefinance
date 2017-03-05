@@ -28,7 +28,6 @@
         <hibernate-validator.version>5.4.0.Final</hibernate-validator.version>
         <json.version>20160810</json.version>
         <logback.version>1.2.1</logback.version>
-        <lombok.version>1.16.12</lombok.version>
         <nu-validator.version>17.2.1</nu-validator.version>
         <plexus-javac.version>2.8.1</plexus-javac.version>
         <postgresql.version>42.0.0</postgresql.version>
