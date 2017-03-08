@@ -38,29 +38,6 @@
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>org.jboss.tattletale</groupId>
-                        <artifactId>tattletale-maven</artifactId>
-                        <version>1.2.0.Beta2</version>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>report</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <source>${basedir}/target/${project.artifactId}-${project.version}</source>
-                            <destination>${basedir}/target/tattletale-report</destination>
-                        </configuration>
-                        <dependencies>
-                            <dependency>
-                                <groupId>org.javassist</groupId>
-                                <artifactId>javassist</artifactId>
-                                <version>${javassist.version}</version>
-                            </dependency>
-                        </dependencies>
-                    </plugin>
-                    <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jdeps-plugin</artifactId>
                         <version>3.0.0</version>
