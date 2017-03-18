@@ -65,7 +65,7 @@
         <checkstyle.version>7.6</checkstyle.version>
         <ehcache3.version>3.3.0</ehcache3.version>
         <hibernate.version>5.2.9.Final</hibernate.version>
-        <hibernate-validator.version>5.4.0.Final</hibernate-validator.version>
+        <hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
         <json.version>20160810</json.version>
         <logback.version>1.2.2</logback.version>
         <plexus-javac.version>2.8.1</plexus-javac.version>
