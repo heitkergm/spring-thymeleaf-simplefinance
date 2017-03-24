@@ -140,7 +140,7 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter
      * @return the persistence exception translation post processor
      */
     @Bean
-    public PersistenceExceptionTranslationPostProcessor persistencePostProcessor ()
+    public static PersistenceExceptionTranslationPostProcessor persistencePostProcessor ()
     {
         return new PersistenceExceptionTranslationPostProcessor ();
     }
