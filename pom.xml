@@ -65,7 +65,7 @@
         <checkstyle.version>7.6.1</checkstyle.version>
         <ehcache3.version>3.3.1</ehcache3.version>
         <groovy.version>2.4.10</groovy.version>
-        <hibernate.version>5.2.9.Final</hibernate.version>
+        <hibernate.version>5.2.10.Final</hibernate.version>
         <hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
         <jboss-logging.version>3.3.1.Final</jboss-logging.version>
         <json.version>20160810</json.version>
