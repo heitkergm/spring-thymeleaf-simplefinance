@@ -76,6 +76,7 @@
         <postgresql.version>42.0.0</postgresql.version>
         <slf4j.version>1.7.25</slf4j.version>
         <snakeyaml.version>1.18</snakeyaml.version>
+        <spring.version>4.3.8.RELEASE</spring.version>
         <thymeleaf.version>3.0.5.RELEASE</thymeleaf.version>
         <thymeleaf-extras-springsecurity4.version>3.0.2.RELEASE</thymeleaf-extras-springsecurity4.version>
         <thymeleaf-extras-java8time.version>3.0.0.RELEASE</thymeleaf-extras-java8time.version>
