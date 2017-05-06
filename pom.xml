@@ -68,7 +68,7 @@
         <json.version>20160810</json.version>
         <logback.version>1.2.3</logback.version>
         <plexus-javac.version>2.8.1</plexus-javac.version>
-        <postgresql.version>42.1.0</postgresql.version>
+        <postgresql.version>42.1.1</postgresql.version>
         <snakeyaml.version>1.18</snakeyaml.version>
         <spring-session.version>1.3.1.RELEASE</spring-session.version>
         <thymeleaf.version>3.0.5.RELEASE</thymeleaf.version>
