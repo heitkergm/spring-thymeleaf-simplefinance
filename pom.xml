@@ -468,6 +468,7 @@
                     <addOutputToClasspath>false</addOutputToClasspath>
                     <executable>java</executable>
                     <arguments>
+                        <argument>-Xss512k</argument>
                         <argument>-classpath</argument>
                         <classpath>
                             <dependency>nu.validator:validator</dependency>
