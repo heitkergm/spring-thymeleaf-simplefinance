@@ -14,6 +14,7 @@ import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.Check;
+import org.hibernate.envers.Audited;
 
 import org.mindrot.jbcrypt.BCrypt;
 
@@ -45,10 +46,12 @@ public class LoginUser extends AbstractBaseModifiableEntity
 
     // passwords are stored as 60 character bcypt'd hashs
     /** The password. */
+    @Audited
     @Column (name = "PASSWORD", nullable = false, length = 60)
     private String password;
 
     /** the time zone. */
+    @Audited
     @Column (name = "TZONE", nullable = false, length = 128)
     private String tzone;
 
