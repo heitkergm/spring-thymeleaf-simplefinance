@@ -1,71 +1,123 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" v="3.6" status="GENERATED" sm="false" xs="false" id="_14897916832291" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
-    <jpa:entity xre="false" abs="false" class="LoginEvent" v="true" m="false" rootElement="_14897916832291" id="_14897916832352">
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" v="4.2.2" status="GENERATED" sm="false" id="_14966042244671" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity xre="false" abs="false" class="Revinfo" v="true" m="false" rootElement="_14966042244671" id="_14966042244732">
         <jpa:attributes>
-            <jpa:basic optional="false" attribute-type="java.util.Date" v="true" name="createdAt" id="_14897916832396">
+            <jpa:basic optional="true" attribute-type="java.math.BigInteger" v="true" name="revtstmp" id="_14966042244778">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="revtstmp" unique="false" nullable="true" insertable="true" updatable="true" table="revinfo"/>
+            </jpa:basic>
+            <jpa:one-to-many own="false" connected-entity-id="_14966042244736" connected-attribute-id="_149660422447938" v="true" name="userAudCollection" id="_14966042244789">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+            </jpa:one-to-many>
+            <jpa:id attribute-type="Integer" v="true" name="rev" id="_14966042244777">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="rev" unique="false" nullable="false" insertable="true" updatable="true" table="revinfo"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:table name="revinfo"/>
+    </jpa:entity>
+    <jpa:entity xre="false" abs="false" class="LoginEvent" v="true" m="false" rootElement="_14966042244671" id="_14966042244733">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="java.util.Date" v="true" name="createdAt" id="_149660422447811">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:temporal>TIMESTAMP</jpa:temporal>
                 <jpa:column name="created_at" unique="false" nullable="false" insertable="true" updatable="true" table="login_event"/>
             </jpa:basic>
-            <jpa:basic optional="false" attribute-type="long" v="true" name="version" id="_14897916832397">
+            <jpa:basic optional="false" attribute-type="long" v="true" name="version" id="_149660422447812">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:column name="version" unique="false" nullable="false" insertable="true" updatable="true" table="login_event"/>
             </jpa:basic>
-            <jpa:basic optional="false" attribute-type="Character" v="true" name="success" id="_14897916832398">
+            <jpa:basic optional="false" attribute-type="Character" v="true" name="success" id="_149660422447813">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:column name="success" unique="false" nullable="false" insertable="true" updatable="true" table="login_event"/>
             </jpa:basic>
-            <jpa:many-to-one optional="false" connected-entity-id="_14897916832363" connected-attribute-id="_148979168324018" v="true" name="userId" id="_14897916832399">
+            <jpa:many-to-one optional="false" connected-entity-id="_14966042244734" connected-attribute-id="_149660422447923" v="true" name="userId" id="_149660422447814">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:join-column name="USER_ID" rc="USER_ID" unique="false" nullable="true" insertable="true" updatable="true"/>
             </jpa:many-to-one>
-            <jpa:id attribute-type="Long" v="true" name="loginEventId" id="_14897916832395">
+            <jpa:id attribute-type="Long" v="true" name="loginEventId" id="_149660422447810">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:column name="login_event_id" unique="false" nullable="false" insertable="true" updatable="true" table="login_event"/>
             </jpa:id>
         </jpa:attributes>
         <jpa:table name="login_event"/>
     </jpa:entity>
-    <jpa:entity xre="false" abs="false" class="User" v="true" m="false" rootElement="_14897916832291" id="_14897916832363">
+    <jpa:entity xre="false" abs="false" class="User" v="true" m="false" rootElement="_14966042244671" id="_14966042244734">
         <jpa:attributes>
-            <jpa:basic optional="false" attribute-type="java.util.Date" v="true" name="createdAt" id="_148979168324011">
+            <jpa:basic optional="false" attribute-type="java.util.Date" v="true" name="createdAt" id="_149660422447816">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:temporal>TIMESTAMP</jpa:temporal>
                 <jpa:column name="created_at" unique="false" nullable="false" insertable="true" updatable="true" table="user"/>
             </jpa:basic>
-            <jpa:basic optional="false" attribute-type="long" v="true" name="version" id="_148979168324012">
+            <jpa:basic optional="false" attribute-type="long" v="true" name="version" id="_149660422447817">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:column name="version" unique="false" nullable="false" insertable="true" updatable="true" table="user"/>
             </jpa:basic>
-            <jpa:basic optional="false" attribute-type="java.util.Date" v="true" name="modifiedAt" id="_148979168324013">
+            <jpa:basic optional="false" attribute-type="java.util.Date" v="true" name="modifiedAt" id="_149660422447818">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:temporal>TIMESTAMP</jpa:temporal>
                 <jpa:column name="modified_at" unique="false" nullable="false" insertable="true" updatable="true" table="user"/>
             </jpa:basic>
-            <jpa:basic optional="false" attribute-type="Character" v="true" name="enabled" id="_148979168324014">
+            <jpa:basic optional="false" attribute-type="Character" v="true" name="enabled" id="_149660422447819">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:column name="enabled" unique="false" nullable="false" insertable="true" updatable="true" table="user"/>
             </jpa:basic>
-            <jpa:basic optional="false" attribute-type="String" v="true" name="password" id="_148979168324015">
+            <jpa:basic optional="false" attribute-type="String" v="true" name="password" id="_149660422447920">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:column name="password" unique="false" nullable="false" insertable="true" updatable="true" table="user" length="60"/>
             </jpa:basic>
-            <jpa:basic optional="false" attribute-type="String" v="true" name="tzone" id="_148979168324016">
+            <jpa:basic optional="false" attribute-type="String" v="true" name="tzone" id="_149660422447921">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:column name="tzone" unique="false" nullable="false" insertable="true" updatable="true" table="user" length="128"/>
             </jpa:basic>
-            <jpa:basic optional="false" attribute-type="String" v="true" name="userName" id="_148979168324017">
+            <jpa:basic optional="false" attribute-type="String" v="true" name="userName" id="_149660422447922">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:column name="user_name" unique="false" nullable="false" insertable="true" updatable="true" table="user" length="32"/>
             </jpa:basic>
-            <jpa:one-to-many own="false" connected-entity-id="_14897916832352" connected-attribute-id="_14897916832399" v="true" name="loginEventCollection" id="_148979168324018">
+            <jpa:one-to-many own="false" connected-entity-id="_14966042244733" connected-attribute-id="_149660422447814" v="true" name="loginEventCollection" id="_149660422447923">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
             </jpa:one-to-many>
-            <jpa:one-to-many own="false" connected-entity-id="_14897916832364" connected-attribute-id="_148979168324027" v="true" name="accountCollection" id="_148979168324019">
+            <jpa:one-to-many own="false" connected-entity-id="_14966042244735" connected-attribute-id="_149660422447932" v="true" name="accountCollection" id="_149660422447924">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
             </jpa:one-to-many>
-            <jpa:id attribute-type="Long" v="true" name="userId" id="_148979168324010">
+            <jpa:id attribute-type="Long" v="true" name="userId" id="_149660422447815">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:column name="user_id" unique="false" nullable="false" insertable="true" updatable="true" table="user"/>
             </jpa:id>
         </jpa:attributes>
@@ -75,49 +127,106 @@
             </jpa:unique-constraint>
         </jpa:table>
     </jpa:entity>
-    <jpa:entity xre="false" abs="false" class="Account" v="true" m="false" rootElement="_14897916832291" id="_14897916832364">
+    <jpa:entity xre="false" abs="false" class="Account" v="true" m="false" rootElement="_14966042244671" id="_14966042244735">
         <jpa:attributes>
-            <jpa:basic optional="false" attribute-type="java.util.Date" v="true" name="createdAt" id="_148979168324021">
+            <jpa:basic optional="false" attribute-type="java.util.Date" v="true" name="createdAt" id="_149660422447926">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:temporal>TIMESTAMP</jpa:temporal>
                 <jpa:column name="created_at" unique="false" nullable="false" insertable="true" updatable="true" table="account"/>
             </jpa:basic>
-            <jpa:basic optional="false" attribute-type="long" v="true" name="version" id="_148979168324022">
+            <jpa:basic optional="false" attribute-type="long" v="true" name="version" id="_149660422447927">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:column name="version" unique="false" nullable="false" insertable="true" updatable="true" table="account"/>
             </jpa:basic>
-            <jpa:basic optional="false" attribute-type="java.util.Date" v="true" name="modifiedAt" id="_148979168324023">
+            <jpa:basic optional="false" attribute-type="java.util.Date" v="true" name="modifiedAt" id="_149660422447928">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:temporal>TIMESTAMP</jpa:temporal>
                 <jpa:column name="modified_at" unique="false" nullable="false" insertable="true" updatable="true" table="account"/>
             </jpa:basic>
-            <jpa:basic optional="false" attribute-type="String" v="true" name="accountName" id="_148979168324024">
+            <jpa:basic optional="false" attribute-type="String" v="true" name="accountName" id="_149660422447929">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:column name="account_name" unique="false" nullable="false" insertable="true" updatable="true" table="account" length="32"/>
             </jpa:basic>
-            <jpa:basic optional="false" attribute-type="String" v="true" name="description" id="_148979168324025">
+            <jpa:basic optional="false" attribute-type="String" v="true" name="description" id="_149660422447930">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:column name="description" unique="false" nullable="false" insertable="true" updatable="true" table="account" length="256"/>
             </jpa:basic>
-            <jpa:basic optional="false" attribute-type="java.math.BigDecimal" v="true" name="startingBalance" id="_148979168324026">
+            <jpa:basic optional="false" attribute-type="java.math.BigDecimal" v="true" name="startingBalance" id="_149660422447931">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:column name="starting_balance" unique="false" nullable="false" insertable="true" updatable="true" table="account" precision="10" scale="2"/>
             </jpa:basic>
-            <jpa:many-to-one optional="false" connected-entity-id="_14897916832363" connected-attribute-id="_148979168324019" v="true" name="userId" id="_148979168324027">
+            <jpa:many-to-one optional="false" connected-entity-id="_14966042244734" connected-attribute-id="_149660422447924" v="true" name="userId" id="_149660422447932">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:join-column name="USER_ID" rc="USER_ID" unique="false" nullable="true" insertable="true" updatable="true"/>
             </jpa:many-to-one>
-            <jpa:id attribute-type="Long" v="true" name="accountId" id="_148979168324020">
+            <jpa:id attribute-type="Long" v="true" name="accountId" id="_149660422447925">
                 <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
                 <jpa:column name="account_id" unique="false" nullable="false" insertable="true" updatable="true" table="account"/>
             </jpa:id>
         </jpa:attributes>
         <jpa:table name="account"/>
     </jpa:entity>
+    <jpa:entity xre="false" abs="false" class="UserAud" v="true" m="false" rootElement="_14966042244671" id="_14966042244736">
+        <jpa:attributes>
+            <jpa:basic optional="true" attribute-type="Short" v="true" name="revtype" id="_149660422447935">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="revtype" unique="false" nullable="true" insertable="true" updatable="true" table="user_aud"/>
+            </jpa:basic>
+            <jpa:basic optional="true" attribute-type="String" v="true" name="password" id="_149660422447936">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="password" unique="false" nullable="true" insertable="true" updatable="true" table="user_aud" length="60"/>
+            </jpa:basic>
+            <jpa:basic optional="true" attribute-type="String" v="true" name="tzone" id="_149660422447937">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="tzone" unique="false" nullable="true" insertable="true" updatable="true" table="user_aud" length="128"/>
+            </jpa:basic>
+            <jpa:many-to-one optional="false" connected-entity-id="_14966042244732" connected-attribute-id="_14966042244789" v="true" name="revinfo" id="_149660422447938">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:join-column name="REV" rc="REV" unique="false" nullable="true" insertable="false" updatable="false"/>
+            </jpa:many-to-one>
+            <jpa:id attribute-type="long" v="true" name="userId" id="_149660422447933">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="user_id" unique="false" nullable="false" insertable="true" updatable="true" table="user_aud"/>
+            </jpa:id>
+            <jpa:id attribute-type="int" v="true" name="rev" id="_149660422447934">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="rev" unique="false" nullable="false" insertable="true" updatable="true" table="user_aud"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:table name="user_aud"/>
+    </jpa:entity>
     <jpa:snp loc="BEFORE_PACKAGE" e="true">/**
- * This file was generated by the JPA Modeler
+ * This file was generated by the Jeddict
  */</jpa:snp>
     <jpa:diagram>
-        <plane elementRef="_14897916832291"/>
+        <plane elementRef="_14966042244671"/>
     </jpa:diagram>
 </jpa:entity-mappings>
