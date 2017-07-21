@@ -27,6 +27,17 @@
                 <skip-checks>true</skip-checks>
             </properties>
         </profile>
+        <profile>
+            <id>32 bit java</id>
+            <activation>
+                <os>
+                    <arch>i386</arch>
+                </os>
+            </activation>
+            <properties>
+                <skip-checks>true</skip-checks>
+            </properties>
+        </profile>
     </profiles>
 
     <properties>
