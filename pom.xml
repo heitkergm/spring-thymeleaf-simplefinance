@@ -405,7 +405,7 @@
                                     <version>3.5.0</version>
                                 </requireMavenVersion>
                                 <requireJavaVersion>
-                                    <version>1.8.0-131</version>
+                                    <version>1.8.0-141</version>
                                 </requireJavaVersion>
                                 <bannedDependencies>
                                     <excludes>
