@@ -198,7 +198,7 @@
         <dependency>
             <groupId>org.webjars.npm</groupId>
             <artifactId>jquery-validation</artifactId>
-            <version>1.16.0</version>
+            <version>1.17.0</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -209,7 +209,7 @@
         <dependency>
             <groupId>javax.interceptor</groupId>
             <artifactId>javax.interceptor-api</artifactId>
-            <version>1.2</version>
+            <version>1.2.1</version>
         </dependency>
         <dependency>
             <groupId>nu.validator</groupId>
