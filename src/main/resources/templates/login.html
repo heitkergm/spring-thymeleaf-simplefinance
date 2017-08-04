@@ -48,6 +48,11 @@
     {
         $("#login-user-form").validate(
         {
+            onfocusout: function(element)
+            {
+                this.element(element);
+            },
+    
             rules:
             {
                 username:
