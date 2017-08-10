@@ -43,9 +43,10 @@
                 data-th-src="@{/webjars/jquery-validation/dist/jquery.validate.min.js}"
                 type="text/javascript"></script>
 	<script type="text/javascript" data-th-inline="javascript">
-	    document.getElementById('username').focus();
+
     $(document).ready(function()
     {
+        document.getElementById('username').focus();
         $("#login-user-form").validate(
         {
             onfocusout: function(element)
