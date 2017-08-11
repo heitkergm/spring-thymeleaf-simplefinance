@@ -58,14 +58,14 @@
 
     $(document).ready(function()
     {
- 	document.getElementById('currentPassword').focus();
+ 	$('#currentPassword').focus();
         $("#changepwd-user-form").validate(
         {
             onfocusout: function(element)
             {
                 this.element(element);
             },
-    
+
             rules:
             {
                 currentPassword:

@@ -46,14 +46,13 @@
 
     $(document).ready(function()
     {
-        document.getElementById('username').focus();
         $("#login-user-form").validate(
         {
             onfocusout: function(element)
             {
                 this.element(element);
             },
-    
+
             rules:
             {
                 username:
@@ -87,6 +86,7 @@
             errorLabelContainer: '#errors'
         });
     });
+    $('#username').focus();
  	</script>
     </div>
 </body>
