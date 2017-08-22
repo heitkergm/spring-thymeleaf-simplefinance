@@ -49,7 +49,7 @@
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.1</checkstyle.version>
         <ehcache3.version>3.3.1</ehcache3.version>
-        <errorprone.version>2.0.21</errorprone.version>
+        <errorprone.version>2.1.0</errorprone.version>
         <hibernate.version>5.2.10.Final</hibernate.version>
         <hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
         <javax-mail.version>1.6.0</javax-mail.version>
@@ -60,7 +60,7 @@
         <snakeyaml.version>1.18</snakeyaml.version>
         <thymeleaf.version>3.0.7.RELEASE</thymeleaf.version>
         <thymeleaf-extras-springsecurity4.version>3.0.2.RELEASE</thymeleaf-extras-springsecurity4.version>
-        <thymeleaf-extras-java8time.version>3.0.0.RELEASE</thymeleaf-extras-java8time.version>
+        <thymeleaf-extras-java8time.version>3.0.1.RELEASE</thymeleaf-extras-java8time.version>
         <thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>
         <tomcat.version>8.5.20</tomcat.version>
         <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
@@ -214,7 +214,7 @@
         <dependency>
             <groupId>nu.validator</groupId>
             <artifactId>validator</artifactId>
-            <version>17.7.0</version>
+            <version>17.9.0</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
