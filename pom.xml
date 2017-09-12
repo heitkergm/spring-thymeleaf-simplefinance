@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.6.RELEASE</version>
+        <version>1.5.7.RELEASE</version>
     </parent>
 
     <profiles>
@@ -600,7 +600,7 @@
                 <plugin>
                     <groupId>io.takari</groupId>
                     <artifactId>maven</artifactId>
-                    <version>0.4.1</version>
+                    <version>0.4.2</version>
                 </plugin>
             </plugins>
         </pluginManagement>
