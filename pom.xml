@@ -7,6 +7,10 @@
     <version>1.0</version>
     <packaging>war</packaging>
 
+    <prerequisites>
+        <maven>3.5.0</maven>
+    </prerequisites>
+
     <name>spring-thymeleaf-simplefinance</name>
 
     <parent>
@@ -400,7 +404,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
-                <version>1.4.1</version>
+                <version>3.0.0-M1</version>
                 <executions>
                     <execution>
                         <id>default-cli</id>
