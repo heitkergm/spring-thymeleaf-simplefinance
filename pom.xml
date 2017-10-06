@@ -237,7 +237,7 @@
         <dependency>
             <groupId>nu.validator</groupId>
             <artifactId>validator</artifactId>
-            <version>17.9.0</version>
+            <version>17.11.0</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
