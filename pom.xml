@@ -85,7 +85,7 @@
         <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
         <maven-site-plugin.version>3.6</maven-site-plugin.version>
         <maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
-        <maven-war-plugin.version>3.1.0</maven-war-plugin.version>
+        <maven-war-plugin.version>3.2.0</maven-war-plugin.version>
         <versions-maven-plugin.version>2.5</versions-maven-plugin.version>
     </properties>
 
@@ -237,7 +237,7 @@
         <dependency>
             <groupId>nu.validator</groupId>
             <artifactId>validator</artifactId>
-            <version>17.11.0</version>
+            <version>17.11.1</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
