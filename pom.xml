@@ -59,8 +59,8 @@
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.3</checkstyle.version>
         <ehcache3.version>3.4.0</ehcache3.version>
-        <errorprone.version>2.1.1</errorprone.version>
-        <hibernate.version>5.2.11.Final</hibernate.version>
+        <errorprone.version>2.1.2</errorprone.version>
+        <hibernate.version>5.2.12.Final</hibernate.version>
         <hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
         <jackson.version>2.9.2</jackson.version>
         <javax-mail.version>1.6.0</javax-mail.version>
@@ -386,6 +386,8 @@
                     <useIncrementalCompilation>yes</useIncrementalCompilation>
                     <compilerArgs>
                         <arg>-Xpkginfo:always</arg>
+                        <!-- make errorprone and lombok work together -->
+                        <arg>-Xep:ParameterName:OFF</arg>
                     </compilerArgs>
                 </configuration>
                 <dependencies>
