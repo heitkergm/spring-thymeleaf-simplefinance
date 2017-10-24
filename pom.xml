@@ -63,6 +63,7 @@
         <hibernate.version>5.2.12.Final</hibernate.version>
         <hibernate-validator.version>6.0.3.Final</hibernate-validator.version>
         <jackson.version>2.9.2</jackson.version>
+        <javassist.version>3.22.0-GA</javassist.version>
         <javax-mail.version>1.6.0</javax-mail.version>
         <javax-validation.version>2.0.0.Final</javax-validation.version>
         <jsonassert.version>1.5.0</jsonassert.version>
