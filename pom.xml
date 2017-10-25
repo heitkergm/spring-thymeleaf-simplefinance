@@ -61,11 +61,16 @@
         <ehcache3.version>3.4.0</ehcache3.version>
         <errorprone.version>2.1.2</errorprone.version>
         <hibernate.version>5.2.12.Final</hibernate.version>
+        <!--  revert back to hibernate validator 5.4 
         <hibernate-validator.version>6.0.3.Final</hibernate-validator.version>
+        -->
+        <hibernate-validator.version>5.4.2.Final</hibernate-validator.version>
         <jackson.version>2.9.2</jackson.version>
         <javassist.version>3.22.0-GA</javassist.version>
         <javax-mail.version>1.6.0</javax-mail.version>
+        <!-- revert back to hibernate validation 5.4
         <javax-validation.version>2.0.0.Final</javax-validation.version>
+        -->
         <jsonassert.version>1.5.0</jsonassert.version>
         <logback.version>1.2.3</logback.version>
         <plexus-javac-errorprone.version>2.8.2</plexus-javac-errorprone.version>
