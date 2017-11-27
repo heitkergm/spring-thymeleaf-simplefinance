@@ -58,7 +58,7 @@
         <assertj.version>3.8.0</assertj.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>8.4</checkstyle.version>
+        <checkstyle.version>8.5</checkstyle.version>
         <ehcache3.version>3.4.0</ehcache3.version>
         <errorprone.version>2.1.2</errorprone.version>
         <hibernate.version>5.2.12.Final</hibernate.version>
