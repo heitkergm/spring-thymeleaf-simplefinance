@@ -14,7 +14,7 @@
     </organization>
 
     <prerequisites>
-        <maven>3.0.1</maven>
+        <maven>3.0.4</maven>
     </prerequisites>
 
     <name>spring-thymeleaf-simplefinance</name>
@@ -73,6 +73,7 @@
         -->
         <jsonassert.version>1.5.0</jsonassert.version>
         <logback.version>1.2.3</logback.version>
+        <lombok.version>1.16.20</lombok.version>
         <plexus-javac-errorprone.version>2.8.2</plexus-javac-errorprone.version>
         <postgresql.version>42.2.0</postgresql.version>
         <snakeyaml.version>1.19</snakeyaml.version>
@@ -548,7 +549,7 @@
             <plugin>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok-maven-plugin</artifactId>
-                <version>${lombok.version}.1</version>
+                <version>${lombok.version}.0</version>
                 <executions>
                     <execution>
                         <phase>generate-sources</phase>
