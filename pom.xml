@@ -65,7 +65,7 @@
         <hibernate-validator.version>6.0.3.Final</hibernate-validator.version>
         -->
         <hibernate-validator.version>5.4.2.Final</hibernate-validator.version>
-        <jackson.version>2.9.3</jackson.version>
+        <jackson.version>2.9.4</jackson.version>
         <javassist.version>3.22.0-GA</javassist.version>
         <javax-mail.version>1.6.0</javax-mail.version>
         <!-- revert back to hibernate validation 5.4
