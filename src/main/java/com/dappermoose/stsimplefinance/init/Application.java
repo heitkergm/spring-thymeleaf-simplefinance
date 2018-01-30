@@ -56,8 +56,9 @@ public class Application
         SimpleMailMessage msg = new SimpleMailMessage ();
 
         String envProp = System.getenv ("MAIL_TO");
-        String recipient = (envProp != null ? envProp :
-                ctx.getMessage ("mail.to", new Object[] {}, Locale.getDefault ()));
+        String recipient;
+        recipient = envProp != null ? envProp :
+                ctx.getMessage ("mail.to", new Object[] {}, Locale.getDefault ());
 
         if (recipient == null)
         {
