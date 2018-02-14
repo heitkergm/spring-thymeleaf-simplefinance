@@ -14,9 +14,8 @@ import org.apache.tomcat.util.descriptor.web.SecurityConstraint;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
-import org.springframework.boot.context.embedded.tomcat.TomcatConnectorCustomizer;
-import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
+import org.springframework.boot.web.embedded.tomcat.TomcatConnectorCustomizer;
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -60,18 +59,11 @@ public class Application
         recipient = envProp != null ? envProp :
                 ctx.getMessage ("mail.to", new Object[] {}, Locale.getDefault ());
 
-        if (recipient == null)
-        {
-            System.err.println ("mail.to property not defined and no MAIL_TO environment variable");
-        }
-        else
-        {
-            msg.setFrom (ctx.getMessage ("mail.sender", new Object[] {}, Locale.getDefault ()));
-            msg.setTo (recipient);
-            msg.setSubject (ctx.getMessage ("mail.subject", new Object[] {}, Locale.getDefault ()));
-            msg.setText (ctx.getMessage ("mail.upmsg", new Object[] {}, Locale.getDefault ()));
-            mailer.send (msg);
-        }
+        msg.setFrom (ctx.getMessage ("mail.sender", new Object[] {}, Locale.getDefault ()));
+        msg.setTo (recipient);
+        msg.setSubject (ctx.getMessage ("mail.subject", new Object[] {}, Locale.getDefault ()));
+        msg.setText (ctx.getMessage ("mail.upmsg", new Object[] {}, Locale.getDefault ()));
+        mailer.send (msg);
     }
 
     /**
@@ -80,10 +72,10 @@ public class Application
      * @return the customized embedded tomcat server
      */
     @Bean
-    public EmbeddedServletContainerFactory servletContainer ()
+    public TomcatServletWebServerFactory servletWebServer ()
     {
-        TomcatEmbeddedServletContainerFactory tomcat;
-        tomcat = new TomcatEmbeddedServletContainerFactoryImpl ();
+        TomcatServletWebServerFactory tomcat;
+        tomcat = new TomcatServletWebServerFactoryImpl ();
 
         tomcat.addConnectorCustomizers ((TomcatConnectorCustomizer) (final Connector connector) ->
         {
@@ -132,10 +124,10 @@ public class Application
         }
     }
 
-    private static class TomcatEmbeddedServletContainerFactoryImpl extends TomcatEmbeddedServletContainerFactory
+    private static class TomcatServletWebServerFactoryImpl extends TomcatServletWebServerFactory
     {
 
-        TomcatEmbeddedServletContainerFactoryImpl ()
+        TomcatServletWebServerFactoryImpl ()
         {
         }
 

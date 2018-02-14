@@ -14,7 +14,7 @@ import org.springframework.ui.context.support.ResourceBundleThemeSource;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.theme.SessionThemeResolver;
@@ -25,13 +25,14 @@ import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
  * The Class SpringWebConfig.
  */
 @ComponentScan (basePackages = { "com.dappermoose.stsimplefinance.data",
+        "com.dappermoose.stsimplefiance.formbean",
         "com.dappermoose.stsimplefinance.action",
         "com.dappermoose.stsimplefinance.init",
         "com.dappermoose.stsimplefinance.security" })
 @EnableJpaRepositories (basePackages = { "com.dappermoose.stsimplefinance.dao" })
 @Configuration
 @EntityScan (basePackages = "com.dappermoose.stsimplefinance.data")
-public class SpringWebConfig extends WebMvcConfigurerAdapter
+public class SpringWebConfig implements WebMvcConfigurer
 {
     /*
      * (non-Javadoc)

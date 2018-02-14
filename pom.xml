@@ -22,8 +22,21 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.10.RELEASE</version>
+        <version>2.0.0.RC1</version>
     </parent>
+    
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<url>http://repo.spring.io/milestone</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-milestones</id>
+			<url>http://repo.spring.io/milestone</url>
+		</pluginRepository>
+	</pluginRepositories>
 
     <profiles>
         <profile>
@@ -54,43 +67,22 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skip-checks>false</skip-checks>
         <java.version>1.8</java.version>
-        <assertj.version>3.9.0</assertj.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.8</checkstyle.version>
-        <ehcache3.version>3.4.0</ehcache3.version>
         <errorprone.version>2.2.0</errorprone.version>
         <hibernate.version>5.2.13.Final</hibernate.version>
-        <!--  revert back to hibernate validator 5.4
-        <hibernate-validator.version>6.0.3.Final</hibernate-validator.version>
-        -->
-        <hibernate-validator.version>5.4.2.Final</hibernate-validator.version>
         <jackson.version>2.9.4</jackson.version>
         <javassist.version>3.22.0-GA</javassist.version>
-        <javax-mail.version>1.6.0</javax-mail.version>
-        <!-- revert back to hibernate validation 5.4
-        <javax-validation.version>2.0.0.Final</javax-validation.version>
-        -->
-        <jsonassert.version>1.5.0</jsonassert.version>
-        <logback.version>1.2.3</logback.version>
         <plexus-javac-errorprone.version>2.8.2</plexus-javac-errorprone.version>
-        <postgresql.version>42.2.1</postgresql.version>
-        <snakeyaml.version>1.19</snakeyaml.version>
-        <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
-        <thymeleaf-extras-springsecurity4.version>3.0.2.RELEASE</thymeleaf-extras-springsecurity4.version>
-        <thymeleaf-extras-java8time.version>3.0.1.RELEASE</thymeleaf-extras-java8time.version>
-        <thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>
         <tomcat.version>8.5.28</tomcat.version>
         <!-- plugins -->
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
         <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
-        <maven-clean-plugin.version>3.0.0</maven-clean-plugin.version>
-        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.0.2</maven-dependency-plugin.version>
         <maven-javadoc-plugin.version>3.0.0</maven-javadoc-plugin.version>
         <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
         <maven-site-plugin.version>3.7</maven-site-plugin.version>
-        <maven-surefire-plugin.version>2.20.1</maven-surefire-plugin.version>
         <maven-war-plugin.version>3.2.0</maven-war-plugin.version>
         <versions-maven-plugin.version>2.5</versions-maven-plugin.version>
     </properties>
@@ -157,8 +149,12 @@
             <artifactId>thymeleaf-extras-springsecurity4</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thymeleaf.extras</groupId>
-            <artifactId>thymeleaf-extras-java8time</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-properties-migrator</artifactId>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -223,6 +219,13 @@
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
+            <version>1.9.3</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.webjars.npm</groupId>
@@ -295,6 +298,18 @@
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>nz.net.ultraq.thymeleaf</groupId>
+            <artifactId>thymeleaf-layout-dialect</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
     </dependencies>
 
@@ -591,7 +606,7 @@
                             <dependency>org.apache.httpcomponents:httpcore</dependency>
                             <dependency>org.slf4j:log4j-over-slf4j</dependency>
                             <dependency>org.slf4j:slf4j-api</dependency>
-                            <dependency>org.slf4j:jcl-over-slf4j</dependency>
+                            <dependency>org.springframework:spring-jcl</dependency>
                             <dependency>net.arnx:jsonic</dependency>
                             <dependency>org.mozilla:rhino</dependency>
                             <dependency>com.ibm.icu:icu4j</dependency>
