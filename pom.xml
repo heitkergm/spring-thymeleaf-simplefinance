@@ -74,6 +74,8 @@
         <hibernate.version>5.2.13.Final</hibernate.version>
         <jackson.version>2.9.4</jackson.version>
         <javassist.version>3.22.0-GA</javassist.version>
+        <javax-mail.version>1.6.1</javax-mail.version>
+        <jboss-logging.version>3.3.2.Final</jboss-logging.version>
         <plexus-javac-errorprone.version>2.8.2</plexus-javac-errorprone.version>
         <tomcat.version>8.5.28</tomcat.version>
         <!-- plugins -->
