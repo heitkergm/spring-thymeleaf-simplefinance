@@ -100,6 +100,7 @@
         <javax-mail.version>1.6.1</javax-mail.version>
         <jboss-logging.version>3.3.2.Final</jboss-logging.version>
         <plexus-javac-errorprone.version>2.8.2</plexus-javac-errorprone.version>
+        <spring.version>5.0.4.RELEASE</spring.version>
         <thymeleaf-layout-dialect.version>2.3.0</thymeleaf-layout-dialect.version>
         <tomcat.version>8.5.28</tomcat.version>
         <!-- plugins -->
@@ -154,7 +155,16 @@
                     <groupId>javax.el</groupId>
                     <artifactId>el-api</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>dom4j</groupId>
+                    <artifactId>dom4j</artifactId>
+                </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>2.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
@@ -185,7 +195,6 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-jcache</artifactId>
-            <version>${hibernate.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -493,7 +502,7 @@
                         <configuration>
                             <rules>
                                 <requireMavenVersion>
-                                    <version>3.5.0</version>
+                                    <version>3.5.2</version>
                                 </requireMavenVersion>
                                 <requireJavaVersion>
                                     <version>1.8.0-151</version>
@@ -503,6 +512,7 @@
                                         <exclude>commons-logging</exclude>
                                         <exclude>log4j</exclude>
                                         <exclude>xml-apis</exclude>
+                                        <exclude>dom4j</exclude>
                                     </excludes>
                                 </bannedDependencies>
                                 <dependencyConvergence />
