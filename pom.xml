@@ -100,7 +100,11 @@
         <javax-mail.version>1.6.1</javax-mail.version>
         <jboss-logging.version>3.3.2.Final</jboss-logging.version>
         <plexus-javac-errorprone.version>2.8.2</plexus-javac-errorprone.version>
+        <spring-data-releasetrain.version>Kay-SR4</spring-data-releasetrain.version>
+        <spring-security.version>5.0.2.RELEASE</spring-security.version>
+        <spring-session.version>2.0.2.RELEASE</spring-session.version>
         <spring.version>5.0.4.RELEASE</spring.version>
+        <sun-mail.version>1.6.1</sun-mail.version>
         <thymeleaf-layout-dialect.version>2.3.0</thymeleaf-layout-dialect.version>
         <tomcat.version>8.5.28</tomcat.version>
         <!-- plugins -->
