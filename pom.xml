@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.0.RC1</version>
+        <version>2.0.0.RC2</version>
     </parent>
 
 	<repositories>
@@ -94,19 +94,7 @@
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.8</checkstyle.version>
         <errorprone.version>2.2.0</errorprone.version>
-        <hibernate.version>5.2.13.Final</hibernate.version>
-        <jackson.version>2.9.4</jackson.version>
-        <javassist.version>3.22.0-GA</javassist.version>
-        <javax-mail.version>1.6.1</javax-mail.version>
-        <jboss-logging.version>3.3.2.Final</jboss-logging.version>
         <plexus-javac-errorprone.version>2.8.2</plexus-javac-errorprone.version>
-        <spring-data-releasetrain.version>Kay-SR4</spring-data-releasetrain.version>
-        <spring-security.version>5.0.2.RELEASE</spring-security.version>
-        <spring-session.version>2.0.2.RELEASE</spring-session.version>
-        <spring.version>5.0.4.RELEASE</spring.version>
-        <sun-mail.version>1.6.1</sun-mail.version>
-        <thymeleaf-layout-dialect.version>2.3.0</thymeleaf-layout-dialect.version>
-        <tomcat.version>8.5.28</tomcat.version>
         <!-- plugins -->
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
         <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
@@ -231,7 +219,7 @@
         </dependency>
         <dependency>
             <groupId>org.webjars</groupId>
-            <artifactId>webjars-locator</artifactId>
+            <artifactId>webjars-locator-core</artifactId>
         </dependency>
         <dependency>
             <groupId>org.webjars.npm</groupId>
@@ -357,7 +345,6 @@
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
-            <version>2.3.0</version>
         </dependency>
         <dependency>
             <groupId>com.sun.xml.bind</groupId>
@@ -401,6 +388,11 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-annotations</artifactId>
                 <version>${jackson.version}</version>
+            </dependency>
+           <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>3.22.0-GA</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -689,7 +681,7 @@
                 <plugin>
                     <groupId>io.takari</groupId>
                     <artifactId>maven</artifactId>
-                    <version>0.5.0</version>
+                    <version>0.6.0</version>
                 </plugin>
             </plugins>
         </pluginManagement>
