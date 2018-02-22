@@ -35,7 +35,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter
         .and ()
            .authorizeRequests ()
                .antMatchers ("/images/**", "/css/**", "**/favicon.ico",
-                             "/webjars/**", "/register").permitAll ()
+                             "/webjars/**", "/register", "/actuator/**").permitAll ()
                .anyRequest ().authenticated ()
         .and ()
             .requiresChannel ()
@@ -48,7 +48,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter
         .and ()
             .sessionManagement ().sessionCreationPolicy (SessionCreationPolicy.ALWAYS)
                 .sessionFixation ()
-     ;
+        ;
     }
 
     @Override

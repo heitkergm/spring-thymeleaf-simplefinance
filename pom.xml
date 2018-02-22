@@ -675,6 +675,10 @@
                     <skip>${skip-checks}</skip>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
+            </plugin>
         </plugins>
         <pluginManagement>
             <plugins>
