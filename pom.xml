@@ -14,7 +14,7 @@
     </organization>
 
     <prerequisites>
-        <maven>3.0.4</maven>
+        <maven>3.1.1</maven>
     </prerequisites>
 
     <name>spring-thymeleaf-simplefinance</name>
@@ -93,6 +93,7 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.8</checkstyle.version>
+        <ehcache3.version>3.5.0</ehcache3.version>
         <errorprone.version>2.2.0</errorprone.version>
         <plexus-javac-errorprone.version>2.8.3</plexus-javac-errorprone.version>
         <!-- plugins -->
@@ -581,7 +582,7 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>3.1.1</version>
+                <version>3.1.2</version>
                 <configuration>
                     <excludeFilterFile>excludeFindbugs.xml</excludeFilterFile>
                     <skip>${skip-checks}</skip>
