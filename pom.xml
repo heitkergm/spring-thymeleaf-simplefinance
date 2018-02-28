@@ -36,6 +36,15 @@
 			<id>spring-milestones</id>
 			<url>http://repo.spring.io/milestone</url>
 		</pluginRepository>
+                <!--
+		<pluginRepository>
+                    <id>apache snapshots</id>
+                    <url>https://repository.apache.org/content/groups/snapshots</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+                -->
 	</pluginRepositories>
 
     <profiles>
@@ -61,29 +70,6 @@
                 <skip-checks>true</skip-checks>
             </properties>
         </profile>
-        <profile>
-            <id>not java 9 build</id>
-            <activation>
-                <jdk>(,9)</jdk>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-jdeps-plugin</artifactId>
-                        <version>3.1.0</version>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>jdkinternals</goal>
-                                    <goal>test-jdkinternals</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
     </profiles>
 
     <properties>
@@ -98,6 +84,7 @@
         <org-dom4j.version>2.1.0</org-dom4j.version>
         <plexus-javac-errorprone.version>2.8.3</plexus-javac-errorprone.version>
         <spring-data-releasetrain.version>Kay-SR5</spring-data-releasetrain.version>
+        <spring-security.version>5.0.3.RELEASE</spring-security.version>
         <!-- plugins -->
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
         <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
@@ -707,6 +694,24 @@
                 <groupId>pl.project13.maven</groupId>
                 <artifactId>git-commit-id-plugin</artifactId>
             </plugin>
+            <!--
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jdeps-plugin</artifactId>
+                <version>3.1.1-SNAPSHOT</version>
+                <configuration>
+                    <multiRelease>9</multiRelease>
+                </configuration>
+                <executions>
+                   <execution>
+                        <goals>
+                            <goal>jdkinternals</goal>
+                            <goal>test-jdkinternals</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            -->
         </plugins>
         <pluginManagement>
             <plugins>
