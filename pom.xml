@@ -22,30 +22,20 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.0.RC2</version>
+        <version>2.0.0.RELEASE</version>
     </parent>
 
-	<repositories>
-		<repository>
-			<id>spring-milestones</id>
-			<url>http://repo.spring.io/milestone</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>spring-milestones</id>
-			<url>http://repo.spring.io/milestone</url>
-		</pluginRepository>
-                <!--
-		<pluginRepository>
-                    <id>apache snapshots</id>
-                    <url>https://repository.apache.org/content/groups/snapshots</url>
-                    <snapshots>
-                        <enabled>true</enabled>
-                    </snapshots>
-                </pluginRepository>
-                -->
-	</pluginRepositories>
+    <pluginRepositories>
+    <!--
+        <pluginRepository>
+            <id>apache snapshots</id>
+            <url>https://repository.apache.org/content/groups/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    -->
+    </pluginRepositories>
 
     <profiles>
         <profile>
@@ -79,12 +69,9 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.8</checkstyle.version>
-        <ehcache3.version>3.5.0</ehcache3.version>
         <errorprone.version>2.2.0</errorprone.version>
         <org-dom4j.version>2.1.0</org-dom4j.version>
         <plexus-javac-errorprone.version>2.8.3</plexus-javac-errorprone.version>
-        <spring-data-releasetrain.version>Kay-SR5</spring-data-releasetrain.version>
-        <spring-security.version>5.0.3.RELEASE</spring-security.version>
         <!-- plugins -->
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
         <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
