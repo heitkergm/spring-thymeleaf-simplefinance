@@ -25,18 +25,6 @@
         <version>2.0.0.RELEASE</version>
     </parent>
 
-    <pluginRepositories>
-    <!--
-        <pluginRepository>
-            <id>apache snapshots</id>
-            <url>https://repository.apache.org/content/groups/snapshots</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    -->
-    </pluginRepositories>
-
     <profiles>
         <profile>
             <id>raspberry pi</id>
@@ -681,24 +669,6 @@
                 <groupId>pl.project13.maven</groupId>
                 <artifactId>git-commit-id-plugin</artifactId>
             </plugin>
-            <!--
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jdeps-plugin</artifactId>
-                <version>3.1.1-SNAPSHOT</version>
-                <configuration>
-                    <multiRelease>9</multiRelease>
-                </configuration>
-                <executions>
-                   <execution>
-                        <goals>
-                            <goal>jdkinternals</goal>
-                            <goal>test-jdkinternals</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            -->
         </plugins>
         <pluginManagement>
             <plugins>
