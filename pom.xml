@@ -520,6 +520,7 @@
                 <version>${maven-javadoc-plugin.version}</version>
                 <configuration>
                     <sourcepath>target/generated-sources/delombok</sourcepath>
+                    <linksource>true</linksource>
                 </configuration>
             </plugin>
             <plugin>
