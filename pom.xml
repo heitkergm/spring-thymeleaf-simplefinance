@@ -57,6 +57,7 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.8</checkstyle.version>
+        <ehcache3.version>3.5.2</ehcache3.version>
         <errorprone.version>2.2.0</errorprone.version>
         <org-dom4j.version>2.1.0</org-dom4j.version>
         <plexus-javac-errorprone.version>2.8.3</plexus-javac-errorprone.version>
@@ -232,11 +233,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.interceptor</groupId>
-            <artifactId>javax.interceptor-api</artifactId>
-            <version>1.2.1</version>
         </dependency>
         <dependency>
             <groupId>nu.validator</groupId>
