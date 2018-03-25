@@ -246,10 +246,6 @@
             <scope>test</scope>
             <exclusions>
                 <exclusion>
-                    <groupId>nu.validator</groupId>
-                    <artifactId>cssvalidator</artifactId>
-                </exclusion>
-                <exclusion>
                     <groupId>log4j</groupId>
                     <artifactId>log4j</artifactId>
                 </exclusion>
@@ -338,6 +334,17 @@
     </dependencies>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>nu.validator</groupId>
+                <artifactId>cssvalidator</artifactId>
+                <version>1.0.0</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>*</groupId>
+                        <artifactId>*</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
             <dependency>
                 <groupId>com.puppycrawl.tools</groupId>
                 <artifactId>checkstyle</artifactId>
@@ -507,7 +514,6 @@
                                         <exclude>dom4j</exclude>
                                     </excludes>
                                 </bannedDependencies>
-                                <dependencyConvergence />
                             </rules>
                             <fail>true</fail>
                         </configuration>
@@ -649,9 +655,12 @@
                             <dependency>org.springframework:spring-jcl</dependency>
                             <dependency>net.arnx:jsonic</dependency>
                             <dependency>com.ibm.icu:icu4j</dependency>
+                            <dependency>nu.validator:cssvalidator</dependency>
                         </classpath>
                         <argument>nu.validator.client.SimpleCommandLineValidator</argument>
+                        <argument>--also-check-css</argument>
                         <argument>src/main/resources/templates</argument>
+                        <argument>src/main/resources/static/css</argument>
                     </arguments>
                 </configuration>
             </plugin>
