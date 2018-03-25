@@ -242,9 +242,13 @@
         <dependency>
             <groupId>nu.validator</groupId>
             <artifactId>validator</artifactId>
-            <version>17.11.1</version>
+            <version>18.3.0</version>
             <scope>test</scope>
             <exclusions>
+                <exclusion>
+                    <groupId>nu.validator</groupId>
+                    <artifactId>cssvalidator</artifactId>
+                </exclusion>
                 <exclusion>
                     <groupId>log4j</groupId>
                     <artifactId>log4j</artifactId>
@@ -644,7 +648,6 @@
                             <dependency>org.slf4j:slf4j-api</dependency>
                             <dependency>org.springframework:spring-jcl</dependency>
                             <dependency>net.arnx:jsonic</dependency>
-                            <dependency>org.mozilla:rhino</dependency>
                             <dependency>com.ibm.icu:icu4j</dependency>
                         </classpath>
                         <argument>nu.validator.client.SimpleCommandLineValidator</argument>
