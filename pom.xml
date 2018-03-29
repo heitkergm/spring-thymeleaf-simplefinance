@@ -57,6 +57,7 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.8</checkstyle.version>
+        <classmate.version>1.4.0</classmate.version>
         <ehcache3.version>3.5.2</ehcache3.version>
         <errorprone.version>2.2.0</errorprone.version>
         <groovy.version>2.4.14</groovy.version>
@@ -640,7 +641,7 @@
                     <skip>${skip-checks}</skip>
                     <classpathScope>test</classpathScope>
                     <addOutputToClasspath>false</addOutputToClasspath>
-                    <executable>java</executable>
+                    <executable>${JAVA_HOME}/bin/java</executable>
                     <arguments>
                         <argument>-classpath</argument>
                         <classpath>
