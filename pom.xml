@@ -60,7 +60,7 @@
         <classmate.version>1.4.0</classmate.version>
         <ehcache3.version>3.5.2</ehcache3.version>
         <errorprone.version>2.2.0</errorprone.version>
-        <groovy.version>2.4.14</groovy.version>
+        <groovy.version>2.4.15</groovy.version>
         <hibernate.version>5.2.16.Final</hibernate.version>
         <hibernate-validator.version>6.0.9.Final</hibernate-validator.version>
         <jackson.version>2.9.5</jackson.version>
