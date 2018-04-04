@@ -14,7 +14,7 @@
     </organization>
 
     <prerequisites>
-        <maven>3.1.1</maven>
+        <maven>3.5</maven>
     </prerequisites>
 
     <name>spring-thymeleaf-simplefinance</name>
@@ -56,7 +56,7 @@
         <java.version>9</java.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>8.8</checkstyle.version>
+        <checkstyle.version>8.9</checkstyle.version>
         <classmate.version>1.4.0</classmate.version>
         <ehcache3.version>3.5.2</ehcache3.version>
         <errorprone.version>2.2.0</errorprone.version>
@@ -65,9 +65,11 @@
         <hibernate-validator.version>6.0.9.Final</hibernate-validator.version>
         <jackson.version>2.9.5</jackson.version>
         <org-dom4j.version>2.1.0</org-dom4j.version>
-        <plexus-javac-errorprone.version>2.8.3</plexus-javac-errorprone.version>
+        <plexus-javac-errorprone.version>2.8.4</plexus-javac-errorprone.version>
         <postgresql.version>42.2.2</postgresql.version>
         <snakeyaml.version>1.20</snakeyaml.version>
+        <spring.version>5.0.5.RELEASE</spring.version>
+        <spring-security.version>5.0.4.RELEASE</spring-security.version>
         <tomcat.version>8.5.29</tomcat.version>
         <!-- plugins -->
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
@@ -406,6 +408,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.0.0.RELEASE</version>
                 <configuration>
                     <addResources>true</addResources>
                     <fork>true</fork>
