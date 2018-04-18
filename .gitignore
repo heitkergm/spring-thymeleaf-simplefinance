@@ -1,2 +1,4 @@
 /target/
 .DS_Store
+.idea/libraries
+.idea/workspace.xml
