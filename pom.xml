@@ -54,15 +54,16 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skip-checks>false</skip-checks>
         <java.version>9</java.version>
-        <aspectj.version>1.9.0</aspectj.version>
+        <aspectj.version>1.9.1</aspectj.version>
         <byte-buddy.version>1.8.3</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.9</checkstyle.version>
         <classmate.version>1.4.0</classmate.version>
-        <errorprone.version>2.3.0</errorprone.version>
+        <errorprone.version>2.3.1</errorprone.version>
         <org-dom4j.version>2.1.0</org-dom4j.version>
         <plexus-javac-errorprone.version>2.8.4</plexus-javac-errorprone.version>
+        <pmd.version>6.2.0</pmd.version>
         <postgresql.version>42.2.2</postgresql.version>
         <snakeyaml.version>1.21</snakeyaml.version>
         <tomcat.version>8.5.30</tomcat.version>
@@ -557,6 +558,18 @@
                         <phase>validate</phase>
                     </execution>
                 </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>net.sourceforge.pmd</groupId>
+                        <artifactId>pmd-java</artifactId>
+                        <version>${pmd.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>net.sourceforge.pmd</groupId>
+                        <artifactId>pmd-core</artifactId>
+                        <version>${pmd.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
