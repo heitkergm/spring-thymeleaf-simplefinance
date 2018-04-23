@@ -2,8 +2,9 @@
 This is a sample webapp using spring-boot, spring-security, spring-session,
 hibernate, JPA, postgres, embedded tomcat, redis, and thymeleaf.
 
-It requires Java 8u121.  OpenJDK is fine, and recommended.  If not, use Oracle
-Java and remove the mission control app.
+It requires Java 9 for build, and will run with Java 10.  OpenJDK is fine, and recommended.
+
+[![Known Vulnerabilities](https://snyk.io/test/github/heitkergm/spring-thymeleaf-simplefinance/badge.svg)](https://snyk.io/test/github/heitkergm/spring-thymeleaf-simplefinance)
 
 This is a work in progress.  So it is not quite done.  The goal is for it to
 show how an app could force https connections, use a database, provide self-registration.
