@@ -67,7 +67,7 @@
         <pmd.version>6.3.0</pmd.version>
         <postgresql.version>42.2.2</postgresql.version>
         <snakeyaml.version>1.21</snakeyaml.version>
-        <tomcat.version>8.5.30</tomcat.version>
+        <tomcat.version>8.5.31</tomcat.version>
         <!-- plugins -->
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
         <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
