@@ -42,4 +42,11 @@
                 <classifier>javadoc</classifier>
             </properties>
         </action>
+        <action>
+            <actionName>CUSTOM-snyk</actionName>
+            <displayName>snyk</displayName>
+            <goals>
+                <goal>snyk:test</goal>
+            </goals>
+        </action>
     </actions>
