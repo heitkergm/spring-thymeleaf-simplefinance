@@ -53,7 +53,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skip-checks>false</skip-checks>
-        <java.version>9</java.version>
+        <java.version>10</java.version>
+        <asm.version>6.2</asm.version>
         <aspectj.version>1.9.1</aspectj.version>
         <assertj.version>3.10.0</assertj.version>
         <byte-buddy.version>1.8.12</byte-buddy.version>
@@ -61,12 +62,12 @@
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.10.1</checkstyle.version>
         <classmate.version>1.4.0</classmate.version>
-        <errorprone.version>2.3.1</errorprone.version>
         <hibernate.version>5.3.1.Final</hibernate.version>
         <hibernate-validator.version>6.0.10.Final</hibernate-validator.version>
         <lombok.version>1.16.22</lombok.version>
         <org-dom4j.version>2.1.0</org-dom4j.version>
-        <plexus-javac-errorprone.version>2.8.4</plexus-javac-errorprone.version>
+        <plexus-compiler-api.version>2.8.4</plexus-compiler-api.version>
+        <plexus-javac.version>2.8.4</plexus-javac.version>
         <pmd.version>6.4.0</pmd.version>
         <snakeyaml.version>1.21</snakeyaml.version>
         <!-- plugins -->
@@ -354,16 +355,6 @@
                 <version>${checkstyle.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.codehaus.plexus</groupId>
-                <artifactId>plexus-compiler-javac-errorprone</artifactId>
-                <version>${plexus-javac-errorprone.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.errorprone</groupId>
-                <artifactId>error_prone_core</artifactId>
-                <version>${errorprone.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>org.webjars.npm</groupId>
                 <artifactId>jquery</artifactId>
                 <version>3.3.1</version>
@@ -456,28 +447,30 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <release>${java.version}</release>
                     <showDeprecation>true</showDeprecation>
                     <forceJavacCompilerUse>true</forceJavacCompilerUse>
-                    <compilerId>javac-with-errorprone</compilerId>
+                    <compilerId>javac</compilerId>
                     <useIncrementalCompilation>yes</useIncrementalCompilation>
                     <compilerArgs>
                         <arg>-Xpkginfo:always</arg>
-                        <!-- make errorprone and lombok work together -->
-                        <arg>-Xep:ParameterName:OFF</arg>
-                    </compilerArgs>
+                     </compilerArgs>
                 </configuration>
                 <dependencies>
                     <dependency>
                         <groupId>org.codehaus.plexus</groupId>
-                        <artifactId>plexus-compiler-javac-errorprone</artifactId>
-                        <version>${plexus-javac-errorprone.version}</version>
+                        <artifactId>plexus-compiler-javac</artifactId>
+                        <version>${plexus-javac.version}</version>
                     </dependency>
                     <dependency>
-                        <groupId>com.google.errorprone</groupId>
-                        <artifactId>error_prone_core</artifactId>
-                        <version>${errorprone.version}</version>
+                        <groupId>org.ow2.asm</groupId>
+                        <artifactId>asm</artifactId>
+                        <version>${asm.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.codehaus.plexus</groupId>
+                        <artifactId>plexus-compiler-api</artifactId>
+                        <version>${plexus-compiler-api.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>
