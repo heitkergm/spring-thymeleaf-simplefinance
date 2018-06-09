@@ -64,7 +64,7 @@
         <classmate.version>1.4.0</classmate.version>
         <hibernate.version>5.3.1.Final</hibernate.version>
         <hibernate-validator.version>6.0.10.Final</hibernate-validator.version>
-        <lombok.version>1.16.22</lombok.version>
+        <lombok.version>1.18.0</lombok.version>
         <org-dom4j.version>2.1.0</org-dom4j.version>
         <plexus-compiler-api.version>2.8.4</plexus-compiler-api.version>
         <plexus-javac.version>2.8.4</plexus-javac.version>
@@ -76,7 +76,7 @@
         <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
         <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
-        <maven-help-plugin.version>3.0.1</maven-help-plugin.version>
+        <maven-help-plugin.version>3.1.0</maven-help-plugin.version>
         <maven-javadoc-plugin.version>3.0.1</maven-javadoc-plugin.version>
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
         <maven-site-plugin.version>3.7.1</maven-site-plugin.version>
