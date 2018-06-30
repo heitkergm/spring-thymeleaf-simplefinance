@@ -60,7 +60,7 @@
         <byte-buddy.version>1.8.12</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>8.10.1</checkstyle.version>
+        <checkstyle.version>8.11</checkstyle.version>
         <classmate.version>1.4.0</classmate.version>
         <groovy.version>2.5.0</groovy.version>
         <hibernate.version>5.3.1.Final</hibernate.version>
