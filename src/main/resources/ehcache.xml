@@ -11,7 +11,7 @@ xsi:schemaLocation="
     <jsr107:defaults enable-management="true" enable-statistics="true" default-template="default" />
 </service>
 
-<cache alias="org.hibernate.cache.spi.QueryResultsRegion">
+<cache alias="default-query-results-region">
     <expiry>
         <tti unit="seconds">300</tti>
     </expiry>
@@ -20,7 +20,7 @@ xsi:schemaLocation="
     </resources>
 </cache>
 
-<cache alias="org.hibernate.cache.spi.TimestampsRegion">
+<cache alias="default-update-timestamps-region">
     <expiry>
         <none />
     </expiry>
