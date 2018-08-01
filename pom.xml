@@ -66,6 +66,7 @@
         <groovy.version>2.5.1</groovy.version>
         <hibernate.version>5.3.3.Final</hibernate.version>
         <hikaricp.version>3.2.0</hikaricp.version>
+        <junit-jupiter.version>5.2.0</junit-jupiter.version>
         <lombok.version>1.18.0</lombok.version>
         <mockito.version>2.19.1</mockito.version>
         <org-dom4j.version>2.1.1</org-dom4j.version>
@@ -119,6 +120,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -340,6 +347,11 @@
             <artifactId>jaxb-core</artifactId>
             <version>${javax-jaxb.version}.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -514,6 +526,7 @@
                                         <exclude>org.apache.logging.log4j</exclude>
                                         <exclude>xml-apis</exclude>
                                         <exclude>dom4j</exclude>
+                                        <exclude>junit:junit</exclude>
                                     </excludes>
                                 </bannedDependencies>
                             </rules>
