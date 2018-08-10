@@ -65,6 +65,7 @@
         <commons-pool2.version>2.6.0</commons-pool2.version>
         <groovy.version>2.5.1</groovy.version>
         <hibernate.version>5.3.3.Final</hibernate.version>
+        <hibernate-validator.version>6.0.12.Final</hibernate-validator.version>
         <hikaricp.version>3.2.0</hikaricp.version>
         <junit-jupiter.version>5.2.0</junit-jupiter.version>
         <lettuce.version>5.0.5.RELEASE</lettuce.version>
