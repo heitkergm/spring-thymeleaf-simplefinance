@@ -64,7 +64,7 @@
         <classmate.version>1.4.0</classmate.version>
         <commons-pool2.version>2.6.0</commons-pool2.version>
         <groovy.version>2.5.2</groovy.version>
-        <hibernate.version>5.3.3.Final</hibernate.version>
+        <hibernate.version>5.3.5.Final</hibernate.version>
         <hibernate-validator.version>6.0.12.Final</hibernate-validator.version>
         <hikaricp.version>3.2.0</hikaricp.version>
         <junit-jupiter.version>5.2.0</junit-jupiter.version>
