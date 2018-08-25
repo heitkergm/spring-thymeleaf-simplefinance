@@ -76,7 +76,7 @@
         <plexus-compiler-api.version>2.8.4</plexus-compiler-api.version>
         <plexus-javac.version>2.8.4</plexus-javac.version>
         <pmd.version>6.6.0</pmd.version>
-        <snakeyaml.version>1.21</snakeyaml.version>
+        <snakeyaml.version>1.22</snakeyaml.version>
         <tomcat.version>9.0.11</tomcat.version>
         <xmlunit2.version>2.6.1</xmlunit2.version>
         <!-- plugins -->
@@ -698,7 +698,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.1</version>
+                <version>0.8.2</version>
                 <executions>
                     <execution>
                         <id>pre-unit-test</id>
