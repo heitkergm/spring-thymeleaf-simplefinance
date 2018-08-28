@@ -56,8 +56,8 @@
         <java.version>10</java.version>
         <asm.version>6.2.1</asm.version>
         <aspectj.version>1.9.1</aspectj.version>
-        <assertj.version>3.11.0</assertj.version>
-        <byte-buddy.version>1.8.17</byte-buddy.version>
+        <assertj.version>3.11.1</assertj.version>
+        <byte-buddy.version>1.8.18</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.12</checkstyle.version>
