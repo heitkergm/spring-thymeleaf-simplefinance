@@ -14,7 +14,7 @@
     </organization>
 
     <prerequisites>
-        <maven>3.5</maven>
+        <maven>3.5.4</maven>
     </prerequisites>
 
     <name>spring-thymeleaf-simplefinance</name>
@@ -57,15 +57,16 @@
         <asm.version>6.2.1</asm.version>
         <aspectj.version>1.9.1</aspectj.version>
         <assertj.version>3.11.1</assertj.version>
-        <byte-buddy.version>1.8.18</byte-buddy.version>
+        <byte-buddy.version>1.8.19</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.12</checkstyle.version>
         <classmate.version>1.4.0</classmate.version>
         <commons-lang3.version>3.8</commons-lang3.version>
         <commons-pool2.version>2.6.0</commons-pool2.version>
+        <ehcache3.version>3.6.0</ehcache3.version>
         <groovy.version>2.5.2</groovy.version>
-        <hibernate.version>5.3.5.Final</hibernate.version>
+        <hibernate.version>5.3.6.Final</hibernate.version>
         <hibernate-validator.version>6.0.12.Final</hibernate-validator.version>
         <hikaricp.version>3.2.0</hikaricp.version>
         <junit-jupiter.version>5.2.0</junit-jupiter.version>
@@ -92,7 +93,7 @@
         <maven-site-plugin.version>3.7.1</maven-site-plugin.version>
         <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
         <maven-war-plugin.version>3.2.2</maven-war-plugin.version>
-        <versions-maven-plugin.version>2.5</versions-maven-plugin.version>
+        <versions-maven-plugin.version>2.6</versions-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -263,7 +264,7 @@
         <dependency>
             <groupId>nu.validator</groupId>
             <artifactId>validator</artifactId>
-            <version>18.7.23</version>
+            <version>18.8.29</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
@@ -363,7 +364,7 @@
             <dependency>
                 <groupId>nu.validator</groupId>
                 <artifactId>cssvalidator</artifactId>
-                <version>1.0.2</version>
+                <version>1.0.3</version>
                 <exclusions>
                     <exclusion>
                         <groupId>*</groupId>
