@@ -69,6 +69,7 @@
         <hibernate.version>5.3.6.Final</hibernate.version>
         <hibernate-validator.version>6.0.12.Final</hibernate-validator.version>
         <hikaricp.version>3.2.0</hikaricp.version>
+        <javax-mail.version>1.6.2</javax-mail.version>
         <junit-jupiter.version>5.2.0</junit-jupiter.version>
         <lettuce.version>5.0.5.RELEASE</lettuce.version>
         <lombok.version>1.18.2</lombok.version>
@@ -79,6 +80,7 @@
         <pmd.version>6.6.0</pmd.version>
         <postgresql.version>42.2.5</postgresql.version>
         <snakeyaml.version>1.22</snakeyaml.version>
+        <sun-mail.version>1.6.2</sun-mail.version>
         <tomcat.version>9.0.11</tomcat.version>
         <xmlunit2.version>2.6.1</xmlunit2.version>
         <!-- plugins -->
@@ -226,7 +228,7 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>font-awesome</artifactId>
-            <version>5.2.0</version>
+            <version>5.3.1</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
