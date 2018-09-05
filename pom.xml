@@ -70,19 +70,18 @@
         <hibernate-validator.version>6.0.12.Final</hibernate-validator.version>
         <hikaricp.version>3.2.0</hikaricp.version>
         <javax-mail.version>1.6.2</javax-mail.version>
-        <junit-jupiter.version>5.2.0</junit-jupiter.version>
-        <lettuce.version>5.0.5.RELEASE</lettuce.version>
+        <junit-jupiter.version>5.3.0</junit-jupiter.version>
         <lombok.version>1.18.2</lombok.version>
-        <mockito.version>2.19.1</mockito.version>
+        <mockito.version>2.20.0</mockito.version>
         <org-dom4j.version>2.1.1</org-dom4j.version>
         <plexus-compiler-api.version>2.8.5</plexus-compiler-api.version>
         <plexus-javac.version>2.8.5</plexus-javac.version>
         <pmd.version>6.7.0</pmd.version>
         <postgresql.version>42.2.5</postgresql.version>
-        <snakeyaml.version>1.22</snakeyaml.version>
+        <snakeyaml.version>1.23</snakeyaml.version>
         <sun-mail.version>1.6.2</sun-mail.version>
         <tomcat.version>9.0.11</tomcat.version>
-        <xmlunit2.version>2.6.1</xmlunit2.version>
+        <xmlunit2.version>2.6.2</xmlunit2.version>
         <!-- plugins -->
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
         <lombok-maven-plugin.version>1.18.0.0</lombok-maven-plugin.version>
@@ -657,6 +656,13 @@
                     <addOutputDirectory>false</addOutputDirectory>
                     <sourceDirectory>src/main/java</sourceDirectory>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.projectlombok</groupId>
+                        <artifactId>lombok</artifactId>
+                        <version>${lombok.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
