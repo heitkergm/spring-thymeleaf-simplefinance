@@ -62,7 +62,7 @@
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.12</checkstyle.version>
         <classmate.version>1.4.0</classmate.version>
-        <commons-lang3.version>3.8</commons-lang3.version>
+        <commons-lang3.version>3.8.1</commons-lang3.version>
         <commons-pool2.version>2.6.0</commons-pool2.version>
         <ehcache3.version>3.6.1</ehcache3.version>
         <groovy.version>2.5.2</groovy.version>
