@@ -2,6 +2,7 @@ package com.dappermoose.stsimplefinance.formbean;
 
 import java.io.Serializable;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,6 +11,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
+@EqualsAndHashCode
 public class BaseFormBean implements Serializable
 {
     private static final long serialVersionUID = 1L;

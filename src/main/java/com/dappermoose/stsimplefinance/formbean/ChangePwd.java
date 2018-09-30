@@ -2,6 +2,7 @@ package com.dappermoose.stsimplefinance.formbean;
 
 import javax.validation.constraints.Size;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,6 +12,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
+@EqualsAndHashCode (callSuper = true)
 public class ChangePwd extends RegisterUser
 {
     private static final long serialVersionUID = 1L;

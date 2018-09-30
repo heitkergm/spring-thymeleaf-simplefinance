@@ -18,6 +18,9 @@ import org.hibernate.envers.Audited;
 
 import org.mindrot.jbcrypt.BCrypt;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 // TODO: Auto-generated Javadoc
@@ -29,6 +32,9 @@ import lombok.extern.slf4j.Slf4j;
 @Cache (usage = CacheConcurrencyStrategy.READ_WRITE, region = "users")
 @Check (constraints = "ENABLED IN ('Y', 'N')")
 @Slf4j
+@Getter
+@Setter
+@EqualsAndHashCode (callSuper = true)
 public class LoginUser extends AbstractBaseModifiableEntity
 {
     private static final long serialVersionUID = 8751044063686185076L;
@@ -84,36 +90,6 @@ public class LoginUser extends AbstractBaseModifiableEntity
     }
 
     /**
-     * Gets the user id.
-     *
-     * @return the user id
-     */
-    public Long getUserId ()
-    {
-        return userId;
-    }
-
-    /**
-     * Sets the user id.
-     *
-     * @param userIdNew the new user id
-     */
-    public void setUserId (final Long userIdNew)
-    {
-        userId = userIdNew;
-    }
-
-    /**
-     * Gets the user name.
-     *
-     * @return the user name
-     */
-    public String getUserName ()
-    {
-        return userName;
-    }
-
-    /**
      * Sets the user name.
      *
      * @param userNameNew the new user name
@@ -121,16 +97,6 @@ public class LoginUser extends AbstractBaseModifiableEntity
     public void setUserName (final String userNameNew)
     {
         userName = userNameNew;
-    }
-
-    /**
-     * Gets the password.
-     *
-     * @return the password
-     */
-    public String getPassword ()
-    {
-        return password;
     }
 
     /**
@@ -152,45 +118,5 @@ public class LoginUser extends AbstractBaseModifiableEntity
     public void setPassword (final String passwordNew)
     {
         password = BCrypt.hashpw (passwordNew, BCrypt.gensalt ());
-    }
-
-    /**
-     * Gets the Time Zone.
-     *
-     * @return the time zone
-     */
-    public String getTzone ()
-    {
-        return tzone;
-    }
-
-    /**
-     * Sets the time zone.
-     *
-     * @param tzoneNew the new tzone
-     */
-    public void setTzone (final String tzoneNew)
-    {
-        tzone = tzoneNew;
-    }
-
-    /**
-     * Gets the enabled flag.
-     *
-     * @return the enabled flag
-     */
-    public YesNoEnum getEnabled ()
-    {
-        return enabled;
-    }
-
-    /**
-     * Sets the enabled flag.
-     *
-     * @param enabledNew the new enabled flag
-     */
-    public void setEnabled (final YesNoEnum enabledNew)
-    {
-        enabled = enabledNew;
     }
 }

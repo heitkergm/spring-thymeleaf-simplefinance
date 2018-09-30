@@ -7,6 +7,7 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 @Getter
 @Setter
 @Slf4j
+@EqualsAndHashCode (callSuper = true)
 public abstract class AbstractBaseModifiableEntity extends AbstractBaseEntity
 {
     private static final long serialVersionUID = 1446802725141477516L;
