@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.5.RELEASE</version>
+        <version>2.0.6.RELEASE</version>
     </parent>
 
     <profiles>
@@ -57,7 +57,7 @@
         <asm.version>6.2.1</asm.version>
         <aspectj.version>1.9.1</aspectj.version>
         <assertj.version>3.11.1</assertj.version>
-        <byte-buddy.version>1.9.0</byte-buddy.version>
+        <byte-buddy.version>1.9.2</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.13</checkstyle.version>
@@ -67,25 +67,20 @@
         <ehcache3.version>3.6.1</ehcache3.version>
         <groovy.version>2.5.2</groovy.version>
         <hibernate.version>5.3.6.Final</hibernate.version>
-        <hibernate-validator.version>6.0.13.Final</hibernate-validator.version>
         <hikaricp.version>3.2.0</hikaricp.version>
-        <jackson.version>2.9.7</jackson.version>
-        <javax-mail.version>1.6.2</javax-mail.version>
         <junit-jupiter.version>5.3.1</junit-jupiter.version>
         <lombok.version>1.18.2</lombok.version>
-        <mockito.version>2.22.0</mockito.version>
+        <mockito.version>2.23.0</mockito.version>
         <org-dom4j.version>2.1.1</org-dom4j.version>
         <plexus-compiler-api.version>2.8.5</plexus-compiler-api.version>
         <plexus-javac.version>2.8.5</plexus-javac.version>
         <pmd.version>6.8.0</pmd.version>
-        <postgresql.version>42.2.5</postgresql.version>
         <snakeyaml.version>1.23</snakeyaml.version>
-        <sun-mail.version>1.6.2</sun-mail.version>
         <tomcat.version>9.0.12</tomcat.version>
         <xmlunit2.version>2.6.2</xmlunit2.version>
         <!-- plugins -->
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
-        <lombok-maven-plugin.version>1.18.0.0</lombok-maven-plugin.version>
+        <lombok-maven-plugin.version>1.18.2.0</lombok-maven-plugin.version>
         <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
@@ -95,7 +90,7 @@
         <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
         <maven-site-plugin.version>3.7.1</maven-site-plugin.version>
-        <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
+        <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
         <maven-war-plugin.version>3.2.2</maven-war-plugin.version>
         <versions-maven-plugin.version>2.7</versions-maven-plugin.version>
     </properties>
@@ -230,7 +225,7 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>font-awesome</artifactId>
-            <version>5.3.1</version>
+            <version>5.4.1</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -350,12 +345,12 @@
         <dependency>
             <groupId>com.sun.xml.bind</groupId>
             <artifactId>jaxb-impl</artifactId>
-            <version>${javax-jaxb.version}.1</version>
+            <version>${javax-jaxb.version}</version>
         </dependency>
         <dependency>
             <groupId>com.sun.xml.bind</groupId>
             <artifactId>jaxb-core</artifactId>
-            <version>${javax-jaxb.version}.1</version>
+            <version>2.3.0.1</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -414,7 +409,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.0.5.RELEASE</version>
+                <version>2.0.6.RELEASE</version>
                 <configuration>
                     <addResources>true</addResources>
                     <fork>true</fork>
@@ -610,7 +605,7 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>3.1.6</version>
+                <version>3.1.7</version>
                 <configuration>
                     <excludeFilterFile>excludeFindbugs.xml</excludeFilterFile>
                     <skip>${skip-checks}</skip>
@@ -633,7 +628,7 @@
                     <dependency>
                         <groupId>com.github.spotbugs</groupId>
                         <artifactId>spotbugs</artifactId>
-                        <version>3.1.7</version>
+                        <version>3.1.8</version>
                         <exclusions>
                             <exclusion>
                                 <groupId>dom4j</groupId>
