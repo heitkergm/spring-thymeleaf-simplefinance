@@ -66,7 +66,7 @@
         <commons-pool2.version>2.6.0</commons-pool2.version>
         <ehcache3.version>3.6.1</ehcache3.version>
         <groovy.version>2.5.2</groovy.version>
-        <hibernate.version>5.3.6.Final</hibernate.version>
+        <hibernate.version>5.3.7.Final</hibernate.version>
         <hikaricp.version>3.2.0</hikaricp.version>
         <junit-jupiter.version>5.3.1</junit-jupiter.version>
         <lombok.version>1.18.2</lombok.version>
