@@ -70,6 +70,7 @@
         <hikaricp.version>3.2.0</hikaricp.version>
         <junit-jupiter.version>5.3.1</junit-jupiter.version>
         <lombok.version>1.18.2</lombok.version>
+        <micrometer.version>1.1.0</micrometer.version>
         <mockito.version>2.23.0</mockito.version>
         <org-dom4j.version>2.1.1</org-dom4j.version>
         <plexus-compiler-api.version>2.8.5</plexus-compiler-api.version>
@@ -175,7 +176,7 @@
         </dependency>
         <dependency>
             <groupId>org.thymeleaf.extras</groupId>
-            <artifactId>thymeleaf-extras-springsecurity4</artifactId>
+            <artifactId>thymeleaf-extras-springsecurity5</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
