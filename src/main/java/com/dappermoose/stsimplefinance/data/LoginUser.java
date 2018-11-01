@@ -28,7 +28,7 @@ import lombok.extern.slf4j.Slf4j;
  * The Class LoginUser.
  */
 @Entity
-@Table (name = "USER", uniqueConstraints = @UniqueConstraint (columnNames = "USER_NAME"))
+@Table (name = "USER", uniqueConstraints = @UniqueConstraint (columnNames = "USER_NAME", name = "unique_user_name"))
 @Cache (usage = CacheConcurrencyStrategy.READ_WRITE, region = "users")
 @Check (constraints = "ENABLED IN ('Y', 'N')")
 @Slf4j
