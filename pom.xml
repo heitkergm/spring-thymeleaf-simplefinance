@@ -70,6 +70,7 @@
         <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
         <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
         <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
+        <maven-surefire-plugin.version>3.0.0-M1</maven-surefire-plugin.version>
     </properties>
 
     <dependencies>
@@ -240,7 +241,7 @@
         <dependency>
             <groupId>nu.validator</groupId>
             <artifactId>validator</artifactId>
-            <version>18.8.29</version>
+            <version>18.11.5</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
