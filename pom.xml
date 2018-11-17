@@ -55,9 +55,11 @@
         <skip-checks>false</skip-checks>
         <java.version>11</java.version>
         <asm.version>7.0</asm.version>
+        <byte-buddy.version>1.9.4</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.14</checkstyle.version>
+        <ehcache3.version>3.6.2</ehcache3.version>
         <lombok.version>1.18.4</lombok.version>
         <mockito.version>2.23.0</mockito.version>
         <org-dom4j.version>2.1.1</org-dom4j.version>
