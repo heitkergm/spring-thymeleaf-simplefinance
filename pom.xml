@@ -60,6 +60,7 @@
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.14</checkstyle.version>
         <ehcache3.version>3.6.2</ehcache3.version>
+        <groovy.version>2.5.4</groovy.version>
         <lombok.version>1.18.4</lombok.version>
         <mockito.version>2.23.0</mockito.version>
         <org-dom4j.version>2.1.1</org-dom4j.version>
