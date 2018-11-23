@@ -55,7 +55,7 @@
         <skip-checks>false</skip-checks>
         <java.version>11</java.version>
         <asm.version>7.0</asm.version>
-        <byte-buddy.version>1.9.4</byte-buddy.version>
+        <byte-buddy.version>1.9.5</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.14</checkstyle.version>
@@ -615,7 +615,7 @@
                     <dependency>
                         <groupId>com.github.spotbugs</groupId>
                         <artifactId>spotbugs</artifactId>
-                        <version>3.1.8</version>
+                        <version>3.1.9</version>
                         <exclusions>
                             <exclusion>
                                 <groupId>dom4j</groupId>
