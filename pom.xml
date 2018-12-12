@@ -67,6 +67,7 @@
         <lombok-maven-plugin.version>1.18.4.0</lombok-maven-plugin.version>
         <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
         <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
+        <maven-help-plugin.version>3.1.1</maven-help-plugin.version>
         <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M2</maven-surefire-plugin.version>
     </properties>
@@ -368,11 +369,6 @@
                 <version>${jackson.version}</version>
             </dependency>
            <dependency>
-                <groupId>org.javassist</groupId>
-                <artifactId>javassist</artifactId>
-                <version>3.24.0-GA</version>
-            </dependency>
-           <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-compress</artifactId>
                 <version>1.18</version>
@@ -381,6 +377,11 @@
                 <groupId>org.ow2.asm</groupId>
                 <artifactId>asm</artifactId>
                 <version>${asm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>3.24.1-GA</version>
             </dependency>
        </dependencies>
     </dependencyManagement>
