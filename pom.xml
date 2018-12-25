@@ -59,6 +59,7 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.15</checkstyle.version>
+        <ehcache3.version>3.6.3</ehcache3.version>
         <hibernate.version>5.4.0.Final</hibernate.version>
         <jackson.version>2.9.8</jackson.version>
         <jedis.version>2.9.1</jedis.version>
@@ -74,7 +75,7 @@
         <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
         <maven-help-plugin.version>3.1.1</maven-help-plugin.version>
         <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
-        <maven-surefire-plugin.version>3.0.0-M2</maven-surefire-plugin.version>
+        <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
     </properties>
 
     <dependencies>
