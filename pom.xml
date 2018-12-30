@@ -58,7 +58,7 @@
         <byte-buddy.version>1.9.6</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>8.15</checkstyle.version>
+        <checkstyle.version>8.16</checkstyle.version>
         <ehcache3.version>3.6.3</ehcache3.version>
         <groovy.version>2.5.5</groovy.version>
         <hibernate.version>5.4.0.Final</hibernate.version>
