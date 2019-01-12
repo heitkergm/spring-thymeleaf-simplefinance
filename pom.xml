@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.1.RELEASE</version>
+        <version>2.1.2.RELEASE</version>
     </parent>
 
     <profiles>
@@ -55,27 +55,20 @@
         <skip-checks>false</skip-checks>
         <java.version>11</java.version>
         <asm.version>7.0</asm.version>
-        <byte-buddy.version>1.9.6</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.16</checkstyle.version>
-        <ehcache3.version>3.6.3</ehcache3.version>
-        <groovy.version>2.5.5</groovy.version>
         <hibernate.version>5.4.0.Final</hibernate.version>
         <hikaricp.version>3.3.0</hikaricp.version>
-        <jackson.version>2.9.8</jackson.version>
-        <jedis.version>2.9.1</jedis.version>
         <org-dom4j.version>2.1.1</org-dom4j.version>
         <plexus-compiler-api.version>2.8.5</plexus-compiler-api.version>
         <plexus-javac.version>2.8.5</plexus-javac.version>
         <pmd.version>6.10.0</pmd.version>
-        <tomcat.version>9.0.14</tomcat.version>
         <webjars-locator-core.version>0.36</webjars-locator-core.version>
         <!-- plugins -->
         <lombok-maven-plugin.version>1.18.4.0</lombok-maven-plugin.version>
         <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
         <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
-        <maven-help-plugin.version>3.1.1</maven-help-plugin.version>
         <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
     </properties>
@@ -210,7 +203,7 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>font-awesome</artifactId>
-            <version>5.6.1</version>
+            <version>5.6.3</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -399,7 +392,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.1.1.RELEASE</version>
+                <version>2.1.2.RELEASE</version>
                 <configuration>
                     <addResources>true</addResources>
                     <fork>true</fork>
