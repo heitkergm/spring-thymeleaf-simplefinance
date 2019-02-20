@@ -747,7 +747,7 @@
                 <plugin>
                     <groupId>io.takari</groupId>
                     <artifactId>maven</artifactId>
-                    <version>0.7.0</version>
+                    <version>0.7.2</version>
                 </plugin>
             </plugins>
         </pluginManagement>
