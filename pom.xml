@@ -59,6 +59,7 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.18</checkstyle.version>
+        <ehcache3.version>3.7.0</ehcache3.version>
         <hibernate.version>5.4.1.Final</hibernate.version>
         <junit-jupiter.version>5.4.0</junit-jupiter.version>
         <mockito.version>2.24.5</mockito.version>
