@@ -54,7 +54,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skip-checks>false</skip-checks>
         <java.version>11</java.version>
-        <asm.version>7.0</asm.version>
+        <asm.version>7.1</asm.version>
         <assertj.version>3.12.1</assertj.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
@@ -62,18 +62,20 @@
         <ehcache3.version>3.7.0</ehcache3.version>
         <hibernate.version>5.4.1.Final</hibernate.version>
         <junit-jupiter.version>5.4.0</junit-jupiter.version>
-        <mockito.version>2.24.5</mockito.version>
+        <mockito.version>2.25.0</mockito.version>
         <org-dom4j.version>2.1.1</org-dom4j.version>
         <plexus-compiler-api.version>2.8.5</plexus-compiler-api.version>
         <plexus-javac.version>2.8.5</plexus-javac.version>
         <pmd.version>6.12.0</pmd.version>
         <slf4j.version>1.7.26</slf4j.version>
+        <snakeyaml.version>1.24</snakeyaml.version>
         <thymeleaf-extras-java8time.version>3.0.3.RELEASE</thymeleaf-extras-java8time.version>
         <webjars-locator-core.version>0.37</webjars-locator-core.version>
         <!-- plugins -->
         <lombok-maven-plugin.version>1.18.6.0</lombok-maven-plugin.version>
         <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
         <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
+        <maven-javadoc-plugin.version>3.1.0</maven-javadoc-plugin.version>
         <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
     </properties>
@@ -624,7 +626,7 @@
                     <dependency>
                         <groupId>com.github.spotbugs</groupId>
                         <artifactId>spotbugs</artifactId>
-                        <version>3.1.11</version>
+                        <version>3.1.12</version>
                         <exclusions>
                             <exclusion>
                                 <groupId>dom4j</groupId>
