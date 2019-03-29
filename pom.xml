@@ -56,20 +56,23 @@
         <java.version>11</java.version>
         <asm.version>7.1</asm.version>
         <assertj.version>3.12.1</assertj.version>
+        <byte-buddy.version>1.9.12</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.18</checkstyle.version>
         <ehcache3.version>3.7.0</ehcache3.version>
-        <hibernate.version>5.4.1.Final</hibernate.version>
+        <hibernate.version>5.4.2.Final</hibernate.version>
+        <hibernate-validator.version>6.0.16.Final</hibernate-validator.version>
         <junit-jupiter.version>5.4.1</junit-jupiter.version>
-        <mockito.version>2.25.0</mockito.version>
+        <mockito.version>2.25.1</mockito.version>
         <org-dom4j.version>2.1.1</org-dom4j.version>
         <plexus-compiler-api.version>2.8.5</plexus-compiler-api.version>
         <plexus-javac.version>2.8.5</plexus-javac.version>
         <pmd.version>6.12.0</pmd.version>
         <slf4j.version>1.7.26</slf4j.version>
         <snakeyaml.version>1.24</snakeyaml.version>
-        <thymeleaf-extras-java8time.version>3.0.3.RELEASE</thymeleaf-extras-java8time.version>
+        <thymeleaf-extras-java8time.version>3.0.4.RELEASE</thymeleaf-extras-java8time.version>
+        <tomcat.version>9.0.17</tomcat.version>
         <webjars-locator-core.version>0.37</webjars-locator-core.version>
         <!-- plugins -->
         <lombok-maven-plugin.version>1.18.6.0</lombok-maven-plugin.version>
@@ -218,7 +221,7 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>font-awesome</artifactId>
-            <version>5.7.2</version>
+            <version>5.8.1</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -752,7 +755,7 @@
                 <plugin>
                     <groupId>io.takari</groupId>
                     <artifactId>maven</artifactId>
-                    <version>0.7.4</version>
+                    <version>0.7.5</version>
                 </plugin>
             </plugins>
         </pluginManagement>
