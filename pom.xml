@@ -72,7 +72,7 @@
         <slf4j.version>1.7.26</slf4j.version>
         <snakeyaml.version>1.24</snakeyaml.version>
         <thymeleaf-extras-java8time.version>3.0.4.RELEASE</thymeleaf-extras-java8time.version>
-        <thymeleaf-layout-dialect.version>2.4.0</thymeleaf-layout-dialect.version>
+        <thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
         <tomcat.version>9.0.17</tomcat.version>
         <webjars-locator-core.version>0.37</webjars-locator-core.version>
         <!-- plugins -->

@@ -11,4 +11,5 @@
     <logger name="org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor"
             level="INFO" />
     <logger name="org.ehcache.core.EhcacheManager" level="DEBUG" />
+    <logger name="org.hibernate.stat" level="DEBUG" />
 </configuration>
