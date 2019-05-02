@@ -59,7 +59,7 @@
         <assertj.version>3.12.2</assertj.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>8.19</checkstyle.version>
+        <checkstyle.version>8.20</checkstyle.version>
         <classmate.version>1.5.0</classmate.version>
         <commons-lang3.version>3.9</commons-lang3.version>
         <commons-pool2.version>2.6.2</commons-pool2.version>
@@ -71,14 +71,15 @@
         <org-dom4j.version>2.1.1</org-dom4j.version>
         <plexus-compiler-api.version>2.8.5</plexus-compiler-api.version>
         <plexus-javac.version>2.8.5</plexus-javac.version>
-        <pmd.version>6.13.0</pmd.version>
+        <pmd.version>6.14.0</pmd.version>
         <snakeyaml.version>1.24</snakeyaml.version>
         <thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
         <tomcat.version>9.0.19</tomcat.version>
         <webjars-locator-core.version>0.37</webjars-locator-core.version>
         <!-- plugins -->
         <lombok-maven-plugin.version>1.18.6.0</lombok-maven-plugin.version>
-        <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
+        <maven-checkstyle-plugin.version>3.0.0</maven-checkstyle-plugin.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
         <maven-help-plugin.version>3.2.0</maven-help-plugin.version>
         <maven-javadoc-plugin.version>3.1.0</maven-javadoc-plugin.version>
@@ -362,7 +363,7 @@
             <dependency>
                 <groupId>nu.validator</groupId>
                 <artifactId>cssvalidator</artifactId>
-                <version>1.0.4</version>
+                <version>1.0.5</version>
                 <exclusions>
                     <exclusion>
                         <groupId>*</groupId>
@@ -378,7 +379,7 @@
             <dependency>
                 <groupId>org.webjars.npm</groupId>
                 <artifactId>jquery</artifactId>
-                <version>3.4.0</version>
+                <version>3.4.1</version>
             </dependency>
             <dependency>
                 <groupId>net.arnx</groupId>
@@ -425,7 +426,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>${maven.checkstyle.plugin.version}</version>
+                <version>${maven-checkstyle-plugin.version}</version>
                 <dependencies>
                     <dependency>
                         <groupId>com.puppycrawl.tools</groupId>
@@ -769,7 +770,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>${maven.checkstyle.plugin.version}</version>
+                <version>${maven-checkstyle-plugin.version}</version>
                 <configuration>
                     <configLocation>${checkstyle.file.config}</configLocation>
                     <suppressionsLocation>${checkstyle.file.suppress}</suppressionsLocation>
