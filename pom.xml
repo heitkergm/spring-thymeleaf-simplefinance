@@ -55,7 +55,7 @@
         <skip-checks>false</skip-checks>
         <java.version>11</java.version>
         <asm.version>7.1</asm.version>
-        <aspectj.version>1.9.3</aspectj.version>
+        <aspectj.version>1.9.4</aspectj.version>
         <assertj.version>3.12.2</assertj.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
@@ -64,6 +64,7 @@
         <commons-lang3.version>3.9</commons-lang3.version>
         <commons-pool2.version>2.6.2</commons-pool2.version>
         <ehcache3.version>3.7.1</ehcache3.version>
+        <groovy.version>2.5.7</groovy.version>
         <hibernate.version>5.4.2.Final</hibernate.version>
         <jboss-logging.version>3.4.0.Final</jboss-logging.version>
         <junit-jupiter.version>5.4.2</junit-jupiter.version>
@@ -711,7 +712,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.3</version>
+                <version>0.8.4</version>
                 <executions>
                     <execution>
                         <id>pre-unit-test</id>
