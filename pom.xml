@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.4.RELEASE</version>
+        <version>2.1.5.RELEASE</version>
     </parent>
 
     <profiles>
@@ -55,17 +55,15 @@
         <skip-checks>false</skip-checks>
         <java.version>11</java.version>
         <asm.version>7.1</asm.version>
-        <aspectj.version>1.9.4</aspectj.version>
         <assertj.version>3.12.2</assertj.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.20</checkstyle.version>
         <classmate.version>1.5.0</classmate.version>
         <commons-lang3.version>3.9</commons-lang3.version>
-        <commons-pool2.version>2.6.2</commons-pool2.version>
         <ehcache3.version>3.7.1</ehcache3.version>
-        <groovy.version>2.5.7</groovy.version>
         <hibernate.version>5.4.2.Final</hibernate.version>
+        <javax-cache.version>1.1.1</javax-cache.version>
         <jboss-logging.version>3.4.0.Final</jboss-logging.version>
         <junit-jupiter.version>5.4.2</junit-jupiter.version>
         <mockito.version>2.27.0</mockito.version>
@@ -80,7 +78,6 @@
         <!-- plugins -->
         <lombok-maven-plugin.version>1.18.6.0</lombok-maven-plugin.version>
         <maven-checkstyle-plugin.version>3.0.0</maven-checkstyle-plugin.version>
-        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
         <maven-help-plugin.version>3.2.0</maven-help-plugin.version>
         <maven-javadoc-plugin.version>3.1.0</maven-javadoc-plugin.version>
@@ -415,7 +412,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.1.4.RELEASE</version>
+                <version>2.1.5.RELEASE</version>
                 <configuration>
                     <addResources>true</addResources>
                     <fork>true</fork>
