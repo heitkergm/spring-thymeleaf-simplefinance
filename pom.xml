@@ -56,6 +56,7 @@
         <java.version>11</java.version>
         <asm.version>7.1</asm.version>
         <assertj.version>3.12.2</assertj.version>
+        <byte-buddy.version>1.9.13</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.20</checkstyle.version>
@@ -66,6 +67,7 @@
         <jackson.version>2.9.9</jackson.version>
         <javax-cache.version>1.1.1</javax-cache.version>
         <jboss-logging.version>3.4.0.Final</jboss-logging.version>
+        <jedis.version>2.10.2</jedis.version>
         <junit-jupiter.version>5.4.2</junit-jupiter.version>
         <mockito.version>2.27.0</mockito.version>
         <org-dom4j.version>2.1.1</org-dom4j.version>
