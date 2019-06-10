@@ -76,7 +76,7 @@
         <pmd.version>6.15.0</pmd.version>
         <snakeyaml.version>1.24</snakeyaml.version>
         <thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
-        <tomcat.version>9.0.20</tomcat.version>
+        <tomcat.version>9.0.21</tomcat.version>
         <webjars-locator-core.version>0.37</webjars-locator-core.version>
         <!-- plugins -->
         <lombok-maven-plugin.version>1.18.6.0</lombok-maven-plugin.version>
@@ -612,7 +612,7 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>3.1.11</version>
+                <version>3.1.12</version>
                 <configuration>
                     <excludeFilterFile>excludeFindbugs.xml</excludeFilterFile>
                     <skip>${skip-checks}</skip>
