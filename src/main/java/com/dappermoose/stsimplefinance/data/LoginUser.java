@@ -39,30 +39,51 @@ public class LoginUser extends AbstractBaseModifiableEntity
 {
     private static final long serialVersionUID = 8751044063686185076L;
 
-    /** The user id. */
+    /**
+     *  The user id.
+     *
+     * @param userId The new value for the user ID.
+     * @return the User ID.
+     */
     @Id
     @GeneratedValue (strategy = GenerationType.SEQUENCE, generator = "USER_ID_SEQ")
     @SequenceGenerator (name = "USER_ID_SEQ", sequenceName = "USER_ID_SEQ", allocationSize = 1)
     @Column (name = "USER_ID", nullable = false)
     private Long userId;
 
-    /** The user name. */
+    /**
+     * The user name.
+     *
+     * @return the user name.
+     */
     @Column (name = "USER_NAME", nullable = false, length = 32)
     private String userName;
 
     // passwords are stored as 60 character bcypt'd hashs
-    /** The password. */
+    /**
+     * The password.
+     *
+     * @return the encrypted password
+     */
     @Audited
     @Column (name = "PASSWORD", nullable = false, length = 60)
     private String password;
 
-    /** the time zone. */
+    /**
+     * the time zone.
+     *
+     * @param tzone the new value for the time zone.
+     * @return the time zone
+     */
     @Audited
     @Column (name = "TZONE", nullable = false, length = 128)
     private String tzone;
 
     /**
      * is this user enabled.
+     *
+     * @param enabled the new YesNo value for enabled.
+     * @return the YesNo value for enabled.
      */
     @Column (name = "ENABLED", nullable = false, length = 1)
     private YesNoEnum enabled;
