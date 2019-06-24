@@ -31,7 +31,9 @@ and open the template in the editor.
         <module name="MissingDeprecated"/>
 
         <!-- annotations -->
-        <module name="AnnotationUseStyle"/>
+        <module name="AnnotationUseStyle">
+            <property name="elementStyle" value="COMPACT" />
+        </module>
         <module name="MissingOverride"/>
         <module name="PackageAnnotation"/>
         <module name="SuppressWarnings">
