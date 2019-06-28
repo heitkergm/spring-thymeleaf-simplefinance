@@ -71,6 +71,7 @@
         <plexus-compiler-api.version>2.8.5</plexus-compiler-api.version>
         <plexus-javac.version>2.8.5</plexus-javac.version>
         <pmd.version>6.15.0</pmd.version>
+        <postgresql.version>42.2.6</postgresql.version>
         <snakeyaml.version>1.24</snakeyaml.version>
         <thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
         <webjars-locator-core.version>0.37</webjars-locator-core.version>
@@ -735,7 +736,7 @@
             <plugin>
                 <groupId>io.snyk</groupId>
                 <artifactId>snyk-maven-plugin</artifactId>
-                <version>1.2.0</version>
+                <version>1.2.1</version>
                 <executions>
                     <execution>
                         <id>snyk-test</id>
