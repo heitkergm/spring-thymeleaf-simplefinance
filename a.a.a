@@ -1,0 +1,148 @@
+openjdk version "12.0.1" 2019-04-16
+OpenJDK Runtime Environment 19.3 (build 12.0.1+12)
+OpenJDK 64-Bit Server VM 19.3 (build 12.0.1+12, mixed mode, sharing)
+[INFO] Scanning for projects...
+[WARNING] The project com.dappermoose:spring-thymeleaf-simplefinance:war:1.0 uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] -----------< com.dappermoose:spring-thymeleaf-simplefinance >-----------
+[INFO] Building spring-thymeleaf-simplefinance 1.0
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ spring-thymeleaf-simplefinance ---
+[INFO] Deleting /home/matt/spring-thymeleaf-simplefinance/target
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.0:check (validate) @ spring-thymeleaf-simplefinance ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M2:enforce (default-cli) @ spring-thymeleaf-simplefinance ---
+[INFO] 
+[INFO] >>> maven-pmd-plugin:3.12.0:check (default) > :pmd @ spring-thymeleaf-simplefinance >>>
+[INFO] 
+[INFO] --- maven-pmd-plugin:3.12.0:pmd (pmd) @ spring-thymeleaf-simplefinance ---
+[INFO] 
+[INFO] <<< maven-pmd-plugin:3.12.0:check (default) < :pmd @ spring-thymeleaf-simplefinance <<<
+[INFO] 
+[INFO] 
+[INFO] --- maven-pmd-plugin:3.12.0:check (default) @ spring-thymeleaf-simplefinance ---
+[INFO] 
+[INFO] 
+[INFO] --- exec-maven-plugin:1.6.0:exec (default) @ spring-thymeleaf-simplefinance ---
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.4:prepare-agent (pre-unit-test) @ spring-thymeleaf-simplefinance ---
+[INFO] argLine set to -javaagent:/home/matt/.m2/repository/org/jacoco/org.jacoco.agent/0.8.4/org.jacoco.agent-0.8.4-runtime.jar=destfile=/home/matt/spring-thymeleaf-simplefinance/target/jacoco.exec
+[INFO] 
+[INFO] --- git-commit-id-plugin:2.2.6:revision (default) @ spring-thymeleaf-simplefinance ---
+[INFO] dotGitDirectory /home/matt/spring-thymeleaf-simplefinance/.git
+[INFO] git.build.user.name Matt Heitker
+[INFO] git.build.user.email heitkergm@acm.org
+[INFO] git.branch master
+[INFO] --always = true
+[INFO] --dirty = -dirty
+[INFO] --abbrev = 7
+[INFO] Tag refs [[]]
+[INFO] Created map: [{}]
+[INFO] evalCommit is [445f017b39a4f43355e31fa280b96c94bd0854d7]
+[INFO] git.commit.id.describe 445f017-dirty
+[INFO] git.commit.id 445f017b39a4f43355e31fa280b96c94bd0854d7
+[INFO] git.commit.id.abbrev 445f017
+[INFO] git.dirty true
+[INFO] git.commit.user.name Matt Heitker
+[INFO] git.commit.user.email heitkergm@acm.org
+[INFO] git.commit.message.full update versions
+[INFO] git.commit.message.short update versions
+[INFO] git.commit.time 2019-07-11T17:11:39-0400
+[INFO] git.remote.origin.url git@github.com:heitkergm/spring-thymeleaf-simplefinance.git
+[INFO] git.tags 
+[INFO] evalCommit is [445f017b39a4f43355e31fa280b96c94bd0854d7]
+[INFO] Tag refs [[]]
+[INFO] Created map: [{}]
+[INFO] git.closest.tag.name 
+[INFO] evalCommit is [445f017b39a4f43355e31fa280b96c94bd0854d7]
+[INFO] Tag refs [[]]
+[INFO] Created map: [{}]
+[INFO] git.closest.tag.commit.count 
+[INFO] git.total.commit.count 513
+[INFO] git.build.time 2019-07-15T18:17:05-0400
+[INFO] git.build.version 1.0
+[INFO] git.build.host mattdesktop.dappermoose.com
+[INFO] git.commit.id.describe-short 445f017-dirty
+[INFO] found property git.tags
+[INFO] found property git.closest.tag.commit.count
+[INFO] found property git.build.version
+[INFO] found property git.commit.user.name
+[INFO] found property git.commit.id.abbrev
+[INFO] found property git.branch
+[INFO] found property git.build.host
+[INFO] found property git.commit.id.describe-short
+[INFO] found property git.total.commit.count
+[INFO] found property git.commit.id.describe
+[INFO] found property git.build.user.email
+[INFO] found property git.commit.id
+[INFO] found property git.commit.message.short
+[INFO] found property git.commit.user.email
+[INFO] found property git.closest.tag.name
+[INFO] found property git.commit.time
+[INFO] found property git.build.time
+[INFO] found property git.build.user.name
+[INFO] found property git.dirty
+[INFO] found property git.commit.message.full
+[INFO] found property git.remote.origin.url
+[INFO] Writing properties file to [/home/matt/spring-thymeleaf-simplefinance/target/classes/git.properties] (for module spring-thymeleaf-simplefinance)...
+[INFO] 
+[INFO] --- lombok-maven-plugin:1.18.6.0:delombok (default) @ spring-thymeleaf-simplefinance ---
+[INFO] Delombok complete.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ spring-thymeleaf-simplefinance ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 17 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ spring-thymeleaf-simplefinance ---
+[INFO] Compiling 31 source files to /home/matt/spring-thymeleaf-simplefinance/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ spring-thymeleaf-simplefinance ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/matt/spring-thymeleaf-simplefinance/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ spring-thymeleaf-simplefinance ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] >>> spotbugs-maven-plugin:3.1.12:check (validate) > :spotbugs @ spring-thymeleaf-simplefinance >>>
+[INFO] 
+[INFO] --- spotbugs-maven-plugin:3.1.12:spotbugs (spotbugs) @ spring-thymeleaf-simplefinance ---
+[INFO] Fork Value is true
+[INFO] Done SpotBugs Analysis....
+[INFO] 
+[INFO] <<< spotbugs-maven-plugin:3.1.12:check (validate) < :spotbugs @ spring-thymeleaf-simplefinance <<<
+[INFO] 
+[INFO] 
+[INFO] --- spotbugs-maven-plugin:3.1.12:check (validate) @ spring-thymeleaf-simplefinance ---
+[INFO] BugInstance size is 0
+[INFO] Error size is 0
+[INFO] No errors/warnings found
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M3:test (default-test) @ spring-thymeleaf-simplefinance ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.4:report (post-unit-test) @ spring-thymeleaf-simplefinance ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.3:war (default-war) @ spring-thymeleaf-simplefinance ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [spring-thymeleaf-simplefinance] in [/home/matt/spring-thymeleaf-simplefinance/target/spring-thymeleaf-simplefinance-1.0]
+[INFO] Processing war project
+[INFO] Webapp assembled in [84 msecs]
+[INFO] Building war: /home/matt/spring-thymeleaf-simplefinance/target/spring-thymeleaf-simplefinance-1.0.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.6.RELEASE:repackage (repackage) @ spring-thymeleaf-simplefinance ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.032 s
+[INFO] Finished at: 2019-07-15T18:17:12-04:00
+[INFO] ------------------------------------------------------------------------
