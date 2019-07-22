@@ -56,7 +56,7 @@
         <java.version>11</java.version>
         <asm.version>7.1</asm.version>
         <assertj.version>3.12.2</assertj.version>
-        <byte-buddy.version>1.9.14</byte-buddy.version>
+        <byte-buddy.version>1.9.15</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.22</checkstyle.version>
@@ -91,6 +91,12 @@
     </properties>
 
     <dependencies>
+        <!-- limited jackson release for 2.9.9.1 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.9.1</version>
+        </dependency>
         <dependency>
             <groupId>org.mindrot</groupId>
             <artifactId>jbcrypt</artifactId>
