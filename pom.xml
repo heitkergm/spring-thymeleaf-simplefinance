@@ -622,7 +622,7 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>3.1.12.1</version>
+                <version>3.1.12.2</version>
                 <configuration>
                     <excludeFilterFile>excludeFindbugs.xml</excludeFilterFile>
                     <skip>${skip-checks}</skip>
