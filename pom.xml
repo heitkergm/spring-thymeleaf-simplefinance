@@ -64,7 +64,7 @@
         <commons-lang3.version>3.9</commons-lang3.version>
         <commons-pool2.version>2.7.0</commons-pool2.version>
         <ehcache3.version>3.8.0</ehcache3.version>
-        <groovy.version>3.0.0-beta-2</groovy.version>
+        <groovy.version>3.0.0-beta-3</groovy.version>
         <hamcrest.version>2.1</hamcrest.version>
         <hibernate.version>5.4.4.Final</hibernate.version>
         <jboss-logging.version>3.4.0.Final</jboss-logging.version>
@@ -748,7 +748,7 @@
             <plugin>
                 <groupId>io.snyk</groupId>
                 <artifactId>snyk-maven-plugin</artifactId>
-                <version>1.2.2</version>
+                <version>1.2.3</version>
                 <executions>
                     <execution>
                         <id>snyk-test</id>
