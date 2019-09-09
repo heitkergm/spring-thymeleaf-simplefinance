@@ -70,7 +70,7 @@
         <jackson.version>2.9.9</jackson.version>
         <jboss-logging.version>3.4.1.Final</jboss-logging.version>
         <jedis.version>2.10.2</jedis.version>
-        <junit-jupiter.version>5.5.1</junit-jupiter.version>
+        <junit-jupiter.version>5.5.2</junit-jupiter.version>
         <micrometer.version>1.2.0</micrometer.version>
         <mockito.version>3.0.0</mockito.version>
         <org-dom4j.version>2.1.1</org-dom4j.version>
