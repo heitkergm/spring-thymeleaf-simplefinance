@@ -67,6 +67,7 @@
         <groovy.version>3.0.0-beta-3</groovy.version>
         <hamcrest.version>2.1</hamcrest.version>
         <hibernate.version>5.4.4.Final</hibernate.version>
+        <httpclient.version>4.5.10</httpclient.version>
         <jackson.version>2.9.9</jackson.version>
         <jboss-logging.version>3.4.1.Final</jboss-logging.version>
         <jedis.version>2.10.2</jedis.version>
@@ -745,7 +746,7 @@
             <plugin>
                 <groupId>io.snyk</groupId>
                 <artifactId>snyk-maven-plugin</artifactId>
-                <version>1.2.3</version>
+                <version>1.2.4</version>
                 <executions>
                     <execution>
                         <id>snyk-test</id>
