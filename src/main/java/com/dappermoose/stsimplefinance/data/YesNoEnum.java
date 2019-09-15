@@ -17,6 +17,7 @@ public enum YesNoEnum
      * @param value the enum value
      * @return the corresponding boolean
      */
+    @SuppressWarnings ("PMD.UnnecessaryFullyQualifiedName")
     public static boolean toBoolean (final YesNoEnum value)
     {
         boolean retVal = false;

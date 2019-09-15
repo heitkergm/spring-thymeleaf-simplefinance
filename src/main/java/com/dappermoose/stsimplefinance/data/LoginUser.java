@@ -98,6 +98,7 @@ public class LoginUser extends AbstractBaseModifiableEntity
     @Override
     @PrePersist
     @PreUpdate
+    @SuppressWarnings ("PMD.UnnecessaryFullyQualifiedName")
     public void setupPersist ()
     {
         LOG.debug ("entering LoginUser.setupPersist");

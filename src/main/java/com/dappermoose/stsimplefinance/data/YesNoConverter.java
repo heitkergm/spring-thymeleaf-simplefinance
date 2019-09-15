@@ -44,6 +44,7 @@ public class YesNoConverter implements AttributeConverter<YesNoEnum, Character>
      * .Object)
      */
     @Override
+    @SuppressWarnings ("PMD.UnnecessaryFullyQualifiedName")
     public YesNoEnum convertToEntityAttribute (final Character dbData)
     {
         YesNoEnum retVal;

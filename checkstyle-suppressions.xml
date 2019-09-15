@@ -4,7 +4,8 @@
      "http://checkstyle.sourceforge.net/dtds/suppressions_1_0.dtd">
 
 <suppressions>
-    <suppress checks="UncommentedMain"
-             files="Application.java"
-             lines="43"/>
+    <suppress checks="UncommentedMain" files="Application.java" lines="43" />
+    <suppress checks="SuppressWarnings" files="LoginUser.java" lines="101" />
+    <suppress checks="SuppressWarnings" files="YesNoConverter.java" lines="47"/>
+    <suppress checks="SuppressWarnings" files="YesNoEnum.java" lines="20" />
 </suppressions>
