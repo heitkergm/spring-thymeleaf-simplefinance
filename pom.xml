@@ -67,7 +67,7 @@
         <groovy.version>3.0.0-beta-3</groovy.version>
         <hamcrest.version>2.1</hamcrest.version>
         <hibernate.version>5.4.6.Final</hibernate.version>
-        <jackson.version>2.10.0.pr3</jackson.version>
+        <jackson.version>2.10.0</jackson.version>
         <jboss-logging.version>3.4.1.Final</jboss-logging.version>
         <jedis.version>2.10.2</jedis.version>
         <junit-jupiter.version>5.5.2</junit-jupiter.version>
