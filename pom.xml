@@ -236,8 +236,8 @@
         </dependency>
         <dependency>
             <groupId>org.webjars.npm</groupId>
-            <artifactId>purecss</artifactId>
-            <version>1.0.1</version>
+            <artifactId>bulma</artifactId>
+            <version>0.7.5</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
