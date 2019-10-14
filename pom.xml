@@ -79,6 +79,7 @@
         <pmd.version>6.18.0</pmd.version>
         <snakeyaml.version>1.25</snakeyaml.version>
         <thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
+        <tomcat.version>9.0.27</tomcat.version>
         <webjars-locator-core.version>0.41</webjars-locator-core.version>
 
         <!-- plugins -->
@@ -711,7 +712,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.4</version>
+                <version>0.8.5</version>
                 <executions>
                     <execution>
                         <id>pre-unit-test</id>
