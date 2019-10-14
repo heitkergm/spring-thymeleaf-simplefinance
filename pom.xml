@@ -14,7 +14,7 @@
     </organization>
 
     <prerequisites>
-        <maven>3.6.1</maven>
+        <maven>3.6.2</maven>
     </prerequisites>
 
     <name>spring-thymeleaf-simplefinance</name>
@@ -514,7 +514,7 @@
                         <configuration>
                             <rules>
                                 <requireMavenVersion>
-                                    <version>3.6.1</version>
+                                    <version>3.6.2</version>
                                 </requireMavenVersion>
                                 <requireJavaVersion>
                                     <version>${java.version}</version>
