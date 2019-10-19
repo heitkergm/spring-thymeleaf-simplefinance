@@ -6,35 +6,70 @@
 <body><div data-layout-fragment="content">
 	<div class="center">
 			<div data-th-text="#{login.header}"></div>
+                <div class="columns is-centered">
+                <div class="column is-half">
 		<form method="POST" autocomplete="off"
 			action="login"
                         data-th-action="@{/login}"
-			name="loginform" id="login-user-form"
-			class="pure-form pure-form-aligned">
+			name="loginform" id="login-user-form">
 			<fieldset>
-			    <div class="pure-control-group">
-				    <Label data-th-text="#{login.username}"></Label>
-				    <input id="username" name="username" type="text" size="32" maxlength="32" />
+			    <div class="field is-horizontal">
+                                <div class="field-label">
+			        <Label class="label"
+                                       data-th-text="#{login.username}"></Label>
+                                </div>
+                                <div class="field-body">
+				<div class="field is-narrow">
+                                <div class="control">
+				    <input class="input"
+                                           id="username"
+                                           name="username" type="text" size="32"
+                                           maxlength="32" />
 				</div>
-				<div class="pure-control-group">
-				    <Label data-th-text="#{login.password}"></Label>
-				    <input id="password" name="password" type="password" size="32" maxlength="32" />
+                                </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label">
+				<Label class="label"
+                                       data-th-text="#{login.password}"></Label>
+                                </div>
+                                <div class="field-body">
+                                <div class="field is-narrow">
+                                <div class="control">
+				    <input class="input" id="password"
+                                           name="password" type="password"
+                                           size="32" maxlength="32" />
 				</div>
-				<div class="pure-controls">
+                                </div>
+                                </div>
+                            </div>
                                     <p class="error" id="errors">
                                        <span data-th-text="#{login.combo.bad}"
                                              data-th-if="${param.error != null}">
                                        </span>
                                     </p>
-				    <button class="pure-button pure-button-primary button-small" type="submit"
-                                            data-th-text="#{login.button}"></button>
-                                    <p><span data-th-text="#{login.register}"></span>
-					<br /><a href="register" class="pure-button button-small"
-                                                 data-th-href="@{/register}"
-                                                 data-th-text="#{login.reglink}"></a></p>
-				</div>
+				<div class="field is-horizontal">
+                                <div class="field-label"></div>
+                                <div class="field-body">
+                                <div class="field">
+                                <div class="control">
+				    <button class="button is-primary is-small"
+                                            type="submit"
+                                            data-th-text="#{login.button}">
+                                    </button>
+                                 </div>
+                                 </div>
+                                 </div>
+                                 </div>
 			</fieldset>
                </form>
+               </div>
+               </div>
+                                    <p><span data-th-text="#{login.register}"></span></p>
+                                     <a href="register" class="button is-small is-link is-light"
+                                                 data-th-href="@{/register}"
+                                                 data-th-text="#{login.reglink}"></a>
 
 	</div>
 	<script data-th-inline="javascript">

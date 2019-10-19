@@ -2,3 +2,6 @@ body {color: blue;}
 .navbar-brand a {color: blue;}
 .button.is-primary {background-color: blue;}
 .label {color:blue;}
+.table thead th {color:blue;}
+.table tbody td {color:blue;}
+.table tfoot td {color:blue;}
