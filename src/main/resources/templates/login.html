@@ -6,12 +6,12 @@
 <body><div data-layout-fragment="content">
 	<div class="center">
 			<div data-th-text="#{login.header}"></div>
-                <div class="columns is-centered">
-                <div class="column is-half">
 		<form method="POST" autocomplete="off"
 			action="login"
                         data-th-action="@{/login}"
 			name="loginform" id="login-user-form">
+                <div class="columns is-centered">
+                <div class="column is-half">
 			<fieldset>
 			    <div class="field is-horizontal">
                                 <div class="field-label">
@@ -44,28 +44,19 @@
                                 </div>
                                 </div>
                             </div>
+			</fieldset>
+               </div>
+               </div>
                                     <p class="error" id="errors">
                                        <span data-th-text="#{login.combo.bad}"
                                              data-th-if="${param.error != null}">
                                        </span>
                                     </p>
-				<div class="field is-horizontal">
-                                <div class="field-label"></div>
-                                <div class="field-body">
-                                <div class="field">
-                                <div class="control">
 				    <button class="button is-primary is-small"
                                             type="submit"
                                             data-th-text="#{login.button}">
                                     </button>
-                                 </div>
-                                 </div>
-                                 </div>
-                                 </div>
-			</fieldset>
                </form>
-               </div>
-               </div>
                                     <p><span data-th-text="#{login.register}"></span></p>
                                      <a href="register" class="button is-small is-link is-light"
                                                  data-th-href="@{/register}"
