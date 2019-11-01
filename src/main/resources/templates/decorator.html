@@ -24,6 +24,13 @@
                     <span class="bold"> <span data-th-text="#{decorator.header}"></span>
                     <i class="fas fa-dollar-sign fa-lg"></i></span>
                 </a>
+                <a class="navbar-burger burger" data-target="sfMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+                <div id="sfMenu" class="navbar-menu">
                     <a href="?theme=black" class="navbar-item"
                        data-th-text="#{decorator.theme.black}"
                        data-th-if="${#themes.code('name') == 'blue' and #authorization.expression('isAuthenticated()')}"></a>
@@ -53,5 +60,13 @@
     <div class="center">
         <p data-th-utext="#{decorator.footer}">footer</p>
     </div>
+        <script>
+            $(document).ready(function() {
+                $(".navbar-burger").click(function() {
+                    $(".navbar-burger").toggleClass("is-active");
+                    $(".navbar-menu").toggleClass("is-active");
+                });
+            });
+        </script>
 </body>
 </html>
