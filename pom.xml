@@ -69,6 +69,7 @@
         <plexus-javac.version>2.8.5</plexus-javac.version>
         <pmd.version>6.19.0</pmd.version>
         <slf4j.version>1.7.29</slf4j.version>
+        <spring-framework.version>5.2.1.RELEASE</spring-framework.version>
         <webjars-locator-core.version>0.42</webjars-locator-core.version>
 
         <!-- plugins -->
