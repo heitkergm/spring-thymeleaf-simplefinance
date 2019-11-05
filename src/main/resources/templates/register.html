@@ -12,36 +12,80 @@
 		<form data-th-object="${register}" method="POST" autocomplete="off"
 			action="register"
 			id="register-user-form" name="registerform"
-                        data-th-action="@{/register}"
-			class="pure-form pure-form-aligned">
+                        data-th-action="@{/register}">
+                <div class="columns is-centered">
+                <div class="column is-half">
 			<fieldset>
-			    <div class="pure-control-group">
-				    <label data-th-text="#{register.username}"></label>
-				    <input data-th-field="*{userName}" type="text" size="32" maxlength="32" />
-				</div>
-                <div class="pure-control-group">
-                    <label data-th-text="#{register.password}"></label>
-                    <input data-th-field="*{password}" type="password" size="32" maxlength="32" />
+			    <div class="field is-horizontal">
+                                <div class="field-label">
+				    <label data-th-text="#{register.username}"
+                                           class="label"></label>
+                                </div>
+                                <div class="field-body">
+                                <div class="field is-narrow">
+                                <div class="control">
+				    <input data-th-field="*{userName}"
+                                           type="text" size="32" maxlength="32"
+                                           class="input" />
+                                </div>
+                                </div>
+                                </div>
+			    </div>
+                <div class="field is-horizontal">
+                                <div class="field-label">
+                    <label data-th-text="#{register.password}"
+                           class="label"></label>
+                                </div>
+                                <div class="field-body">
+                                <div class="field is-narrow">
+                                <div class="control">
+                    <input data-th-field="*{password}" type="password"
+                           size="32" maxlength="32" class="input" />
+                                </div>
+                                </div>
+                                </div>
                 </div>
-                <div class="pure-control-group">
-                    <label data-th-text="#{register.repeatedPassword}"></label>
-                    <input data-th-field="*{repeatedPassword}" type="password" size="32" maxlength="32" />
+                <div class="field is-horizontal">
+                                <div class="field-label">
+                    <label data-th-text="#{register.repeatedPassword}"
+                            class="label"></label>
+                                </div>
+                                <div class="field-body">
+                                <div class="field is-narrow">
+                                <div class="control">
+                    <input data-th-field="*{repeatedPassword}" type="password"
+                           size="32" maxlength="32" class="input" />
+                                </div>
+                                </div>
+                                </div>
                 </div>
-                 <div class="pure-control-group">
-                    <label data-th-text="#{register.tzone}"></label>
+                <div class="field is-horizontal">
+                                <div class="field-label">
+                    <label data-th-text="#{register.tzone}"
+                           class="label"></label>
+                                </div>
+                                <div class="field-body">
+                                <div class="field is-narrow">
+                                <div class="control">
+                                <div class="select">
                     <select data-th-field="*{tzone}">
                         <option data-th-each="tz:${tzones}" data-th-value="${tz}"
                                 data-th-text="${tz}">Option</option>
                     </select>
-                </div>
-				<div class="pure-controls">
-                                    <p class="error" id="errors">
-                                            <span data-th-errors="*{all}"></span></p>
- 				    <button class="pure-button pure-button-primary button-small" type="submit"
-                                            data-th-text="#{register.button}">
-			            </button>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
                 </div>
 			</fieldset>
+                </div>
+                </div>
+                                    <p class="error" id="errors">
+                                            <span data-th-errors="*{all}"></span></p>
+ 				    <button class="button is-primary is-small"
+                                            type="submit"
+                                            data-th-text="#{register.button}">
+			            </button>
 		</form>
 	</div>
 
