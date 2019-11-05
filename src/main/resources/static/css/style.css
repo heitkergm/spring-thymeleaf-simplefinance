@@ -1,8 +1,7 @@
 .center {text-align: center;}
 .error {color: red; font-weight: normal;}
-label {font-weight:bold;}
+.label {font-weight: bold;}
 .bold {font-weight: bold;}
-.button-small {font-size: 90%;}
-.pure-form fieldset{display: inline-block; border: 1px solid silver;}
-a.pure-menu-link {cursor: pointer;}
+.button.is-small {font-size: 90%;}
 table {margin:auto;}
+.navbar-center {flex-grow: 1; justify-content: center;}

@@ -1,3 +1,9 @@
 body {color: blue;}
-.pure-menu .pure-menu-heading, .pure-menu a {color: blue;}
-.pure-button-primary, .pure-button-selected {background-color: blue;}
+a.navbar-item {color: blue;}
+.button.is-primary {background-color: blue;}
+.label {color:blue;}
+.table thead th {color:blue;}
+.table tbody td {color:blue;}
+.table tfoot td {color:blue;}
+.input:focus {border-color: blue; box-shadow: none;}
+.navbar-burger span {color: blue;}

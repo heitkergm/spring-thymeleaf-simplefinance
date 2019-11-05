@@ -1,3 +1,9 @@
 body {color: black;}
-.pure-menu .pure-menu-heading, .pure-menu a {color: black;}
-.pure-button-primary, .pure-button-selected {background-color: black;}
+a.navbar-item {color: black;}
+.button.is-primary {background-color: black;}
+.label {color:black;}
+.table thead th {color:black;}
+.table tbody td {color:black;}
+.table tfoot td {color:black;}
+.input:focus {border-color: black; box-shadow: none;}
+.navbar-burger span {color: black;}

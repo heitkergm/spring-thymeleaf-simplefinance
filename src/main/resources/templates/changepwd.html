@@ -13,40 +13,92 @@
 		</p>
 		<form data-th-object="${changepwd}" method="POST" autocomplete="off"
 			action="changepwd"  data-th-action="@{/changepwd}"
-			id="changepwd-user-form" name="changepwdform"
-			class="pure-form pure-form-aligned">
+			id="changepwd-user-form" name="changepwdform">
+                <div class="columns is-centered">
+                <div class="column is-half">
 			<fieldset>
-                <div class="pure-control-group">
-                    <label data-th-text="#{changepwd.username}"></label>
-                    <input data-th-field="*{userName}" type="text" size="32" maxlength="32" />
+                <div class="field is-horizontal">
+                                <div class="field-label">
+                    <label data-th-text="#{changepwd.username}"
+                           class="label"></label>
+                                </div>
+                                <div class="field-body">
+                                <div class="field is-narrow">
+                                <div class="control">
+                    <input data-th-field="*{userName}" type="text"
+                           class="input" size="32" maxlength="32" />
+                                </div>
+                                </div>
+                                </div>
                 </div>
-                <div class="pure-control-group">
-                    <label data-th-text="#{changepwd.currpwd}"></label>
-                    <input data-th-field="*{currentPassword}" type="password" size="32" maxlength="32" />
+                <div class="field is-horizontal">
+                                <div class="field-label">
+                    <label data-th-text="#{changepwd.currpwd}"
+                           class="label"></label>
+                                </div>
+                                <div class="field-body">
+                                <div class="field is-narrow">
+                                <div class="control">
+                    <input data-th-field="*{currentPassword}" type="password"
+                           size="32" maxlength="32" class="input" />
+                                </div>
+                                </div>
+                                </div>
                 </div>
-                <div class="pure-control-group">
-                    <label data-th-text="#{changepwd.password}"></label>
-                    <input data-th-field="*{password}" type="password" size="32" maxlength="32" />
+                <div class="field is-horizontal">
+                                <div class="field-label">
+                    <label data-th-text="#{changepwd.password}"
+                           class="label"></label>
+                                </div>
+                                <div class="field-body">
+                                <div class="field is-narrow">
+                                <div class="control">
+                    <input data-th-field="*{password}" type="password" size="32"
+                           class="input" maxlength="32" />
+                                </div>
+                                </div>
+                                </div>
                 </div>
-                <div class="pure-control-group">
-                    <label data-th-text="#{changepwd.repeatedPassword}"></label>
-                    <input data-th-field="*{repeatedPassword}" type="password" size="32" maxlength="32" />
+                <div class="field is-horizontal">
+                                <div class="field-label">
+                    <label data-th-text="#{changepwd.repeatedPassword}"
+                           class="label"></label>
+                                </div>
+                                <div class="field-body">
+                                <div class="field is-narrow">
+                                <div class="control">
+                    <input data-th-field="*{repeatedPassword}" type="password"
+                           class="input" size="32" maxlength="32" />
+                                </div>
+                                </div>
+                                </div>
                 </div>
-                <div class="pure-control-group">
-                    <label data-th-text="#{changepwd.tzone}"></label>
+                <div class="field is-horizontal">
+                                <div class="field-label">
+                    <label data-th-text="#{changepwd.tzone}"
+                           class="label"></label>
+                                </div>
+                                <div class="field-body">
+                                <div class="field is-narrow">
+                                <div class="control">
+                                <div class="select">
                      <select data-th-field="*{tzone}">
                         <option data-th-each="tz:${tzones}" data-th-value="${tz}"
                                 data-th-text="${tz}">Option</option>
                     </select>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
                </div>
- 				<div class="pure-controls">
+			</fieldset>
+                </div>
+                </div>
                                     <p class="error" id="errors">
                                        <span data-th-errors="*{all}"></span>
                                     </p>
- 				    <button class="pure-button pure-button-primary button-small" type="submit"
+ 				    <button class="button is-primary is-small" type="submit"
                                             data-th-text="#{changepwd.button}"></button>
-                </div>
-			</fieldset>
 		</form>
 	</div>
 	<script data-th-inline="javascript">

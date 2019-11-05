@@ -10,44 +10,46 @@
         <link rel="shortcut icon" href="images/favicon.ico"
               data-th-href="@{/images/favicon.ico}" type="image/x-icon" />
         <link type="text/css" rel="stylesheet"
-              href="webjars/purecss/build/pure-min.css"
-              data-th-href="@{/webjars/purecss/build/pure-min.css}" />
+              href="webjars/bulma/css/bulma.min.css"
+              data-th-href="@{/webjars/bulma/css/bulma.min.css}" />
         <link type="text/css" rel="stylesheet" href="css/style.css"
               data-th-href="@{/css/style.css}" />
         <link type="text/css" rel="stylesheet" href="css/style-black.css"
               data-th-href="@{|/css/style-${#themes.code('name')}.css|}" />
     </head>
     <body>
-        <div class="center pure-menu pure-menu-horizontal">
-        <a href="main" class="pure-menu-heading" data-th-href="@{/main}">
-            <span class="bold"> <span data-th-text="#{decorator.header}"></span>
-                <i class="fas fa-dollar-sign fa-lg"></i></span>
-        </a>
-        <ul  class="pure-menu-list" data-layout-fragment="menu">
-                <li class="pure-menu-item"
-                    data-th-if="${#authorization.expression('isAuthenticated()')}">
-                        <a href="?theme=black" class="pure-menu-link"
-                           data-th-text="#{decorator.theme.black}"
-                           data-th-if="${#themes.code('name')} == 'blue'"></a>
-                        <a href="?theme=blue" class="pure-menu-link"
-                           data-th-text="#{decorator.theme.blue}"
-                           data-th-if="${#themes.code('name')} == 'black'">
-                        </a>
-                </li>
-                 <li class="pure-menu-item"
-                     data-th-if="${#authorization.expression('isAuthenticated()')}">
-                     <a href="changepwd" class="pure-menu-link"
-                        data-th-href="@{/changepwd}"
-                        data-th-text="#{decorator.changepwd}"></a>
-                </li>
-                <li class="pure-menu-item"
-                    data-th-if="${#authorization.expression('isAuthenticated()')}">
-                    <a onclick="document.logoutForm.submit()" class="pure-menu-link"
-                       data-th-text="#{decorator.logout}">
+        <nav class="navbar">
+            <div class="navbar-brand navbar-center" data-layout-fragment="menu">
+                <a href="main" class="navbar-item" data-th-href="@{/main}">
+                    <span class="bold"> <span data-th-text="#{decorator.header}"></span>
+                    <i class="fas fa-dollar-sign fa-lg"></i></span>
+                </a>
+                <a class="navbar-burger burger" data-target="sfMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+                <div id="sfMenu" class="navbar-menu">
+                    <a href="?theme=black" class="navbar-item"
+                       data-th-text="#{decorator.theme.black}"
+                       data-th-if="${#themes.code('name') == 'blue' and #authorization.expression('isAuthenticated()')}"></a>
+                    <a href="?theme=blue" class="navbar-item"
+                       data-th-text="#{decorator.theme.blue}"
+                       data-th-if="${#themes.code('name') == 'black' and #authorization.expression('isAuthenticated()')}">
                     </a>
-               </li>
-        </ul>
-    </div>
+                    <a href="changepwd" class="navbar-item"
+                       data-th-href="@{/changepwd}"
+                       data-th-text="#{decorator.changepwd}"
+                       data-th-if="${#authorization.expression('isAuthenticated()')}">
+                    </a>
+                    <a onclick="document.logoutForm.submit()"
+                       class="navbar-item"
+                       data-th-text="#{decorator.logout}"
+                       data-th-if="${#authorization.expression('isAuthenticated()')}">
+                    </a>
+            </div>
+        </nav>
         <script src="webjars/jquery/dist/jquery.min.js"
                 data-th-src="@{/webjars/jquery/dist/jquery.min.js}">
         </script>
@@ -58,5 +60,13 @@
     <div class="center">
         <p data-th-utext="#{decorator.footer}">footer</p>
     </div>
+        <script>
+            $(document).ready(function() {
+                $(".navbar-burger").click(function() {
+                    $(".navbar-burger").toggleClass("is-active");
+                    $(".navbar-menu").toggleClass("is-active");
+                });
+            });
+        </script>
 </body>
 </html>
