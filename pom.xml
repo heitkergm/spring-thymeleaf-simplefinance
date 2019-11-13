@@ -68,7 +68,7 @@
         <plexus-compiler-api.version>2.8.5</plexus-compiler-api.version>
         <plexus-javac.version>2.8.5</plexus-javac.version>
         <pmd.version>6.19.0</pmd.version>
-        <webjars-locator-core.version>0.42</webjars-locator-core.version>
+        <webjars-locator-core.version>0.43</webjars-locator-core.version>
 
         <!-- plugins -->
         <lombok-maven-plugin.version>1.18.10.0</lombok-maven-plugin.version>
@@ -747,7 +747,7 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>5.2.3</version>
+                <version>5.2.4</version>
                 <configuration>
                     <skipProvidedScope>true</skipProvidedScope>
                 </configuration>
