@@ -69,6 +69,7 @@
         <plexus-compiler-api.version>2.8.5</plexus-compiler-api.version>
         <plexus-javac.version>2.8.5</plexus-javac.version>
         <pmd.version>6.19.0</pmd.version>
+        <spring-data-releasetrain.version>Moore-SR2</spring-data-releasetrain.version>
         <webjars-locator-core.version>0.43</webjars-locator-core.version>
 
         <!-- plugins -->
