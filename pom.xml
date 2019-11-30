@@ -60,7 +60,7 @@
         <byte-buddy.version>1.10.4</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>8.26</checkstyle.version>
+        <checkstyle.version>8.27</checkstyle.version>
         <groovy.version>3.0.0-rc-1</groovy.version>
         <hamcrest.version>2.2</hamcrest.version>
         <hibernate.version>5.4.9.Final</hibernate.version>
