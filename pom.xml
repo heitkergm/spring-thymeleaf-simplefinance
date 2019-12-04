@@ -66,11 +66,13 @@
         <hibernate.version>5.4.9.Final</hibernate.version>
         <hibernate-validator.version>6.1.0.Final</hibernate-validator.version>
         <jackson.version>2.10.1</jackson.version>
+        <micrometer.version>1.3.2</micrometer.version>
         <org-dom4j.version>2.1.1</org-dom4j.version>
         <plexus-compiler-api.version>2.8.5</plexus-compiler-api.version>
         <plexus-javac.version>2.8.5</plexus-javac.version>
         <pmd.version>6.20.0</pmd.version>
         <spring-data-releasetrain.version>Moore-SR2</spring-data-releasetrain.version>
+        <spring-framework.version>5.2.2.RELEASE</spring-framework.version>
         <tomcat.version>9.0.29</tomcat.version>
         <webjars-locator-core.version>0.43</webjars-locator-core.version>
 
@@ -732,7 +734,7 @@
             <plugin>
                 <groupId>io.snyk</groupId>
                 <artifactId>snyk-maven-plugin</artifactId>
-                <version>1.2.4</version>
+                <version>1.2.5</version>
                 <executions>
                     <execution>
                         <id>snyk-test</id>
