@@ -59,7 +59,7 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.27</checkstyle.version>
-        <groovy.version>3.0.0-rc-1</groovy.version>
+        <groovy.version>3.0.0-rc-2</groovy.version>
         <hamcrest.version>2.2</hamcrest.version>
         <hibernate-validator.version>6.1.0.Final</hibernate-validator.version>
         <jackson.version>2.10.1</jackson.version>
@@ -69,6 +69,7 @@
         <plexus-compiler-api.version>2.8.5</plexus-compiler-api.version>
         <plexus-javac.version>2.8.5</plexus-javac.version>
         <pmd.version>6.20.0</pmd.version>
+        <postgresql.version>42.2.9</postgresql.version>
         <webjars-locator-core.version>0.43</webjars-locator-core.version>
 
         <!-- plugins -->
