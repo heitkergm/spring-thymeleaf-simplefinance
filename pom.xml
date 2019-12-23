@@ -60,6 +60,7 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.27</checkstyle.version>
+        <commons-pool2.version>2.8.0</commons-pool2.version>
         <groovy.version>3.0.0-rc-2</groovy.version>
         <hamcrest.version>2.2</hamcrest.version>
         <hibernate.version>5.4.10.Final</hibernate.version>
