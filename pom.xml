@@ -72,13 +72,15 @@
         <plexus-compiler-api.version>2.8.6</plexus-compiler-api.version>
         <plexus-javac.version>2.8.6</plexus-javac.version>
         <pmd.version>6.21.0</pmd.version>
+        <postgresql.version>42.2.11</postgresql.version>
         <snakeyaml.version>1.26</snakeyaml.version>
         <webjars-locator-core.version>0.44</webjars-locator-core.version>
-        <xmlunit.version>2.6.4</xmlunit.version>
+        <xmlunit2.version>2.6.4</xmlunit2.version>
 
         <!-- plugins -->
-        <lombok-maven-plugin.version>1.18.10.0</lombok-maven-plugin.version>
+        <lombok-maven-plugin.version>1.18.12.0</lombok-maven-plugin.version>
         <maven-checkstyle-plugin.version>3.1.1</maven-checkstyle-plugin.version>
+        <maven-dependency-plugin.version>3.1.2</maven-dependency-plugin.version>
         <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
         <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
         <maven-site-plugin.version>3.9.0</maven-site-plugin.version>
