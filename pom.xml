@@ -54,7 +54,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skip-checks>false</skip-checks>
         <java.version>13</java.version>
-        <asm.version>8.0</asm.version>
+        <asm.version>8.0.1</asm.version>
         <assertj.version>3.15.0</assertj.version>
         <byte-buddy.version>1.10.9</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
@@ -68,7 +68,7 @@
         <javassist.version>3.27.0-GA</javassist.version>
         <jedis.version>3.2.0</jedis.version>
         <junit-jupiter.version>5.6.1</junit-jupiter.version>
-        <micrometer.version>1.4.0</micrometer.version>
+        <micrometer.version>1.4.1</micrometer.version>
         <mockito.version>3.3.3</mockito.version>
         <org-dom4j.version>2.1.1</org-dom4j.version>
         <postgresql.version>42.2.12</postgresql.version>
