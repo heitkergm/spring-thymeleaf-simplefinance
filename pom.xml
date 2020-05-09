@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.6.RELEASE</version>
+        <version>2.2.7.RELEASE</version>
     </parent>
 
     <profiles>
@@ -56,14 +56,12 @@
         <java.version>14</java.version>
         <asm.version>8.0.1</asm.version>
         <assertj.version>3.15.0</assertj.version>
-        <byte-buddy.version>1.10.9</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.32</checkstyle.version>
         <commons-pool2.version>2.8.0</commons-pool2.version>
         <groovy.version>3.0.3</groovy.version>
         <hamcrest.version>2.2</hamcrest.version>
-        <hibernate.version>5.4.14.Final</hibernate.version>
         <hibernate-validator.version>6.1.4.Final</hibernate-validator.version>
         <jackson.version>2.11.0</jackson.version>
         <javassist.version>3.27.0-GA</javassist.version>
@@ -77,7 +75,6 @@
         <plexus-javac.version>2.8.6</plexus-javac.version>
         <pmd.version>6.23.0</pmd.version>
         <snakeyaml.version>1.26</snakeyaml.version>
-        <tomcat.version>9.0.34</tomcat.version>
         <webjars-locator-core.version>0.45</webjars-locator-core.version>
 
         <!-- plugins -->
@@ -422,7 +419,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.2.6.RELEASE</version>
+                <version>2.2.7.RELEASE</version>
                 <configuration>
                     <addResources>true</addResources>
                     <fork>true</fork>
