@@ -34,6 +34,7 @@ public class MyErrorController implements ErrorController
     }
 
     @Override
+    @SuppressWarnings ("deprecation")
     public String getErrorPath ()
     {
         return "/error";

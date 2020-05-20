@@ -8,4 +8,5 @@
     <suppress checks="SuppressWarnings" files="LoginUser.java" lines="101" />
     <suppress checks="SuppressWarnings" files="YesNoConverter.java" lines="47"/>
     <suppress checks="SuppressWarnings" files="YesNoEnum.java" lines="20" />
+    <suppress checks="SuppressWarnings" files="MyErrorController.java" lines="37" />
 </suppressions>
