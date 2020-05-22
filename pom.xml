@@ -58,7 +58,7 @@
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.32</checkstyle.version>
-        <groovy.version>3.0.3</groovy.version>
+        <groovy.version>3.0.4</groovy.version>
         <hibernate.version>5.4.16.Final</hibernate.version>
         <javassist.version>3.27.0-GA</javassist.version>
         <micrometer.version>1.5.1</micrometer.version>
