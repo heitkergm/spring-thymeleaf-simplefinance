@@ -49,4 +49,12 @@
                 <goal>snyk:test</goal>
             </goals>
         </action>
+        <action>
+            <actionName>CUSTOM-clean-install</actionName>
+            <displayName>clean-install</displayName>
+            <goals>
+                <goal>clean</goal>
+                <goal>install</goal>
+            </goals>
+        </action>
     </actions>
