@@ -274,7 +274,7 @@
         <dependency>
             <groupId>nu.validator</groupId>
             <artifactId>validator</artifactId>
-            <version>20.3.16</version>
+            <version>20.6.30</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
@@ -380,7 +380,7 @@
             <dependency>
                 <groupId>nu.validator</groupId>
                 <artifactId>cssvalidator</artifactId>
-                <version>1.0.7</version>
+                <version>1.0.8</version>
                 <exclusions>
                     <exclusion>
                         <groupId>*</groupId>
