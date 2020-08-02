@@ -57,10 +57,12 @@
         <asm.version>9.0-beta</asm.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>8.34</checkstyle.version>
+        <checkstyle.version>8.35</checkstyle.version>
         <groovy.version>3.0.5</groovy.version>
+        <hibernate.version>5.4.19.Final</hibernate.version>
+        <jackson-bom.version>2.11.2</jackson-bom.version>
         <javassist.version>3.27.0-GA</javassist.version>
-        <mockito.version>3.4.4</mockito.version>
+        <mockito.version>3.4.6</mockito.version>
         <org-dom4j.version>2.1.3</org-dom4j.version>
         <plexus-compiler-api.version>2.8.6</plexus-compiler-api.version>
         <plexus-javac.version>2.8.6</plexus-javac.version>
@@ -638,7 +640,7 @@
                     <dependency>
                         <groupId>com.github.spotbugs</groupId>
                         <artifactId>spotbugs</artifactId>
-                        <version>4.0.6</version>
+                        <version>4.1.1</version>
                         <exclusions>
                             <exclusion>
                                 <groupId>dom4j</groupId>
