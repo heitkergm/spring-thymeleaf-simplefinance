@@ -61,7 +61,7 @@
         <checkstyle.version>8.35</checkstyle.version>
         <commons-pool2.version>2.8.1</commons-pool2.version>
         <groovy.version>3.0.5</groovy.version>
-        <hibernate.version>5.4.19.Final</hibernate.version>
+        <hibernate.version>5.4.20.Final</hibernate.version>
         <jackson-bom.version>2.11.2</jackson-bom.version>
         <javassist.version>3.27.0-GA</javassist.version>
         <mockito.version>3.4.6</mockito.version>
@@ -81,6 +81,7 @@
         <maven-site-plugin.version>3.9.1</maven-site-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
         <maven-war-plugin.version>3.3.1</maven-war-plugin.version>
+        <versions-maven-plugin.version>2.8.1</versions-maven-plugin.version>
     </properties>
 
     <dependencies>
