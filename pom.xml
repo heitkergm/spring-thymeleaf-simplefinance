@@ -60,11 +60,12 @@
         <checkstyle.version>8.35</checkstyle.version>
         <groovy.version>3.0.5</groovy.version>
         <javassist.version>3.27.0-GA</javassist.version>
-        <mockito.version>3.4.6</mockito.version>
+        <mockito.version>3.5.0</mockito.version>
         <org-dom4j.version>2.1.3</org-dom4j.version>
-        <plexus-compiler-api.version>2.8.6</plexus-compiler-api.version>
-        <plexus-javac.version>2.8.6</plexus-javac.version>
+        <plexus-compiler-api.version>2.8.7</plexus-compiler-api.version>
+        <plexus-javac.version>2.8.7</plexus-javac.version>
         <pmd.version>6.26.0</pmd.version>
+        <postgresql.version>42.2.15</postgresql.version>
         <webjars-locator-core.version>0.46</webjars-locator-core.version>
 
         <!-- plugins -->
