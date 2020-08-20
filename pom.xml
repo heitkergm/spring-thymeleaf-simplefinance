@@ -557,6 +557,13 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${maven-javadoc-plugin.version}</version>
                 <configuration>
+                    <doclint>all</doclint>
+                    <detectJavaApiLink>false</detectJavaApiLink>
+                    <links>
+                        <link>https://docs.oracle.com/en/java/javase/${java.version}/docs/api/</link>
+                        <link>https://docs.spring.io/spring-boot/docs/current/api/</link>
+                        <link>https://docs.spring.io/spring/docs/current/javadoc-api/</link>
+                    </links>
                     <sourcepath>target/generated-sources/delombok</sourcepath>
                     <linksource>true</linksource>
                 </configuration>
