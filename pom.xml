@@ -748,6 +748,7 @@
                 <artifactId>dependency-check-maven</artifactId>
                 <version>5.3.2</version>
                 <configuration>
+                    <suppressionFiles>dependency-suppressions.xml</suppressionFiles>
                     <skipProvidedScope>true</skipProvidedScope>
                     <assemblyAnalyzerEnabled>false</assemblyAnalyzerEnabled>
                     <nodeAnalyzerEnabled>false</nodeAnalyzerEnabled>
