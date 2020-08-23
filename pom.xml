@@ -60,7 +60,7 @@
         <checkstyle.version>8.35</checkstyle.version>
         <groovy.version>3.0.5</groovy.version>
         <javassist.version>3.27.0-GA</javassist.version>
-        <mockito.version>3.5.2</mockito.version>
+        <mockito.version>3.5.5</mockito.version>
         <org-dom4j.version>2.1.3</org-dom4j.version>
         <plexus-compiler-api.version>2.8.7</plexus-compiler-api.version>
         <plexus-javac.version>2.8.7</plexus-javac.version>
@@ -557,12 +557,16 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${maven-javadoc-plugin.version}</version>
                 <configuration>
-                    <doclint>all</doclint>
+                    <doclint>none</doclint>
                     <detectJavaApiLink>false</detectJavaApiLink>
                     <links>
                         <link>https://docs.oracle.com/en/java/javase/${java.version}/docs/api/</link>
                         <link>https://docs.spring.io/spring-boot/docs/current/api/</link>
                         <link>https://docs.spring.io/spring/docs/current/javadoc-api/</link>
+                        <link>https://docs.spring.io/spring-security/site/docs/current/api/</link>
+                        <link>https://docs.spring.io/spring-session/docs/current/api/</link>
+                        <link>https://docs.spring.io/spring-data/jpa/docs/current/api/</link>
+                        <link>https://jakarta.ee/specifications/platform/8/apidocs/</link>
                     </links>
                     <sourcepath>target/generated-sources/delombok</sourcepath>
                     <linksource>true</linksource>
