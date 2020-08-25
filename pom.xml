@@ -61,7 +61,7 @@
         <checkstyle.version>8.35</checkstyle.version>
         <groovy.version>3.0.5</groovy.version>
         <javassist.version>3.27.0-GA</javassist.version>
-        <mockito.version>3.5.5</mockito.version>
+        <mockito.version>3.5.7</mockito.version>
         <org-dom4j.version>2.1.3</org-dom4j.version>
         <plexus-compiler-api.version>2.8.8</plexus-compiler-api.version>
         <plexus-javac.version>2.8.8</plexus-javac.version>
@@ -76,6 +76,7 @@
         <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
         <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
         <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
+        <maven-site-plugin.version>3.9.1</maven-site-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
         <maven-war-plugin.version>3.3.1</maven-war-plugin.version>
         <versions-maven-plugin.version>2.8.1</versions-maven-plugin.version>
@@ -792,6 +793,11 @@
                     <configLocation>${checkstyle.file.config}</configLocation>
                     <suppressionsLocation>${checkstyle.file.suppress}</suppressionsLocation>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>${maven-site-plugin.version}</version>
             </plugin>
         </plugins>
     </reporting>
