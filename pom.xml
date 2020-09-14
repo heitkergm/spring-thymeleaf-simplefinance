@@ -71,6 +71,7 @@
         <pmd.version>6.27.0</pmd.version>
         <postgresql.version>42.2.16</postgresql.version>
         <snakeyaml.version>1.27</snakeyaml.version>
+        <thymeleaf-layout-dialect.version>2.5.0</thymeleaf-layout-dialect.version>
         <webjars-locator-core.version>0.46</webjars-locator-core.version>
 
         <!-- plugins -->
