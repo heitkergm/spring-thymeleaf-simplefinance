@@ -54,9 +54,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skip-checks>false</skip-checks>
         <java.version>14</java.version>
-        <asm.version>9.0-beta</asm.version>
+        <asm.version>9.0</asm.version>
         <assertj.version>3.17.2</assertj.version>
-        <byte-buddy.version>1.10.15</byte-buddy.version>
+        <byte-buddy.version>1.10.16</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.36.1</checkstyle.version>
@@ -667,6 +667,7 @@
                     </dependency>
                 </dependencies>
             </plugin>
+<!--
             <plugin>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok-maven-plugin</artifactId>
@@ -691,6 +692,7 @@
                     </dependency>
                 </dependencies>
             </plugin>
+-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
