@@ -7,13 +7,13 @@ import javax.validation.ConstraintValidatorContext;
 
 import org.apache.commons.beanutils.BeanUtils;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 
 // TODO: Auto-generated Javadoc
 /**
  * The Class PasswordMatchImpl.
  */
-@Slf4j
+@Log4j2
 public class PasswordMatchImpl implements
     ConstraintValidator<PasswordMatch, Object>
 {

@@ -10,7 +10,7 @@ import javax.persistence.PreUpdate;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 
 /**
  * The BaseEntity class.
@@ -18,7 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 @MappedSuperclass
 @Getter
 @Setter
-@Slf4j
+@Log4j2
 @EqualsAndHashCode (callSuper = true)
 public abstract class AbstractBaseModifiableEntity extends AbstractBaseEntity
 {

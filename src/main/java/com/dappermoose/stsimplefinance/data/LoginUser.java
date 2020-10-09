@@ -21,7 +21,7 @@ import org.mindrot.jbcrypt.BCrypt;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -31,7 +31,7 @@ import lombok.extern.slf4j.Slf4j;
 @Table (name = "LOGIN_USER", uniqueConstraints = @UniqueConstraint (columnNames = "USER_NAME", name = "unique_user_name"))
 @Cache (usage = CacheConcurrencyStrategy.READ_WRITE, region = "users")
 @Check (constraints = "ENABLED IN ('Y', 'N')")
-@Slf4j
+@Log4j2
 @Getter
 @Setter
 @EqualsAndHashCode (callSuper = true)

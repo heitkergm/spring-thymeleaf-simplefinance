@@ -12,13 +12,13 @@ import javax.persistence.Version;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 
 /**
  * The BaseEntity class.
  */
 @MappedSuperclass
-@Slf4j
+@Log4j2
 @Getter
 @Setter
 @EqualsAndHashCode

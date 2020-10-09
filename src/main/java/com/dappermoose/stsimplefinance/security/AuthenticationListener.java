@@ -18,14 +18,14 @@ import com.dappermoose.stsimplefinance.data.LoginEvent;
 import com.dappermoose.stsimplefinance.data.LoginUser;
 import com.dappermoose.stsimplefinance.data.YesNoEnum;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 
 /**
  * listening for authentication events and logging them to the login event table.
  *
  * @author matthewheitker
  */
-@Slf4j
+@Log4j2
 public class AuthenticationListener implements ApplicationListener<AbstractAuthenticationEvent>
 {
     @Inject
