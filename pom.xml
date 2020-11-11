@@ -73,6 +73,7 @@
         <plexus-compiler-api.version>2.8.8</plexus-compiler-api.version>
         <plexus-javac.version>2.8.8</plexus-javac.version>
         <pmd.version>6.29.0</pmd.version>
+        <slf4j.version>2.0.0-alpha1</slf4j.version>
         <snakeyaml.version>1.27</snakeyaml.version>
         <thymeleaf-layout-dialect.version>2.5.1</thymeleaf-layout-dialect.version>
         <webjars-locator-core.version>0.46</webjars-locator-core.version>
@@ -123,6 +124,17 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-slf4j-impl</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j18-impl</artifactId>
+            <version>${log4j2.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -726,10 +738,9 @@
                             <dependency>nu.validator:galimatias</dependency>
                             <dependency>org.apache.httpcomponents:httpclient</dependency>
                             <dependency>org.apache.httpcomponents:httpcore</dependency>
-                            <dependency>org.apache.logging.log4j:log4j-slf4j-impl</dependency>
+                            <dependency>org.apache.logging.log4j:log4j-1.2-api</dependency>
                             <dependency>org.apache.logging.log4j:log4j-api</dependency>
                             <dependency>org.apache.logging.log4j:log4j-core</dependency>
-                            <dependency>org.apache.logging.log4j:log4j-1.2-api</dependency>
                             <dependency>org.springframework:spring-jcl</dependency>
                             <dependency>net.arnx:jsonic</dependency>
                             <dependency>com.ibm.icu:icu4j</dependency>
