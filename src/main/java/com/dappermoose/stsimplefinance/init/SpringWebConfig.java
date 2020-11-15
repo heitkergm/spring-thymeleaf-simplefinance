@@ -11,7 +11,6 @@ import org.springframework.context.support.ReloadableResourceBundleMessageSource
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.ui.context.support.ResourceBundleThemeSource;
-import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -34,21 +33,6 @@ import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
 @EntityScan (basePackages = "com.dappermoose.stsimplefinance.data")
 public class SpringWebConfig implements WebMvcConfigurer
 {
-    /*
-     * (non-Javadoc)
-     *
-     * @see
-     * org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
-     * #configureDefaultServletHandling(org.springframework.web.servlet.config.
-     * annotation.DefaultServletHandlerConfigurer)
-     */
-    @Override
-    public void configureDefaultServletHandling (
-            final DefaultServletHandlerConfigurer configurer)
-    {
-        configurer.enable ();
-    }
-
     /*
      * (non-Javadoc)
      *
