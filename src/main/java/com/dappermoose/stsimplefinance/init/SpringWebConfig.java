@@ -24,10 +24,10 @@ import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
  * The Class SpringWebConfig.
  */
 @ComponentScan (basePackages = { "com.dappermoose.stsimplefinance.data",
-        "com.dappermoose.stsimplefiance.formbean",
-        "com.dappermoose.stsimplefinance.action",
-        "com.dappermoose.stsimplefinance.init",
-        "com.dappermoose.stsimplefinance.security" })
+                                 "com.dappermoose.stsimplefiance.formbean",
+                                 "com.dappermoose.stsimplefinance.action",
+                                 "com.dappermoose.stsimplefinance.init",
+                                 "com.dappermoose.stsimplefinance.security" })
 @EnableJpaRepositories (basePackages = { "com.dappermoose.stsimplefinance.dao" })
 @Configuration
 @EntityScan (basePackages = "com.dappermoose.stsimplefinance.data")
