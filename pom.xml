@@ -55,14 +55,15 @@
         <skip-checks>false</skip-checks>
         <java.version>15</java.version>
         <assertj.version>3.19.0</assertj.version>
-        <byte-buddy.version>1.10.21</byte-buddy.version>
+        <byte-buddy.version>1.10.22</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.41</checkstyle.version>
         <ehcache3.version>3.9.2</ehcache3.version>
         <groovy.version>3.0.7</groovy.version>
+        <hibernate.version>5.4.29.Final</hibernate.version>
         <hibernate-validator.version>6.2.0.Final</hibernate-validator.version>
-        <jackson-bom.version>2.12.1</jackson-bom.version>
+        <jackson-bom.version>2.12.2</jackson-bom.version>
         <javassist.version>3.27.0-GA</javassist.version>
         <jedis.version>3.5.1</jedis.version>
         <json-path.version>2.5.0</json-path.version>
@@ -291,7 +292,7 @@
         <dependency>
             <groupId>org.webjars.npm</groupId>
             <artifactId>jquery</artifactId>
-            <version>3.5.1</version>
+            <version>3.6.0</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -658,7 +659,7 @@
                     <dependency>
                         <groupId>com.github.spotbugs</groupId>
                         <artifactId>spotbugs</artifactId>
-                        <version>4.2.1</version>
+                        <version>4.2.2</version>
                         <exclusions>
                             <exclusion>
                                 <groupId>dom4j</groupId>
@@ -767,7 +768,7 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>6.1.1</version>
+                <version>6.1.2</version>
                 <configuration>
                     <suppressionFiles>dependency-suppressions.xml</suppressionFiles>
                     <skipProvidedScope>true</skipProvidedScope>
