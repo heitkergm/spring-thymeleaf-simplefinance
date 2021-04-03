@@ -531,7 +531,7 @@
                                     <version>3.6.3</version>
                                 </requireMavenVersion>
                                 <requireJavaVersion>
-                                    <version>[${java.version},16)</version>
+                                    <version>${java.version}</version>
                                 </requireJavaVersion>
                                 <bannedDependencies>
                                     <excludes>
