@@ -71,6 +71,7 @@
         <pmd.version>6.33.0</pmd.version>
         <slf4j.version>2.0.0-alpha1</slf4j.version>
         <snakeyaml.version>1.28</snakeyaml.version>
+        <thymeleaf-layout-dialect.version>2.5.3</thymeleaf-layout-dialect.version>
         <xmlunit2.version>2.8.2</xmlunit2.version>
 
         <!-- plugins -->
@@ -632,7 +633,7 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>4.2.2</version>
+                <version>4.2.3</version>
                 <configuration>
                     <excludeFilterFile>excludeFindbugs.xml</excludeFilterFile>
                     <skip>${skip-checks}</skip>
@@ -655,7 +656,7 @@
                     <dependency>
                         <groupId>com.github.spotbugs</groupId>
                         <artifactId>spotbugs</artifactId>
-                        <version>4.2.2</version>
+                        <version>4.2.3</version>
                         <exclusions>
                             <exclusion>
                                 <groupId>dom4j</groupId>
