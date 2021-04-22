@@ -55,10 +55,11 @@
         <skip-checks>false</skip-checks>
         <java.version>11</java.version>
         <assertj.version>3.19.0</assertj.version>
+        <byte-buddy.version>1.11.0</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.41.1</checkstyle.version>
-        <groovy.version>3.0.7</groovy.version>
+        <groovy.version>3.0.8</groovy.version>
         <jackson-bom.version>2.12.3</jackson-bom.version>
         <javassist.version>3.27.0-GA</javassist.version>
         <jedis.version>3.6.0</jedis.version>
@@ -768,6 +769,7 @@
                 <artifactId>dependency-check-maven</artifactId>
                 <version>6.1.5</version>
                 <configuration>
+                    <skip>${skip-checks}</skip>
                     <suppressionFiles>dependency-suppressions.xml</suppressionFiles>
                     <skipProvidedScope>true</skipProvidedScope>
                     <assemblyAnalyzerEnabled>false</assemblyAnalyzerEnabled>
