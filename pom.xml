@@ -33,7 +33,7 @@
         <byte-buddy.version>1.11.0</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>8.41.1</checkstyle.version>
+        <checkstyle.version>8.42</checkstyle.version>
         <ehcache3.version>3.9.3</ehcache3.version>
         <groovy.version>3.0.8</groovy.version>
         <jackson-bom.version>2.12.3</jackson-bom.version>
@@ -441,6 +441,9 @@
                             <consoleOutput>true</consoleOutput>
                             <failsOnError>true</failsOnError>
                             <linkXRef>false</linkXRef>
+                            <includeTestSourceDirectory>false</includeTestSourceDirectory>
+                            <includeResources>false</includeResources>
+                            <includeTestResources>false</includeTestResources>
                             <skip>${skip-checks}</skip>
                         </configuration>
                         <goals>
@@ -504,7 +507,7 @@
                         <configuration>
                             <rules>
                                 <requireMavenVersion>
-                                    <version>3.6.3</version>
+                                    <version>3.8.1</version>
                                 </requireMavenVersion>
                                 <requireJavaVersion>
                                     <version>${java.version}</version>
