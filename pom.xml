@@ -14,7 +14,7 @@
     </organization>
 
     <prerequisites>
-        <maven>3.6.3</maven>
+        <maven>3.8.1</maven>
     </prerequisites>
 
     <name>spring-thymeleaf-simplefinance</name>
