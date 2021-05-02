@@ -24,10 +24,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<role name="simplefinance"/>
 </schema>
 
-<table name="account" layer="0" collapse-mode="0" max-obj-count="9" z-value="0">
+<table name="account" layer="0" collapse-mode="2" max-obj-count="9" z-value="0">
 	<schema name="simplefinance"/>
 	<role name="simplefinance"/>
-	<position x="60" y="60"/>
+	<position x="80" y="180"/>
 	<column name="account_id" not-null="true">
 		<type name="bigint" length="0"/>
 	</column>
@@ -57,10 +57,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 </table>
 
-<table name="login_event" layer="0" collapse-mode="0" max-obj-count="6" z-value="0">
+<table name="login_event" layer="0" collapse-mode="2" max-obj-count="6" z-value="0">
 	<schema name="simplefinance"/>
 	<role name="simplefinance"/>
-	<position x="480" y="60"/>
+	<position x="740" y="380"/>
 	<column name="login_event_id" not-null="true">
 		<type name="bigint" length="0"/>
 	</column>
@@ -123,10 +123,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 </table>
 
-<table name="login_user_aud" layer="0" collapse-mode="0" max-obj-count="6" z-value="0">
+<table name="login_user_aud" layer="0" collapse-mode="2" max-obj-count="6" z-value="0">
 	<schema name="simplefinance"/>
 	<role name="simplefinance"/>
-	<position x="1280" y="60"/>
+	<position x="1120" y="240"/>
 	<column name="user_id" not-null="true">
 		<type name="bigint" length="0"/>
 	</column>
@@ -147,7 +147,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 </table>
 
-<table name="revinfo" layer="0" collapse-mode="0" max-obj-count="2" z-value="0">
+<table name="revinfo" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
 	<schema name="simplefinance"/>
 	<role name="simplefinance"/>
 	<position x="1680" y="60"/>
