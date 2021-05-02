@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.9.3" use-changelog="false" last-position="0,0" last-zoom="1" max-obj-count="6"
+	 default-schema="public" default-owner="postgres">
+<role name="simplefinance"
+      inherit="true"
+      login="true"
+      encrypted="true"
+      password="********">
+</role>
+
+<database name="simplefinance" encoding="UTF8" lc-collate="en_US.UTF-8" lc-ctype="en_US.UTF-8" is-template="false" allow-conns="true">
+	<role name="simplefinance"/>
+	<tablespace name="pg_default"/>
+</database>
+
+<schema name="public" layer="0" rect-visible="true" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<schema name="simplefinance" layer="0" rect-visible="true" fill-color="#0b25c2">
+	<role name="simplefinance"/>
+</schema>
+
+<table name="account" layer="0" collapse-mode="0" max-obj-count="9" z-value="0">
+	<schema name="simplefinance"/>
+	<role name="simplefinance"/>
+	<position x="60" y="60"/>
+	<column name="account_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="created_at" not-null="true">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="version" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="modified_at" not-null="true">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="account_name" not-null="true">
+		<type name="character varying" length="32"/>
+	</column>
+	<column name="description" not-null="true">
+		<type name="character varying" length="256"/>
+	</column>
+	<column name="starting_balance" not-null="true">
+		<type name="numeric" length="10" precision="2"/>
+	</column>
+	<column name="user_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<constraint name="account_pkey" type="pk-constr" table="simplefinance.account">
+		<columns names="account_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="login_event" layer="0" collapse-mode="0" max-obj-count="6" z-value="0">
+	<schema name="simplefinance"/>
+	<role name="simplefinance"/>
+	<position x="480" y="60"/>
+	<column name="login_event_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="created_at" not-null="true">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="version" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="success" not-null="true">
+		<type name="character" length="1"/>
+	</column>
+	<column name="user_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<constraint name="login_event_success_check" type="ck-constr" table="simplefinance.login_event">
+			<expression><![CDATA[(success = ANY (ARRAY['Y'::bpchar, 'N'::bpchar]))]]></expression>
+	</constraint>
+	<constraint name="login_event_pkey" type="pk-constr" table="simplefinance.login_event">
+		<columns names="login_event_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="login_user" layer="0" collapse-mode="0" max-obj-count="9" z-value="0">
+	<schema name="simplefinance"/>
+	<role name="simplefinance"/>
+	<position x="880" y="60"/>
+	<column name="user_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="created_at" not-null="true">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="version" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="modified_at" not-null="true">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="enabled" not-null="true">
+		<type name="character" length="1"/>
+	</column>
+	<column name="password" not-null="true">
+		<type name="character varying" length="60"/>
+	</column>
+	<column name="tzone" not-null="true">
+		<type name="character varying" length="128"/>
+	</column>
+	<column name="user_name" not-null="true">
+		<type name="character varying" length="32"/>
+	</column>
+	<constraint name="login_user_enabled_check" type="ck-constr" table="simplefinance.login_user">
+			<expression><![CDATA[(enabled = ANY (ARRAY['Y'::bpchar, 'N'::bpchar]))]]></expression>
+	</constraint>
+	<constraint name="login_user_pkey" type="pk-constr" table="simplefinance.login_user">
+		<columns names="user_id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="unique_user_name" type="uq-constr" table="simplefinance.login_user">
+		<columns names="user_name" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="login_user_aud" layer="0" collapse-mode="0" max-obj-count="6" z-value="0">
+	<schema name="simplefinance"/>
+	<role name="simplefinance"/>
+	<position x="1280" y="60"/>
+	<column name="user_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="rev" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="revtype">
+		<type name="smallint" length="0"/>
+	</column>
+	<column name="password">
+		<type name="character varying" length="60"/>
+	</column>
+	<column name="tzone">
+		<type name="character varying" length="128"/>
+	</column>
+	<constraint name="login_user_aud_pkey" type="pk-constr" table="simplefinance.login_user_aud">
+		<columns names="user_id,rev" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="revinfo" layer="0" collapse-mode="0" max-obj-count="2" z-value="0">
+	<schema name="simplefinance"/>
+	<role name="simplefinance"/>
+	<position x="1680" y="60"/>
+	<column name="rev" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="revtstmp">
+		<type name="bigint" length="0"/>
+	</column>
+	<constraint name="revinfo_pkey" type="pk-constr" table="simplefinance.revinfo">
+		<columns names="rev" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<index name="account_fkey_user" table="simplefinance.account"
+	 concurrent="false" unique="false" fast-update="false" buffering="false"
+	 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="user_id"/>
+		</idxelement>
+</index>
+
+<index name="login_event_fkey_user" table="simplefinance.login_event"
+	 concurrent="false" unique="false" fast-update="false" buffering="false"
+	 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="user_id"/>
+		</idxelement>
+</index>
+
+<sequence name="account_id_seq" cycle="false" start="1" increment="1" min-value="1" max-value="9223372036854775807" cache="1">
+	<schema name="simplefinance"/>
+	<role name="simplefinance"/>
+</sequence>
+
+<sequence name="hibernate_sequence" cycle="false" start="1" increment="1" min-value="1" max-value="9223372036854775807" cache="1">
+	<schema name="simplefinance"/>
+	<role name="simplefinance"/>
+</sequence>
+
+<sequence name="login_event_id_seq" cycle="false" start="1" increment="1" min-value="1" max-value="9223372036854775807" cache="1">
+	<schema name="simplefinance"/>
+	<role name="simplefinance"/>
+</sequence>
+
+<sequence name="user_id_seq" cycle="false" start="1" increment="1" min-value="1" max-value="9223372036854775807" cache="1">
+	<schema name="simplefinance"/>
+	<role name="simplefinance"/>
+</sequence>
+
+<constraint name="fk_account_user" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="simplefinance.login_user" table="simplefinance.account">
+	<columns names="user_id" ref-type="src-columns"/>
+	<columns names="user_id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_login_event_user" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="simplefinance.login_user" table="simplefinance.login_event">
+	<columns names="user_id" ref-type="src-columns"/>
+	<columns names="user_id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fkfjlavr6bxwi9t984luyiagjh4" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="simplefinance.revinfo" table="simplefinance.login_user_aud">
+	<columns names="rev" ref-type="src-columns"/>
+	<columns names="rev" ref-type="dst-columns"/>
+</constraint>
+
+<relationship name="rel_account_login_user" type="relfk" layer="0"
+	 custom-color="#d9b994"
+	 src-table="simplefinance.account"
+	 dst-table="simplefinance.login_user" reference-fk="fk_account_user"
+	 src-required="false" dst-required="true"/>
+
+<relationship name="rel_login_event_login_user" type="relfk" layer="0"
+	 custom-color="#c149fb"
+	 src-table="simplefinance.login_event"
+	 dst-table="simplefinance.login_user" reference-fk="fk_login_event_user"
+	 src-required="false" dst-required="true"/>
+
+<relationship name="rel_login_user_aud_revinfo" type="relfk" layer="0"
+	 custom-color="#8cef80"
+	 src-table="simplefinance.login_user_aud"
+	 dst-table="simplefinance.revinfo" reference-fk="fkfjlavr6bxwi9t984luyiagjh4"
+	 src-required="false" dst-required="true"/>
+
+<permission>
+	<object name="public" type="schema"/>
+	<roles names="postgres"/>
+	<privileges create="true" usage="true"/>
+</permission>
+<permission>
+	<object name="public" type="schema"/>
+	<privileges create="true" usage="true"/>
+</permission>
+</dbmodel>
