@@ -32,11 +32,4 @@ public class MyErrorController implements ErrorController
 
         return "httpError";
     }
-
-    @Override
-    @SuppressWarnings ("deprecation")
-    public String getErrorPath ()
-    {
-        return "/error";
-    }
 }
