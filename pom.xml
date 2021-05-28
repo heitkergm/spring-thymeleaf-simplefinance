@@ -30,7 +30,9 @@
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.42</checkstyle.version>
         <ehcache3.version>3.9.4</ehcache3.version>
+        <hibernate.version>5.4.32.Final</hibernate.version>
         <javassist.version>3.28.0-GA</javassist.version>
+        <jboss-logging.version>3.4.2.Final</jboss-logging.version>
         <mockito.version>3.10.0</mockito.version>
         <org-dom4j.version>2.1.3</org-dom4j.version>
         <plexus-compiler-api.version>2.8.8</plexus-compiler-api.version>
