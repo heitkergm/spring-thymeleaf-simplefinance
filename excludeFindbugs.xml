@@ -3,4 +3,36 @@
         <Class name="com.dappermoose.stsimplefinance.init.SpringSecurityConfig" />
         <Bug pattern="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" />
     </Match>
+    <Match>
+        <Class name="com.dappermoose.stsimplefinance.data.AbstractBaseEntity" />
+        <Bug pattern="EI_EXPOSE_REP" />
+    </Match>
+    <Match>
+        <Class name="com.dappermoose.stsimplefinance.data.AbstractBaseEntity" />
+        <Bug pattern="EI_EXPOSE_REP2" />
+    </Match>
+    <Match>
+        <Class name="com.dappermoose.stsimplefinance.data.AbstractBaseModifiableEntity" />
+        <Bug pattern="EI_EXPOSE_REP" />
+    </Match>
+    <Match>
+        <Class name="com.dappermoose.stsimplefinance.data.AbstractBaseModifiableEntity" />
+        <Bug pattern="EI_EXPOSE_REP2" />
+    </Match>
+    <Match>
+        <Class name="com.dappermoose.stsimplefinance.data.Account" />
+        <Bug pattern="EI_EXPOSE_REP" />
+    </Match>
+    <Match>
+        <Class name="com.dappermoose.stsimplefinance.data.Account" />
+        <Bug pattern="EI_EXPOSE_REP2" />
+    </Match>
+    <Match>
+        <Class name="com.dappermoose.stsimplefinance.data.LoginEvent" />
+        <Bug pattern="EI_EXPOSE_REP" />
+    </Match>
+    <Match>
+        <Class name="com.dappermoose.stsimplefinance.data.LoginEvent" />
+        <Bug pattern="EI_EXPOSE_REP2" />
+    </Match>
 </FindBugsFilter>
