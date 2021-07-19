@@ -35,7 +35,7 @@
         <commons-pool2.version>2.10.0</commons-pool2.version>
         <cssvalidator.version>1.0.8</cssvalidator.version>
         <git-commit-id-plugin.version>5.0.0</git-commit-id-plugin.version>
-        <hibernate.version>5.5.3.Final</hibernate.version>
+        <hibernate.version>5.5.4.Final</hibernate.version>
         <httpclient5.version>5.1.0</httpclient5.version>
         <jackson-bom.version>2.12.4</jackson-bom.version>
         <javassist.version>3.28.0-GA</javassist.version>
@@ -50,6 +50,8 @@
         <postgresql.version>42.2.23</postgresql.version>
         <slf4j.version>2.0.0-alpha2</slf4j.version>
         <snakeyaml.version>1.29</snakeyaml.version>
+        <spring-data-bom.version>2021.0.3</spring-data-bom.version>
+        <spring-framework.version>5.3.9</spring-framework.version>
         <tomcat.version>9.0.50</tomcat.version>
         <webjars-locator-core.version>0.47</webjars-locator-core.version>
 
