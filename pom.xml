@@ -39,7 +39,7 @@
         <httpclient5.version>5.1.0</httpclient5.version>
         <jackson-bom.version>2.12.4</jackson-bom.version>
         <javassist.version>3.28.0-GA</javassist.version>
-        <jedis.version>3.6.2</jedis.version>
+        <jedis.version>3.6.3</jedis.version>
         <jsonic.version>1.3.10</jsonic.version>
         <junit-jupiter.version>5.8.0-M1</junit-jupiter.version>
         <micrometer.version>1.7.2</micrometer.version>
@@ -605,6 +605,9 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
                 <version>${versions-maven-plugin.version}</version>
+                <configuration>
+                    <rulesUri>file://${project.basedir}/versions-rule-set.xml</rulesUri>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
