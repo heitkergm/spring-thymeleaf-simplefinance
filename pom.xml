@@ -26,7 +26,7 @@
         <skip-checks>false</skip-checks>
         <java.version>11</java.version>
         <assertj.version>3.20.2</assertj.version>
-        <byte-buddy.version>1.11.8</byte-buddy.version>
+        <byte-buddy.version>1.11.9</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>8.44</checkstyle.version>
@@ -485,7 +485,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
-                <version>3.0.0-M3</version>
+                <version>3.0.0</version>
                 <executions>
                     <execution>
                         <id>default-cli</id>
