@@ -26,13 +26,14 @@
         <skip-checks>false</skip-checks>
         <java.version>11</java.version>
         <assertj.version>3.20.2</assertj.version>
-        <byte-buddy.version>1.11.10</byte-buddy.version>
+        <byte-buddy.version>1.11.12</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>8.45</checkstyle.version>
-        <classgraph.version>4.8.111</classgraph.version>
+        <checkstyle.version>8.45.1</checkstyle.version>
+        <classgraph.version>4.8.114</classgraph.version>
         <commons-pool2.version>2.10.0</commons-pool2.version>
         <cssvalidator.version>1.0.8</cssvalidator.version>
+        <ehcache3.version>3.9.5</ehcache3.version>
         <git-commit-id-plugin.version>5.0.0</git-commit-id-plugin.version>
         <hibernate.version>5.5.6.Final</hibernate.version>
         <httpclient5.version>5.1.0</httpclient5.version>
@@ -40,12 +41,14 @@
         <javassist.version>3.28.0-GA</javassist.version>
         <jsonic.version>1.3.10</jsonic.version>
         <junit-jupiter.version>5.8.0-M1</junit-jupiter.version>
+        <micrometer.version>1.7.3</micrometer.version>
         <mockito.version>3.11.2</mockito.version>
         <plexus-compiler-api.version>2.8.8</plexus-compiler-api.version>
         <plexus-javac.version>2.8.8</plexus-javac.version>
         <pmd.version>6.37.0</pmd.version>
-        <slf4j.version>2.0.0-alpha2</slf4j.version>
+        <slf4j.version>2.0.0-alpha4</slf4j.version>
         <snakeyaml.version>1.29</snakeyaml.version>
+        <tomcat.version>9.0.52</tomcat.version>
         <webjars-locator-core.version>0.47</webjars-locator-core.version>
 
         <!-- plugins -->
@@ -623,7 +626,7 @@
                     <dependency>
                         <groupId>com.github.spotbugs</groupId>
                         <artifactId>spotbugs</artifactId>
-                        <version>4.3.0</version>
+                        <version>4.4.0</version>
                     </dependency>
                 </dependencies>
             </plugin>
