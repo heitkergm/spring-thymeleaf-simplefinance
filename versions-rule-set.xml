@@ -8,5 +8,11 @@
             <ignoreVersion type="regex">.*\.jre[6,7]</ignoreVersion>
         </ignoreVersions>
     </rule>
+    <rule groupId="org.slf4j"
+          comparisonMethod="maven">
+        <ignoreVersions>
+            <ignoreVersion type="regex">2.0.0.*</ignoreVersion>
+        </ignoreVersions>
+    </rule>
   </rules>
 </ruleset>
