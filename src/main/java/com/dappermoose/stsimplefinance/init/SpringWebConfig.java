@@ -19,6 +19,8 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.theme.SessionThemeResolver;
 import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
 
+import nz.net.ultraq.thymeleaf.layoutdialect.LayoutDialect;
+
 // TODO: Auto-generated Javadoc
 /**
  * The Class SpringWebConfig.
@@ -139,5 +141,16 @@ public class SpringWebConfig implements WebMvcConfigurer
     public String[] tzones ()
     {
         return TimeZone.getAvailableIDs ();
+    }
+
+    /**
+     * bean for thymeleaf layout dialect 3.
+     *
+     * @return the layout Dialect
+     */
+    @Bean
+    public LayoutDialect layoutDialect ()
+    {
+        return new LayoutDialect ();
     }
 }

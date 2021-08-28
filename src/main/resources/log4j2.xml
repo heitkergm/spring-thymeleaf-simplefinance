@@ -32,5 +32,6 @@ and tweak it  -->
                        name="org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor" />
                 <Logger name="org.ehcache.core.EhcacheManager" level="debug" />
                 <Logger name="org.hibernate.stat" level="debug" />
+                <Logger name="com.atomikos" level="debug" />
 	</Loggers>
 </Configuration>
