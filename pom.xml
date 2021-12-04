@@ -18,7 +18,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.0</version>
+        <version>2.6.1</version>
     </parent>
 
     <properties>
@@ -26,19 +26,21 @@
         <skip-checks>false</skip-checks>
         <java.version>17</java.version>
         <atomikos.version>5.0.8</atomikos.version>
-        <byte-buddy.version>1.12.2</byte-buddy.version>
+        <byte-buddy.version>1.12.3</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>9.1</checkstyle.version>
-        <classgraph.version>4.8.135</classgraph.version>
+        <checkstyle.version>9.2</checkstyle.version>
+        <classgraph.version>4.8.137</classgraph.version>
         <cssvalidator.version>1.0.8</cssvalidator.version>
         <git-commit-id-plugin.version>5.0.0</git-commit-id-plugin.version>
         <jsonic.version>1.3.10</jsonic.version>
+        <junit-jupiter.version>5.8.2</junit-jupiter.version>
         <mockito.version>4.1.0</mockito.version>
         <plexus-compiler-api.version>2.9.0</plexus-compiler-api.version>
         <plexus-javac.version>2.9.0</plexus-javac.version>
-        <pmd.version>6.40.0</pmd.version>
+        <pmd.version>6.41.0</pmd.version>
         <slf4j.version>1.8.0-beta4</slf4j.version>
+        <thymeleaf.version>3.0.13.RELEASE</thymeleaf.version>
 
         <!-- plugins -->
         <exec-maven-plugin.version>3.0.0</exec-maven-plugin.version>
@@ -393,7 +395,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.6.0</version>
+                <version>2.6.1</version>
                 <configuration>
                     <addResources>true</addResources>
                     <fork>true</fork>
