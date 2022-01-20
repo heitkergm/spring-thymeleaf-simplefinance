@@ -28,5 +28,10 @@
                 <ignoreVersion type="regex">6.*</ignoreVersion>
             </ignoreVersions>
         </rule>
+        <rule groupId="redis.clients" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">4.*</ignoreVersion>
+            </ignoreVersions>
+        </rule>
     </rules>
 </ruleset>
