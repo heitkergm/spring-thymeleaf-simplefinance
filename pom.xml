@@ -31,20 +31,23 @@
         <byte-buddy.version>1.12.8</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>9.3</checkstyle.version>
-        <classgraph.version>4.8.140</classgraph.version>
+        <checkstyle.version>10.0</checkstyle.version>
+        <classgraph.version>4.8.141</classgraph.version>
         <cssvalidator.version>1.0.8</cssvalidator.version>
         <git-commit-id-plugin5.version>5.0.0</git-commit-id-plugin5.version>
+        <hibernate-validator.version>6.2.3.Final</hibernate-validator.version>
         <jedis.version>3.8.0</jedis.version>
         <jsonic.version>1.3.10</jsonic.version>
+        <log4j2.version>2.17.2</log4j2.version>
         <mockito.version>4.3.1</mockito.version>
         <plexus-compiler-api.version>2.10.0</plexus-compiler-api.version>
         <plexus-javac.version>2.10.0</plexus-javac.version>
-        <pmd.version>6.42.0</pmd.version>
+        <pmd.version>6.43.0</pmd.version>
         <slf4j.version>1.8.0-beta4</slf4j.version>
         <snakeyaml.version>1.30</snakeyaml.version>
         <thymeleaf.version>3.1.0.M1</thymeleaf.version>
         <thymeleaf-extras-springsecurity.version>3.1.0.M1</thymeleaf-extras-springsecurity.version>
+        <tomcat.version>9.0.59</tomcat.version>
         <webjars-locator-core.version>0.50</webjars-locator-core.version>
         <xmlunit2.version>2.9.0</xmlunit2.version>
 
