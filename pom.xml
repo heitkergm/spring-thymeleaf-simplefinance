@@ -35,7 +35,9 @@
         <classgraph.version>4.8.141</classgraph.version>
         <cssvalidator.version>1.0.8</cssvalidator.version>
         <git-commit-id-plugin5.version>5.0.0</git-commit-id-plugin5.version>
+        <ehcache3.version>3.10.0</ehcache3.version>
         <groovy.version>3.0.10</groovy.version>
+        <hibernate.version>5.6.7.Final</hibernate.version>
         <hibernate-validator.version>6.2.3.Final</hibernate-validator.version>
         <jackson-bom.version>2.13.2</jackson-bom.version>
         <jedis.version>3.8.0</jedis.version>
@@ -50,7 +52,7 @@
         <thymeleaf.version>3.1.0.M1</thymeleaf.version>
         <thymeleaf-layout-dialect.version>3.1.0</thymeleaf-layout-dialect.version>
         <thymeleaf-extras-springsecurity.version>3.1.0.M1</thymeleaf-extras-springsecurity.version>
-        <tomcat.version>9.0.59</tomcat.version>
+        <tomcat.version>9.0.60</tomcat.version>
         <webjars-locator-core.version>0.50</webjars-locator-core.version>
         <xmlunit2.version>2.9.0</xmlunit2.version>
 
@@ -58,14 +60,14 @@
         <exec-maven-plugin.version>3.0.0</exec-maven-plugin.version>
         <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
         <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
-        <maven-compiler-plugin.version>3.10.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.3.0</maven-dependency-plugin.version>
         <maven-deploy-plugin.version>3.0.0-M2</maven-deploy-plugin.version>
         <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
         <maven-javadoc-plugin.version>3.3.2</maven-javadoc-plugin.version>
         <maven-site-plugin.version>3.11.0</maven-site-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
-        <versions-maven-plugin.version>2.9.0</versions-maven-plugin.version>
+        <versions-maven-plugin.version>2.10.0</versions-maven-plugin.version>
     </properties>
 
     <dependencies>
