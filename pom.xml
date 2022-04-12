@@ -25,10 +25,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skip-checks>false</skip-checks>
         <java.version>17</java.version>
-        <aspectj.version>1.9.9</aspectj.version>
+        <aspectj.version>1.9.9.1</aspectj.version>
         <assertj.version>3.22.0</assertj.version>
         <atomikos.version>5.0.9</atomikos.version>
-        <byte-buddy.version>1.12.8</byte-buddy.version>
+        <byte-buddy.version>1.12.9</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>10.1</checkstyle.version>
@@ -47,6 +47,7 @@
         <thymeleaf.version>3.1.0.M1</thymeleaf.version>
         <thymeleaf-layout-dialect.version>3.1.0</thymeleaf-layout-dialect.version>
         <thymeleaf-extras-springsecurity.version>3.1.0.M1</thymeleaf-extras-springsecurity.version>
+        <tomcat.version>9.0.62</tomcat.version>
         <webjars-locator-core.version>0.50</webjars-locator-core.version>
         <xmlunit2.version>2.9.0</xmlunit2.version>
 
@@ -54,12 +55,13 @@
         <exec-maven-plugin.version>3.0.0</exec-maven-plugin.version>
         <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
         <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
+        <maven-clean-plugin.version>3.2.0</maven-clean-plugin.version>
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.3.0</maven-dependency-plugin.version>
         <maven-deploy-plugin.version>3.0.0-M2</maven-deploy-plugin.version>
         <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
         <maven-site-plugin.version>3.11.0</maven-site-plugin.version>
-        <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+        <maven-surefire-plugin.version>3.0.0-M6</maven-surefire-plugin.version>
         <versions-maven-plugin.version>2.10.0</versions-maven-plugin.version>
     </properties>
 
@@ -615,6 +617,7 @@
                 <artifactId>spotbugs-maven-plugin</artifactId>
                 <version>4.6.0.0</version>
                 <configuration>
+                    <jvmArgs>-Djava.security.manager=allow</jvmArgs>
                     <excludeFilterFile>excludeFindbugs.xml</excludeFilterFile>
                     <skip>${skip-checks}</skip>
                 </configuration>
@@ -704,7 +707,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.7</version>
+                <version>0.8.8</version>
                 <executions>
                     <execution>
                         <id>pre-unit-test</id>
