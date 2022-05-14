@@ -35,4 +35,8 @@
         <Class name="com.dappermoose.stsimplefinance.data.LoginEvent" />
         <Bug pattern="EI_EXPOSE_REP2" />
     </Match>
+    <Match>
+        <Class name="com.dappermoose.stsimplefinance.init.SpringSecurityConfig" />
+        <Bug pattern="THROWS_METHOD_THROWS_CLAUSE_BASIC_EXCEPTION" />
+    </Match>
 </FindBugsFilter>
