@@ -1,20 +1,18 @@
 
 package com.dappermoose.stsimplefinance.init;
 
-import javax.annotation.Resource;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.theme.CookieThemeResolver;
 
 import com.dappermoose.stsimplefinance.security.AuthenticationListener;
+
 
 /**
  *Spring Security config.
@@ -22,13 +20,10 @@ import com.dappermoose.stsimplefinance.security.AuthenticationListener;
  * @author matthewheitker
  */
 @Configuration
-public class SpringSecurityConfig extends WebSecurityConfigurerAdapter
+public class SpringSecurityConfig
 {
-    @Resource (name = "authService")
-    private UserDetailsService userDetailsService;
-
-    @Override
-    protected void configure (final HttpSecurity http) throws Exception
+    @Bean
+    SecurityFilterChain securityFilterChain (final HttpSecurity http) throws Exception
     {
         http
            .formLogin ().loginPage ("/login").permitAll ()
@@ -49,13 +44,13 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter
             .sessionManagement ().sessionCreationPolicy (SessionCreationPolicy.ALWAYS)
                 .sessionFixation ()
         ;
+        return http.build ();
     }
 
-    @Override
-    protected void configure (final AuthenticationManagerBuilder auth) throws Exception
+    @Bean
+    PasswordEncoder passwordEncoder ()
     {
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder ();
-        auth.userDetailsService (userDetailsService).passwordEncoder (encoder);
+        return new BCryptPasswordEncoder ();
     }
 
     /**
