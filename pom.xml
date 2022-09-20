@@ -28,7 +28,7 @@
         <aspectj.version>1.9.9.1</aspectj.version>
         <assertj.version>3.23.1</assertj.version>
         <atomikos.version>5.0.9</atomikos.version>
-        <byte-buddy.version>1.12.14</byte-buddy.version>
+        <byte-buddy.version>1.12.16</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>10.3.3</checkstyle.version>
@@ -37,17 +37,20 @@
         <ehcache3.version>3.10.1</ehcache3.version>
         <git-commit-id-plugin5.version>5.0.0</git-commit-id-plugin5.version>
         <hibernate.version>5.6.11.Final</hibernate.version>
+        <hibernate-validator.version>6.2.5.Final</hibernate-validator.version>
+        <jackson-bom.version>2.13.4</jackson-bom.version>
         <jedis.version>3.9.0</jedis.version>
         <jsonic.version>1.3.10</jsonic.version>
-        <junit-jupiter.version>5.9.0</junit-jupiter.version>
-        <log4j2.version>2.18.0</log4j2.version>
-        <mockito.version>4.7.0</mockito.version>
+        <junit-jupiter.version>5.9.1</junit-jupiter.version>
+        <log4j2.version>2.19.0</log4j2.version>
+        <micrometer.version>1.9.4</micrometer.version>
+        <mockito.version>4.8.0</mockito.version>
         <plexus-compiler-api.version>2.12.1</plexus-compiler-api.version>
         <plexus-javac.version>2.12.1</plexus-javac.version>
-        <pmd.version>6.48.0</pmd.version>
+        <pmd.version>6.49.0</pmd.version>
         <postgresql.version>42.5.0</postgresql.version>
-        <slf4j.version>1.8.0-beta4</slf4j.version>
-        <snakeyaml.version>1.31</snakeyaml.version>
+        <slf4j.version>2.0.1</slf4j.version>
+        <snakeyaml.version>1.32</snakeyaml.version>
         <thymeleaf.version>3.1.0.M2</thymeleaf.version>
         <thymeleaf-layout-dialect.version>3.1.0</thymeleaf-layout-dialect.version>
         <thymeleaf-extras-springsecurity.version>3.1.0.M1</thymeleaf-extras-springsecurity.version>
@@ -63,7 +66,7 @@
         <maven-resources-plugin.version>3.3.0</maven-resources-plugin.version>
         <maven-site-plugin.version>4.0.0-M3</maven-site-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
-        <versions-maven-plugin.version>2.11.0</versions-maven-plugin.version>
+        <versions-maven-plugin.version>2.12.0</versions-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -108,7 +111,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j18-impl</artifactId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
             <version>${log4j2.version}</version>
         </dependency>
         <dependency>
@@ -388,7 +391,7 @@
             <dependency>
                 <groupId>org.apache.groovy</groupId>
                 <artifactId>groovy</artifactId>
-                <version>4.0.4</version>
+                <version>4.0.5</version>
             </dependency>
             <dependency>
                 <groupId>io.github.classgraph</groupId>
@@ -568,7 +571,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.18.0</version>
+                <version>3.19.0</version>
                 <configuration>
                     <verbose>true</verbose>
                     <linkXRef>false</linkXRef>
@@ -626,7 +629,7 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>4.7.1.1</version>
+                <version>4.7.2.0</version>
                 <configuration>
                     <jvmArgs>-Djava.security.manager=allow</jvmArgs>
                     <excludeFilterFile>excludeFindbugs.xml</excludeFilterFile>
@@ -645,7 +648,7 @@
                     <dependency>
                         <groupId>com.github.spotbugs</groupId>
                         <artifactId>spotbugs</artifactId>
-                        <version>4.7.1</version>
+                        <version>4.7.2</version>
                     </dependency>
                 </dependencies>
             </plugin>
@@ -756,7 +759,7 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>7.1.2</version>
+                <version>7.2.1</version>
                 <configuration>
                     <skip>${skip-checks}</skip>
                     <dataDirectory>${user.dir}/../dependency-check-data</dataDirectory>
