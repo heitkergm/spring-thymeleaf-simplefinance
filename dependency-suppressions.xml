@@ -3,5 +3,6 @@
     <suppress>
         <vulnerabilityName>CVE-2020-5408</vulnerabilityName>
         <vulnerabilityName>CVE-2016-1000027</vulnerabilityName>
+        <vulnerabilityName>CVE-2022-41854</vulnerabilityName>
     </suppress>
 </suppressions>
