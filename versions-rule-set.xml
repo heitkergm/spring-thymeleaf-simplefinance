@@ -26,6 +26,7 @@
         <rule groupId="org.apache.tomcat" comparisonMethod="maven">
             <ignoreVersions>
                 <ignoreVersion type="regex">10.*</ignoreVersion>
+                <ignoreVersion type="regex">11.*</ignoreVersion>
             </ignoreVersions>
         </rule>
         <rule groupId="org.hibernate.validator" comparisonMethod="maven">

@@ -13,5 +13,6 @@
             "username": "simplefinance",
             "password": "simplefinance"
         }
-    ]
+    ],
+    "java.compile.nullAnalysis.mode": "automatic"
 }
