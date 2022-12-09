@@ -8,9 +8,10 @@ import java.util.TimeZone;
 
 import org.apache.catalina.Context;
 import org.apache.catalina.connector.Connector;
-import org.apache.coyote.http11.Http11NioProtocol;
 import org.apache.tomcat.util.descriptor.web.SecurityCollection;
 import org.apache.tomcat.util.descriptor.web.SecurityConstraint;
+import org.apache.tomcat.util.net.SSLHostConfig;
+import org.apache.tomcat.util.net.SSLHostConfigCertificate;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -88,20 +89,30 @@ public class Application
 
     private Connector createSSLConnector ()
     {
-        Connector connector = new Connector ("org.apache.coyote.http11.Http11NioProtocol");
-        Http11NioProtocol protocol = (Http11NioProtocol) connector.getProtocolHandler ();
+        Connector httpsConnector = new Connector ();
         try
         {
             File keystore = getKeyStoreFile ();
-            connector.setScheme ("https");
-            connector.setSecure (true);
-            connector.setPort (8443);
-            protocol.setSSLEnabled (true);
-            protocol.setKeystoreFile (keystore.getAbsolutePath ());
-            protocol.setKeystorePass ("changeit");
-            protocol.setKeyAlias ("localhost");
-            protocol.setCiphers ("TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_128_CBC_SHA,TLS_DHE_RSA_WITH_AES_256_CBC_SHA,TLS_DHE_RSA_WITH_AES_128_CBC_SHA256,SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA");
-            return connector;
+            httpsConnector.setScheme ("https");
+            httpsConnector.setSecure (true);
+            httpsConnector.setPort (8443);
+            httpsConnector.setRedirectPort (8443);
+            httpsConnector.setProperty ("SSLEnabled", "true");
+
+            SSLHostConfig sslConfig = new SSLHostConfig ();
+            sslConfig.setCiphers ("TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_128_CBC_SHA,TLS_DHE_RSA_WITH_AES_256_CBC_SHA,TLS_DHE_RSA_WITH_AES_128_CBC_SHA256,SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA");
+
+            SSLHostConfigCertificate certConfig =
+                new SSLHostConfigCertificate (sslConfig, SSLHostConfigCertificate.Type.RSA);
+            certConfig.setCertificateKeystoreFile (keystore.getAbsolutePath ());
+            certConfig.setCertificateKeystorePassword ("changeit");
+            certConfig.setCertificateKeyAlias ("localhost");
+
+            sslConfig.addCertificate (certConfig);
+
+            httpsConnector.addSslHostConfig (sslConfig);
+
+            return httpsConnector;
         }
         catch (IOException ex)
         {

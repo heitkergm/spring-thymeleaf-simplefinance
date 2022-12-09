@@ -10,14 +10,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.ui.context.support.ResourceBundleThemeSource;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
-import org.springframework.web.servlet.theme.SessionThemeResolver;
-import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
 
 import nz.net.ultraq.thymeleaf.layoutdialect.LayoutDialect;
 
@@ -47,7 +44,6 @@ public class SpringWebConfig implements WebMvcConfigurer
     public void addInterceptors (final InterceptorRegistry registry)
     {
         registry.addInterceptor (new LocaleChangeInterceptor ());
-        registry.addInterceptor (new ThemeChangeInterceptor ());
     }
 
     /*
@@ -90,33 +86,6 @@ public class SpringWebConfig implements WebMvcConfigurer
     SessionLocaleResolver localeResolver ()
     {
         final SessionLocaleResolver resolver = new SessionLocaleResolver ();
-        return resolver;
-    }
-
-    // beans for themes
-    /**
-     * Resource bundle theme source.
-     *
-     * @return the resource bundle theme source
-     */
-    @Bean
-    ResourceBundleThemeSource themeSource ()
-    {
-        final ResourceBundleThemeSource themeSource = new ResourceBundleThemeSource ();
-        themeSource.setBasenamePrefix ("themes.");
-        return themeSource;
-    }
-
-    /**
-     * Session theme resolver.
-     *
-     * @return the session theme resolver
-     */
-    @Bean
-    SessionThemeResolver themeResolver ()
-    {
-        final SessionThemeResolver resolver = new SessionThemeResolver ();
-        resolver.setDefaultThemeName ("blue");
         return resolver;
     }
 

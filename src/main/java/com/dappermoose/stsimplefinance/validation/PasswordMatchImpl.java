@@ -2,8 +2,8 @@ package com.dappermoose.stsimplefinance.validation;
 
 import java.lang.reflect.InvocationTargetException;
 
-import javax.validation.ConstraintValidator;
-import javax.validation.ConstraintValidatorContext;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
 
 import org.apache.commons.beanutils.BeanUtils;
 
@@ -27,7 +27,7 @@ public class PasswordMatchImpl implements
      * (non-Javadoc)
      *
      * @see
-     * javax.validation.ConstraintValidator#initialize(java.lang.annotation.
+     * jakarta.validation.ConstraintValidator#initialize(java.lang.annotation.
      * Annotation)
      */
     @Override
@@ -42,8 +42,8 @@ public class PasswordMatchImpl implements
     /*
      * (non-Javadoc)
      *
-     * @see javax.validation.ConstraintValidator#isValid(java.lang.Object,
-     * javax.validation.ConstraintValidatorContext)
+     * @see jakarta.validation.ConstraintValidator#isValid(java.lang.Object,
+     * jakarta.validation.ConstraintValidatorContext)
      */
     @Override
     public boolean isValid (final Object obj,

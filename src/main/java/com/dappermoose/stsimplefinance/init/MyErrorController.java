@@ -1,6 +1,6 @@
 package com.dappermoose.stsimplefinance.init;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
@@ -26,9 +26,9 @@ public class MyErrorController implements ErrorController
             final Model model)
     {
         model.addAttribute ("status",
-                request.getAttribute ("javax.servlet.error.status_code"));
+                request.getAttribute ("jakarta.servlet.error.status_code"));
         model.addAttribute ("reason",
-                request.getAttribute ("javax.servlet.error.message"));
+                request.getAttribute ("jakarta.servlet.error.message"));
 
         return "httpError";
     }

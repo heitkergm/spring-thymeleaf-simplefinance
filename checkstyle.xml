@@ -79,7 +79,7 @@ and open the template in the editor.
         <module name="UnusedImports"/>
         <module name="ImportOrder">
             <property name="groups"
-                      value="/^java\./,javax,net,org.apache,org.springframework,org.hibernate,org,com,lombok"/>
+                      value="/^java\./,jakarta,javax,net,org.apache,org.springframework,org.hibernate,org,com,lombok"/>
             <property name="ordered" value="true"/>
             <property name="separated" value="true"/>
             <property name="option" value="above"/>

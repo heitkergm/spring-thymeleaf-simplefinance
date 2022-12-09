@@ -2,11 +2,11 @@ package com.dappermoose.stsimplefinance.action;
 
 import java.util.List;
 
-import javax.inject.Inject;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.transaction.Transactional;
-import javax.validation.Valid;
+import jakarta.inject.Inject;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.MessageSource;

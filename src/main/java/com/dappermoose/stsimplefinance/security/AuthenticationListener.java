@@ -3,8 +3,8 @@ package com.dappermoose.stsimplefinance.security;
 
 import java.util.List;
 
-import javax.inject.Inject;
-import javax.transaction.Transactional;
+import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 
 import org.springframework.context.ApplicationListener;
 import org.springframework.security.authentication.event.AbstractAuthenticationEvent;

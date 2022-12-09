@@ -14,8 +14,8 @@
               data-th-href="@{/webjars/bulma/css/bulma.min.css}" />
         <link type="text/css" rel="stylesheet" href="css/style.css"
               data-th-href="@{/css/style.css}" />
-        <link type="text/css" rel="stylesheet" href="css/style-black.css"
-              data-th-href="@{|/css/style-${#themes.code('name')}.css|}" />
+        <link type="text/css" rel="stylesheet" href="css/style-blue.css"
+              data-th-href="@{|/css/style-blue.css|}" />
     </head>
     <body>
         <nav class="navbar">
@@ -31,13 +31,6 @@
                 </a>
             </div>
                 <div id="sfMenu" class="navbar-menu">
-                    <a href="?theme=black" class="navbar-item"
-                       data-th-text="#{decorator.theme.black}"
-                       data-th-if="${#themes.code('name') == 'blue' and #authorization.expression('isAuthenticated()')}"></a>
-                    <a href="?theme=blue" class="navbar-item"
-                       data-th-text="#{decorator.theme.blue}"
-                       data-th-if="${#themes.code('name') == 'black' and #authorization.expression('isAuthenticated()')}">
-                    </a>
                     <a href="changepwd" class="navbar-item"
                        data-th-href="@{/changepwd}"
                        data-th-text="#{decorator.changepwd}"

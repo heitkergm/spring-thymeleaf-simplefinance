@@ -1,6 +1,6 @@
 package com.dappermoose.stsimplefinance.formbean;
 
-import javax.validation.constraints.Size;
+import jakarta.validation.constraints.Size;
 
 import com.dappermoose.stsimplefinance.validation.PasswordMatch;
 

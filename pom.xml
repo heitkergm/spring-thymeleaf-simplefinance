@@ -18,52 +18,38 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.6</version>
+        <version>3.0.0</version>
     </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skip-checks>false</skip-checks>
         <java.version>17</java.version>
-        <aspectj.version>1.9.9.1</aspectj.version>
-        <assertj.version>3.23.1</assertj.version>
-        <atomikos.version>5.0.9</atomikos.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
         <checkstyle.version>10.5.0</checkstyle.version>
-        <classgraph.version>4.8.149</classgraph.version>
+        <classgraph.version>4.8.151</classgraph.version>
         <cssvalidator.version>1.0.8</cssvalidator.version>
-        <git-commit-id-plugin5.version>5.0.0</git-commit-id-plugin5.version>
+        <hibernate.version>6.1.6.Final</hibernate.version>
         <httpclient.version>4.5.14</httpclient.version>
         <httpcore.version>4.4.16</httpcore.version>
-        <jackson-bom.version>2.14.1</jackson-bom.version>
-        <jedis.version>3.9.0</jedis.version>
         <jsonic.version>1.3.10</jsonic.version>
-        <junit-jupiter.version>5.9.1</junit-jupiter.version>
-        <log4j2.version>2.19.0</log4j2.version>
-        <micrometer.version>1.10.2</micrometer.version>
         <mockito.version>4.9.0</mockito.version>
         <plexus-compiler-api.version>2.12.1</plexus-compiler-api.version>
         <plexus-javac.version>2.12.1</plexus-javac.version>
         <pmd.version>6.52.0</pmd.version>
-        <postgresql.version>42.5.1</postgresql.version>
         <slf4j.version>2.0.5</slf4j.version>
-        <snakeyaml.version>1.33</snakeyaml.version>
         <thymeleaf.version>3.1.1.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>3.1.0</thymeleaf-layout-dialect.version>
         <thymeleaf-extras-springsecurity.version>3.1.1.RELEASE</thymeleaf-extras-springsecurity.version>
-        <tomcat.version>9.0.70</tomcat.version>
-        <webjars-locator-core.version>0.52</webjars-locator-core.version>
+        <tomcat.version>10.1.4</tomcat.version>
 
         <!-- plugins -->
         <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
         <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
         <maven-checkstyle-plugin.version>3.2.0</maven-checkstyle-plugin.version>
         <maven-dependency-plugin.version>3.4.0</maven-dependency-plugin.version>
-        <maven-deploy-plugin.version>3.0.0</maven-deploy-plugin.version>
-        <maven-help-plugin.version>3.3.0</maven-help-plugin.version>
         <maven-install-plugin.version>3.1.0</maven-install-plugin.version>
-        <maven-resources-plugin.version>3.3.0</maven-resources-plugin.version>
         <maven-site-plugin.version>4.0.0-M4</maven-site-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
         <versions-maven-plugin.version>2.13.0</versions-maven-plugin.version>
@@ -81,13 +67,13 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>javax.inject</groupId>
-            <artifactId>javax.inject</artifactId>
-            <version>1</version>
+            <groupId>jakarta.inject</groupId>
+            <artifactId>jakarta.inject-api</artifactId>
+            <version>2.0.1</version>
         </dependency>
         <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -162,8 +148,9 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jta-atomikos</artifactId>
+            <groupId>com.atomikos</groupId>
+            <artifactId>transactions-spring-boot-starter</artifactId>
+            <version>5.0.9</version>
         </dependency>
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
@@ -185,7 +172,8 @@
         </dependency>
         <dependency>
             <groupId>org.thymeleaf.extras</groupId>
-            <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+            <artifactId>thymeleaf-extras-springsecurity6</artifactId>
+            <version>${thymeleaf.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -196,18 +184,19 @@
             <artifactId>spring-boot-properties-migrator</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.hibernate</groupId>
+            <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-jcache</artifactId>
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>org.hibernate</groupId>
+            <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-envers</artifactId>
         </dependency>
         <dependency>
             <groupId>org.ehcache</groupId>
             <artifactId>ehcache</artifactId>
             <scope>runtime</scope>
+            <classifier>jakarta</classifier>
         </dependency>
         <dependency>
             <groupId>org.springframework.session</groupId>
@@ -243,10 +232,6 @@
             <artifactId>bulma</artifactId>
             <version>0.9.4</version>
             <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-java8</artifactId>
         </dependency>
         <dependency>
             <groupId>commons-beanutils</groupId>
@@ -362,20 +347,6 @@
             <artifactId>jedis</artifactId>
         </dependency>
         <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-impl</artifactId>
-            <version>2.3.3-b01</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-core</artifactId>
-            <version>2.3.0.1</version>
-        </dependency>
-        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <scope>test</scope>
@@ -422,7 +393,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.7.6</version>
+                <version>3.0.0</version>
                 <configuration>
                     <addResources>true</addResources>
                     <fork>true</fork>
@@ -744,12 +715,6 @@
             <plugin>
                 <groupId>io.github.git-commit-id</groupId>
                 <artifactId>git-commit-id-maven-plugin</artifactId>
-                <version>${git-commit-id-plugin5.version}</version>
-                <executions>
-                    <execution>
-                        <goals><goal>revision</goal></goals>
-                    </execution>
-                </executions>
                 <configuration>
                     <generateGitPropertiesFile>true</generateGitPropertiesFile>
                     <useNativeGit>true</useNativeGit>
@@ -759,7 +724,7 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>7.4.0</version>
+                <version>7.4.1</version>
                 <configuration>
                     <skip>${skip-checks}</skip>
                     <dataDirectory>${user.dir}/../dependency-check-data</dataDirectory>

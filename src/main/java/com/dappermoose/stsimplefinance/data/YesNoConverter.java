@@ -1,7 +1,7 @@
 package com.dappermoose.stsimplefinance.data;
 
-import javax.persistence.AttributeConverter;
-import javax.persistence.Converter;
+import jakarta.persistence.AttributeConverter;
+import jakarta.persistence.Converter;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -14,7 +14,7 @@ public class YesNoConverter implements AttributeConverter<YesNoEnum, Character>
      * (non-Javadoc)
      *
      * @see
-     * javax.persistence.AttributeConverter#convertToDatabaseColumn(java.lang
+     * jakarta.persistence.AttributeConverter#convertToDatabaseColumn(java.lang
      * .Object)
      */
     @Override
@@ -40,7 +40,7 @@ public class YesNoConverter implements AttributeConverter<YesNoEnum, Character>
      * (non-Javadoc)
      *
      * @see
-     * javax.persistence.AttributeConverter#convertToEntityAttribute(java.lang
+     * jakarta.persistence.AttributeConverter#convertToEntityAttribute(java.lang
      * .Object)
      */
     @Override

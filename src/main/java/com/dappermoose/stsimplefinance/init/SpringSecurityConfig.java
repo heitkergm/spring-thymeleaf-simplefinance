@@ -8,8 +8,6 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.web.servlet.i18n.CookieLocaleResolver;
-import org.springframework.web.servlet.theme.CookieThemeResolver;
 
 import com.dappermoose.stsimplefinance.security.AuthenticationListener;
 
@@ -28,8 +26,8 @@ public class SpringSecurityConfig
         http
            .formLogin ().loginPage ("/login").permitAll ()
         .and ()
-           .authorizeRequests ()
-               .antMatchers ("/images/**", "/css/**", "**/favicon.ico",
+           .authorizeHttpRequests ()
+               .requestMatchers ("/images/**", "/css/**", "**/favicon.ico",
                              "/webjars/**", "/register", "/actuator/**").permitAll ()
                .anyRequest ().authenticated ()
         .and ()
@@ -38,8 +36,6 @@ public class SpringSecurityConfig
         .and ()
             .logout ().invalidateHttpSession (true).logoutSuccessUrl ("/main")
                 .clearAuthentication (true)
-                .deleteCookies (CookieThemeResolver.DEFAULT_COOKIE_NAME,
-                                CookieLocaleResolver.DEFAULT_COOKIE_NAME)
         .and ()
             .sessionManagement ().sessionCreationPolicy (SessionCreationPolicy.ALWAYS)
                 .sessionFixation ()
