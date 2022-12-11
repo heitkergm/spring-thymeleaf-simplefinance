@@ -148,11 +148,6 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>com.atomikos</groupId>
-            <artifactId>transactions-spring-boot-starter</artifactId>
-            <version>5.0.9</version>
-        </dependency>
-        <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-el</artifactId>
             <scope>compile</scope>

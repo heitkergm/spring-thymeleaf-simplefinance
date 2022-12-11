@@ -46,7 +46,6 @@ public class Application
         TimeZone.setDefault (TimeZone.getTimeZone ("UTC"));
 
         System.setProperty ("spring.devtools.restart.enabled", "false");
-        System.setProperty ("com.atomikos.icatch.registered", "true");
         ApplicationContext ctx = SpringApplication.run (Application.class, args);
         sendStartupEmail (ctx);
     }
