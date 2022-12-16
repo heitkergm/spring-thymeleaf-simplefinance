@@ -1,8 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
-    <suppress>
-        <vulnerabilityName>CVE-2020-5408</vulnerabilityName>
-        <vulnerabilityName>CVE-2016-1000027</vulnerabilityName>
-        <vulnerabilityName>CVE-2021-37533</vulnerabilityName>
-    </suppress>
 </suppressions>

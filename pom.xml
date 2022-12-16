@@ -18,31 +18,26 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.0</version>
+        <version>3.0.1</version>
     </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skip-checks>false</skip-checks>
         <java.version>17</java.version>
+        <byte-buddy.version>1.12.21</byte-buddy.version>
         <checkstyle.file.config>checkstyle.xml</checkstyle.file.config>
         <checkstyle.file.suppress>checkstyle-suppressions.xml</checkstyle.file.suppress>
-        <checkstyle.version>10.5.0</checkstyle.version>
-        <classgraph.version>4.8.151</classgraph.version>
+        <checkstyle.version>10.6.0</checkstyle.version>
+        <classgraph.version>4.8.153</classgraph.version>
         <cssvalidator.version>1.0.8</cssvalidator.version>
-        <hibernate.version>6.1.6.Final</hibernate.version>
-        <httpclient.version>4.5.14</httpclient.version>
-        <httpcore.version>4.4.16</httpcore.version>
+        <groovy.version>4.0.7</groovy.version>
+        <jedis.version>4.4.0-m1</jedis.version>
         <jsonic.version>1.3.10</jsonic.version>
-        <mockito.version>4.9.0</mockito.version>
-        <plexus-compiler-api.version>2.12.1</plexus-compiler-api.version>
-        <plexus-javac.version>2.12.1</plexus-javac.version>
-        <pmd.version>6.52.0</pmd.version>
-        <slf4j.version>2.0.5</slf4j.version>
-        <thymeleaf.version>3.1.1.RELEASE</thymeleaf.version>
-        <thymeleaf-layout-dialect.version>3.1.0</thymeleaf-layout-dialect.version>
-        <thymeleaf-extras-springsecurity.version>3.1.1.RELEASE</thymeleaf-extras-springsecurity.version>
-        <tomcat.version>10.1.4</tomcat.version>
+        <mockito.version>4.11.0</mockito.version>
+        <plexus-compiler-api.version>2.13.0</plexus-compiler-api.version>
+        <plexus-javac.version>2.13.0</plexus-javac.version>
+        <pmd.version>6.53.0</pmd.version>
 
         <!-- plugins -->
         <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
@@ -52,7 +47,7 @@
         <maven-install-plugin.version>3.1.0</maven-install-plugin.version>
         <maven-site-plugin.version>4.0.0-M4</maven-site-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
-        <versions-maven-plugin.version>2.13.0</versions-maven-plugin.version>
+        <versions-maven-plugin.version>2.14.2</versions-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -248,7 +243,7 @@
         <dependency>
             <groupId>org.webjars.npm</groupId>
             <artifactId>jquery</artifactId>
-            <version>3.6.1</version>
+            <version>3.6.3</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -355,11 +350,6 @@
                 <version>3.5.0.Final</version>
             </dependency>
             <dependency>
-                <groupId>org.apache.groovy</groupId>
-                <artifactId>groovy</artifactId>
-                <version>4.0.6</version>
-            </dependency>
-            <dependency>
                 <groupId>io.github.classgraph</groupId>
                 <artifactId>classgraph</artifactId>
                 <version>${classgraph.version}</version>
@@ -388,7 +378,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>3.0.1</version>
                 <configuration>
                     <addResources>true</addResources>
                     <fork>true</fork>
@@ -485,7 +475,7 @@
                         <configuration>
                             <rules>
                                 <requireMavenVersion>
-                                    <version>3.8.6</version>
+                                    <version>3.8.7</version>
                                 </requireMavenVersion>
                                 <requireJavaVersion>
                                     <version>${java.version}</version>
@@ -719,7 +709,7 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>7.4.1</version>
+                <version>7.4.3</version>
                 <configuration>
                     <skip>${skip-checks}</skip>
                     <dataDirectory>${user.dir}/../dependency-check-data</dataDirectory>
