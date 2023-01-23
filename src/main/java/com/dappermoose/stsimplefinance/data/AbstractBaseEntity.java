@@ -55,11 +55,11 @@ public abstract class AbstractBaseEntity implements Serializable
     @PreUpdate
     public void setupPersist ()
     {
-        LOG.debug ("entering AbtractBaseEntity.setupPersist");
+        log.debug ("entering AbtractBaseEntity.setupPersist");
         if (created == null)
         {
             created = Instant.now ();
         }
-        LOG.debug ("leaving AbtractBaseEntity.setupPersist");
+        log.debug ("leaving AbtractBaseEntity.setupPersist");
     }
 }

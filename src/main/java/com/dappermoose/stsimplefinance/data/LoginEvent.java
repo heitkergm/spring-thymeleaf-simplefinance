@@ -23,8 +23,8 @@ import lombok.Setter;
  * The Class LoginEvent.
  */
 @Entity
-@Table (name = "LOGIN_EVENT",
-        indexes = @Index (columnList = "USER_ID", name = "LOGIN_EVENT_FKEY_USER"))
+@Table (name = "logIN_EVENT",
+        indexes = @Index (columnList = "USER_ID", name = "logIN_EVENT_FKEY_USER"))
 @Check (constraints = "SUCCESS IN ('Y', 'N')")
 @Getter
 @Setter
@@ -40,9 +40,9 @@ public class LoginEvent extends AbstractBaseEntity
      * @return the login event ID
      */
     @Id
-    @GeneratedValue (strategy = GenerationType.SEQUENCE, generator = "LOGIN_EVENT_ID_SEQ")
-    @SequenceGenerator (name = "LOGIN_EVENT_ID_SEQ", sequenceName = "LOGIN_EVENT_ID_SEQ", allocationSize = 1)
-    @Column (name = "LOGIN_EVENT_ID", nullable = false, updatable = false)
+    @GeneratedValue (strategy = GenerationType.SEQUENCE, generator = "logIN_EVENT_ID_SEQ")
+    @SequenceGenerator (name = "logIN_EVENT_ID_SEQ", sequenceName = "logIN_EVENT_ID_SEQ", allocationSize = 1)
+    @Column (name = "logIN_EVENT_ID", nullable = false, updatable = false)
     private Long loginEventId;
 
     /**
@@ -52,7 +52,7 @@ public class LoginEvent extends AbstractBaseEntity
      * @return the user record
      */
     @ManyToOne (optional = false)
-    @JoinColumn (name = "USER_ID", nullable = false, updatable = false, foreignKey = @ForeignKey (name = "FK_LOGIN_EVENT_USER"))
+    @JoinColumn (name = "USER_ID", nullable = false, updatable = false, foreignKey = @ForeignKey (name = "FK_logIN_EVENT_USER"))
     private LoginUser user;
 
     /**

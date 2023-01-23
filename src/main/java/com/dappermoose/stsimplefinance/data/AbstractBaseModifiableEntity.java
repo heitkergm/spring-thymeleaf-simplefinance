@@ -26,7 +26,7 @@ public abstract class AbstractBaseModifiableEntity extends AbstractBaseEntity
 
     /**
      * The modified timestamp.
-     * 
+     *
      * @param modified the new value
      * @return the value of modified
      */
@@ -44,7 +44,7 @@ public abstract class AbstractBaseModifiableEntity extends AbstractBaseEntity
     @PreUpdate
     public void setupPersist ()
     {
-        LOG.debug ("entering AbtractBaseModifiableEntity.setupPersist");
+        log.debug ("entering AbtractBaseModifiableEntity.setupPersist");
         super.setupPersist ();
         if (modified == null)
         {
@@ -54,6 +54,6 @@ public abstract class AbstractBaseModifiableEntity extends AbstractBaseEntity
         {
             modified = Instant.now ();
         }
-        LOG.debug ("leaving AbtractBaseModifiableEntity.setupPersist");
+        log.debug ("leaving AbtractBaseModifiableEntity.setupPersist");
     }
 }

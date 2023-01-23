@@ -35,8 +35,8 @@ public class PasswordMatchImpl implements
     {
         password = pm.password ();
         repassword = pm.repassword ();
-        LOG.debug ("password is: " + password);
-        LOG.debug ("repassword is: " + repassword);
+        log.debug ("password is: " + password);
+        log.debug ("repassword is: " + repassword);
     }
 
     /*
@@ -54,8 +54,8 @@ public class PasswordMatchImpl implements
             // get field value
             final Object pw = BeanUtils.getProperty (obj, password);
             final Object rpw = BeanUtils.getProperty (obj, repassword);
-            LOG.debug ("password is " + ((String) pw));
-            LOG.debug ("repeated password is " + ((String) rpw));
+            log.debug ("password is " + ((String) pw));
+            log.debug ("repeated password is " + ((String) rpw));
             return pw != null && rpw != null && pw.equals (rpw);
         }
         catch (final IllegalAccessException | InvocationTargetException | NoSuchMethodException iae)

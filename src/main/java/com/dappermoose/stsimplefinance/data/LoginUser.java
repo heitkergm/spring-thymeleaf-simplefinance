@@ -28,7 +28,7 @@ import lombok.extern.log4j.Log4j2;
  * The Class LoginUser.
  */
 @Entity
-@Table (name = "LOGIN_USER", uniqueConstraints = @UniqueConstraint (columnNames = "USER_NAME", name = "unique_user_name"))
+@Table (name = "logIN_USER", uniqueConstraints = @UniqueConstraint (columnNames = "USER_NAME", name = "unique_user_name"))
 @Cache (usage = CacheConcurrencyStrategy.READ_WRITE, region = "users")
 @Check (constraints = "ENABLED IN ('Y', 'N')")
 @Log4j2
@@ -101,14 +101,14 @@ public class LoginUser extends AbstractBaseModifiableEntity
     @SuppressWarnings ("PMD.UnnecessaryFullyQualifiedName")
     public void setupPersist ()
     {
-        LOG.debug ("entering LoginUser.setupPersist");
+        log.debug ("entering LoginUser.setupPersist");
         super.setupPersist ();
 
         if (enabled == null)
         {
             enabled = YesNoEnum.YES;
         }
-        LOG.debug ("leaving LoginUser.setupPersist");
+        log.debug ("leaving LoginUser.setupPersist");
     }
 
     /**
