@@ -7,10 +7,5 @@
                 <ignoreVersion type="regex">11.*</ignoreVersion>
             </ignoreVersions>
         </rule>
-        <rule groupId="org.hibernate.orm" comparisonMethod="maven">
-            <ignoreVersions>
-                <ignoreVersion type="regex">6.2.*</ignoreVersion>
-            </ignoreVersions>
-        </rule>
     </rules>
 </ruleset>
