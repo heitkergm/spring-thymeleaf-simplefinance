@@ -24,21 +24,27 @@ public class SpringSecurityConfig
     SecurityFilterChain securityFilterChain (final HttpSecurity http) throws Exception
     {
         http
-           .formLogin ().loginPage ("/login").permitAll ()
-        .and ()
-           .authorizeHttpRequests ()
-               .requestMatchers ("/images/**", "/css/**", "**/favicon.ico",
-                             "/webjars/**", "/register", "/actuator/**").permitAll ()
-               .anyRequest ().authenticated ()
-        .and ()
-            .requiresChannel ()
-                .anyRequest ().requiresSecure ()
-        .and ()
-            .logout ().invalidateHttpSession (true).logoutSuccessUrl ("/main")
-                .clearAuthentication (true)
-        .and ()
-            .sessionManagement ().sessionCreationPolicy (SessionCreationPolicy.ALWAYS)
-                .sessionFixation ()
+            .formLogin (formLogin ->
+                formLogin.loginPage ("/login").permitAll ()
+            )
+            .authorizeHttpRequests (authorizeHttpRequests ->
+                authorizeHttpRequests
+                    .requestMatchers ("/images/**", "/css/**", "**/favicon.ico",
+                                      "/webjars/**", "/register", "/actuator/**")
+                    .permitAll ().anyRequest ().authenticated ()
+            )
+            .requiresChannel (requiresChannel ->
+                requiresChannel.anyRequest ().requiresSecure ()
+            )
+            .logout (logout ->
+                logout.invalidateHttpSession (true).logoutSuccessUrl ("/main")
+                      .clearAuthentication (true)
+            )
+            .sessionManagement (sessionManagement ->
+                sessionManagement
+                    .sessionCreationPolicy (SessionCreationPolicy.ALWAYS)
+                    .sessionFixation ()
+            )
         ;
         return http.build ();
     }
