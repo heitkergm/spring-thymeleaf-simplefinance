@@ -39,6 +39,7 @@
         <plexus-javac.version>2.13.0</plexus-javac.version>
         <pmd.version>6.55.0</pmd.version>
         <snakeyaml.version>2.1</snakeyaml.version>
+        <tomcat.version>10.1.13</tomcat.version>
         <webjars-locator-core.version>0.53</webjars-locator-core.version>
 
         <!-- plugins -->
