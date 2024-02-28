@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.dappermoose.stsimplefinance.dao.LoginUserRepository;
 import com.dappermoose.stsimplefinance.data.LoginUser;
+import com.dappermoose.stsimplefinance.data.YesNoEnum;
 import com.dappermoose.stsimplefinance.formbean.RegisterUser;
 
 // TODO: Auto-generated Javadoc
@@ -99,6 +100,7 @@ public class RegisterAction
         user.setUserName (register.getUserName ());
         user.setPassword (register.getPassword ());
         user.setTzone (register.getTzone ());
+        user.setEnabled (YesNoEnum.YES);
         userRepository.save (user);
 
         return "redirect:/main";

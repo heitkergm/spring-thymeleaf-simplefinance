@@ -26,8 +26,7 @@ import lombok.Setter;
  * The Class Account.
  */
 @Entity
-@Table (name = "ACCOUNT",
-        indexes = @Index (columnList = "USER_ID", name = "ACCOUNT_FKEY_USER"))
+@Table (name = "ACCOUNT", indexes = @Index (columnList = "USER_ID", name = "ACCOUNT_FKEY_USER"))
 @Cache (usage = CacheConcurrencyStrategy.READ_WRITE, region = "accounts")
 @Getter
 @Setter

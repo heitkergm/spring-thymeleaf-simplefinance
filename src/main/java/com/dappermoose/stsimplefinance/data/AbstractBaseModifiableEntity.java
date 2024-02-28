@@ -4,13 +4,13 @@ import java.time.Instant;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreUpdate;
+
+import org.springframework.data.annotation.LastModifiedDate;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * The BaseEntity class.
@@ -18,7 +18,7 @@ import lombok.extern.log4j.Log4j2;
 @MappedSuperclass
 @Getter
 @Setter
-@Log4j2
+@Slf4j
 @EqualsAndHashCode (callSuper = true)
 public abstract class AbstractBaseModifiableEntity extends AbstractBaseEntity
 {
@@ -30,30 +30,7 @@ public abstract class AbstractBaseModifiableEntity extends AbstractBaseEntity
      * @param modified the new value
      * @return the value of modified
      */
+    @LastModifiedDate
     @Column (name = "MODIFIED_AT", nullable = false)
     private Instant modified;
-
-    /**
-     * Sets the timestamps.
-     * <p>
-     * Ensure that the time stored is ALWAYS GMT
-     *</p>
-     */
-    @Override
-    @PrePersist
-    @PreUpdate
-    public void setupPersist ()
-    {
-        log.debug ("entering AbtractBaseModifiableEntity.setupPersist");
-        super.setupPersist ();
-        if (modified == null)
-        {
-            modified = getCreated ();
-        }
-        else
-        {
-            modified = Instant.now ();
-        }
-        log.debug ("leaving AbtractBaseModifiableEntity.setupPersist");
-    }
 }

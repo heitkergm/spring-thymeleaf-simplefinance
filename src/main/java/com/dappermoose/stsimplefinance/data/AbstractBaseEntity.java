@@ -4,27 +4,30 @@ import java.io.Serializable;
 import java.time.Instant;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Version;
+
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * The BaseEntity class.
  */
 @MappedSuperclass
-@Log4j2
+@Slf4j
 @Getter
 @Setter
 @EqualsAndHashCode
+@EntityListeners (AuditingEntityListener.class)
 public abstract class AbstractBaseEntity implements Serializable
 {
-    private static final long serialVersionUID = 8250446686147979986L;
+    private static final long serialVersionUID = 8004662717417451569L;
 
     /**
      * The created timestamp field.
@@ -32,6 +35,7 @@ public abstract class AbstractBaseEntity implements Serializable
      * @param created new value
      * @return value of created
      */
+    @CreatedDate
     @Column (name = "CREATED_AT", nullable = false, updatable = false)
     private Instant created;
 
@@ -44,22 +48,4 @@ public abstract class AbstractBaseEntity implements Serializable
     @Version
     @Column (name = "VERSION", nullable = false)
     private Long version;
-
-    /**
-     * Sets the timestamps.
-     *<p>
-     * Ensure that the time stored is ALWAYS GMT
-     *</p>
-     */
-    @PrePersist
-    @PreUpdate
-    public void setupPersist ()
-    {
-        log.debug ("entering AbtractBaseEntity.setupPersist");
-        if (created == null)
-        {
-            created = Instant.now ();
-        }
-        log.debug ("leaving AbtractBaseEntity.setupPersist");
-    }
 }

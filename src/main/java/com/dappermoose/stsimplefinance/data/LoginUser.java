@@ -5,8 +5,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreUpdate;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
@@ -87,29 +85,6 @@ public class LoginUser extends AbstractBaseModifiableEntity
      */
     @Column (name = "ENABLED", nullable = false, length = 1)
     private YesNoEnum enabled;
-
-    /**
-     * Sets the timestamps.
-     *<p>
-     * Ensure that the time stored is ALWAYS GMT
-     * and that the tzone is set to UTC if empty or null.
-     * </p>
-     */
-    @Override
-    @PrePersist
-    @PreUpdate
-    @SuppressWarnings ("PMD.UnnecessaryFullyQualifiedName")
-    public void setupPersist ()
-    {
-        log.debug ("entering LoginUser.setupPersist");
-        super.setupPersist ();
-
-        if (enabled == null)
-        {
-            enabled = YesNoEnum.YES;
-        }
-        log.debug ("leaving LoginUser.setupPersist");
-    }
 
     /**
      * Sets the user name.
