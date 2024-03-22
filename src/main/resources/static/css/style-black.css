@@ -1,6 +1,6 @@
 body {color: black;}
 a.navbar-item {color: black;}
-.button.is-primary {background-color: black;}
+.button.is-primary {background-color: black; color: white;}
 .label {color:black;}
 .table thead th {color:black;}
 .table tbody td {color:black;}

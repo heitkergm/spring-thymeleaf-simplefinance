@@ -9,6 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
+import org.springframework.data.envers.repository.support.EnversRevisionRepositoryFactoryBean;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -28,7 +29,8 @@ import nz.net.ultraq.thymeleaf.layoutdialect.LayoutDialect;
                   "com.dappermoose.stsimplefinance.action",
                   "com.dappermoose.stsimplefinance.init",
                   "com.dappermoose.stsimplefinance.security"})
-@EnableJpaRepositories ("com.dappermoose.stsimplefinance.dao")
+@EnableJpaRepositories (basePackages = "com.dappermoose.stsimplefinance.dao",
+        repositoryFactoryBeanClass = EnversRevisionRepositoryFactoryBean.class)
 @Configuration
 @EnableJpaAuditing
 @EntityScan ("com.dappermoose.stsimplefinance.data")
