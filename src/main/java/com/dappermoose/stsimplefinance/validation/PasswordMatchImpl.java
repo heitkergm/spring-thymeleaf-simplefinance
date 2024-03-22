@@ -56,7 +56,11 @@ public class PasswordMatchImpl implements
             final Object rpw = BeanUtils.getProperty (obj, repassword);
             log.debug ("password is " + ((String) pw));
             log.debug ("repeated password is " + ((String) rpw));
-            return pw != null && rpw != null && pw.equals (rpw);
+            if (pw == null || rpw == null)
+            {
+                return false;
+            }
+            return pw.equals (rpw);
         }
         catch (final IllegalAccessException | InvocationTargetException | NoSuchMethodException iae)
         {
