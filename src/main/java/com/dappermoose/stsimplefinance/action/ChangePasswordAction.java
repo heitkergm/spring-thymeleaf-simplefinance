@@ -24,14 +24,14 @@ import com.dappermoose.stsimplefinance.dao.LoginUserRepository;
 import com.dappermoose.stsimplefinance.data.LoginUser;
 import com.dappermoose.stsimplefinance.formbean.ChangePwd;
 
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 
 // TODO: Auto-generated Javadoc
 /**
  * The Class ChangePasswordAction.
  */
 @Controller
-@Log4j2
+@Slf4j
 public class ChangePasswordAction
 {
     /** The user repository. */

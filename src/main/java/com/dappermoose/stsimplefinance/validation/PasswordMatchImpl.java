@@ -1,21 +1,19 @@
 package com.dappermoose.stsimplefinance.validation;
 
-import java.lang.reflect.InvocationTargetException;
-
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
-import org.apache.commons.beanutils.BeanUtils;
+import org.springframework.beans.BeanWrapper;
+import org.springframework.beans.PropertyAccessorFactory;
 
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 
 // TODO: Auto-generated Javadoc
 /**
  * The Class PasswordMatchImpl.
  */
-@Log4j2
-public class PasswordMatchImpl implements
-    ConstraintValidator<PasswordMatch, Object>
+@Slf4j
+public class PasswordMatchImpl implements ConstraintValidator<PasswordMatch, Object>
 {
     /** The password. */
     private String password;
@@ -26,8 +24,7 @@ public class PasswordMatchImpl implements
     /*
      * (non-Javadoc)
      *
-     * @see
-     * jakarta.validation.ConstraintValidator#initialize(java.lang.annotation.
+     * @see jakarta.validation.ConstraintValidator#initialize(java.lang.annotation.
      * Annotation)
      */
     @Override
@@ -46,25 +43,19 @@ public class PasswordMatchImpl implements
      * jakarta.validation.ConstraintValidatorContext)
      */
     @Override
-    public boolean isValid (final Object obj,
-            final ConstraintValidatorContext ctx)
+    public boolean isValid (final Object obj, final ConstraintValidatorContext ctx)
     {
-        try
-        {
-            // get field value
-            final Object pw = BeanUtils.getProperty (obj, password);
-            final Object rpw = BeanUtils.getProperty (obj, repassword);
-            log.debug ("password is " + ((String) pw));
-            log.debug ("repeated password is " + ((String) rpw));
-            if (pw == null || rpw == null)
-            {
-                return false;
-            }
-            return pw.equals (rpw);
-        }
-        catch (final IllegalAccessException | InvocationTargetException | NoSuchMethodException iae)
+        // get field value
+
+        BeanWrapper bean = PropertyAccessorFactory.forBeanPropertyAccess (obj);
+        final Object pw = bean.getPropertyValue (password);
+        final Object rpw = bean.getPropertyValue (repassword);
+        log.debug ("password is " + ((String) pw));
+        log.debug ("repeated password is " + ((String) rpw));
+        if (pw == null || rpw == null)
         {
             return false;
         }
+        return pw.equals (rpw);
     }
 }

@@ -7,6 +7,7 @@ import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 
 import org.springframework.context.ApplicationListener;
+import org.springframework.lang.NonNull;
 import org.springframework.security.authentication.event.AbstractAuthenticationEvent;
 import org.springframework.security.authentication.event.AbstractAuthenticationFailureEvent;
 import org.springframework.security.authentication.event.AuthenticationSuccessEvent;
@@ -18,14 +19,14 @@ import com.dappermoose.stsimplefinance.data.LoginEvent;
 import com.dappermoose.stsimplefinance.data.LoginUser;
 import com.dappermoose.stsimplefinance.data.YesNoEnum;
 
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * listening for authentication events and logging them to the login event table.
  *
  * @author matthewheitker
  */
-@Log4j2
+@Slf4j
 public class AuthenticationListener implements ApplicationListener<AbstractAuthenticationEvent>
 {
     @Inject
@@ -36,12 +37,13 @@ public class AuthenticationListener implements ApplicationListener<AbstractAuthe
 
     @Override
     @Transactional
-    public void onApplicationEvent (final AbstractAuthenticationEvent e)
+    public void onApplicationEvent (@NonNull final AbstractAuthenticationEvent e)
     {
+        // deepcode ignore LogLevelCheck: don't care
         log.debug ("login event + " + e.toString ());
 
         if (!(e instanceof AuthenticationSuccessEvent ||
-                e instanceof AbstractAuthenticationFailureEvent))
+              e instanceof AbstractAuthenticationFailureEvent))
         {
             return;
         }

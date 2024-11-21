@@ -7,5 +7,20 @@
                 <ignoreVersion type="regex">11.*</ignoreVersion>
             </ignoreVersions>
         </rule>
+        <rule groupId="org.apache.groovy" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">5.*</ignoreVersion>
+            </ignoreVersions>
+        </rule>
+        <rule groupId="org.hibernate.orm" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">7.*</ignoreVersion>
+            </ignoreVersions>
+        </rule>
+        <rule groupId="org.hibernate.validator" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">9.*</ignoreVersion>
+            </ignoreVersions>
+        </rule>
     </rules>
 </ruleset>
