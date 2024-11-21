@@ -29,7 +29,7 @@ public class SpringSecurityConfig
             )
             .authorizeHttpRequests (authorizeHttpRequests ->
                 authorizeHttpRequests
-                    .requestMatchers ("/images/**", "/css/**", "**/favicon.ico",
+                    .requestMatchers ("/images/**", "/css/**", "/**/favicon.ico",
                                       "/webjars/**", "/register", "/actuator/**")
                     .permitAll ().anyRequest ().authenticated ()
             )

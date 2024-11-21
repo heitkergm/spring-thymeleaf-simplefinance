@@ -12,6 +12,7 @@ import org.springframework.dao.annotation.PersistenceExceptionTranslationPostPro
 import org.springframework.data.envers.repository.support.EnversRevisionRepositoryFactoryBean;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.lang.NonNull;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -45,7 +46,7 @@ public class SpringWebConfig implements WebMvcConfigurer
      * InterceptorRegistry)
      */
     @Override
-    public void addInterceptors (final InterceptorRegistry registry)
+    public void addInterceptors (@NonNull final InterceptorRegistry registry)
     {
         registry.addInterceptor (new LocaleChangeInterceptor ());
     }
@@ -59,7 +60,7 @@ public class SpringWebConfig implements WebMvcConfigurer
      * ViewControllerRegistry)
      */
     @Override
-    public void addViewControllers (final ViewControllerRegistry registry)
+    public void addViewControllers (@NonNull final ViewControllerRegistry registry)
     {
         registry.addRedirectViewController ("/", "/main");
         registry.addViewController ("/login");
