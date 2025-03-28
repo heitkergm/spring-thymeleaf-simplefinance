@@ -97,7 +97,7 @@ and open the template in the editor.
             <property name="accessModifiers" value="public"/>
         </module>
         <module name="JavadocVariable">
-            <property name="scope" value="public"/>
+            <property name="accessModifiers" value="public"/>
         </module>
         <module name="JavadocStyle">
             <property name="scope" value="public"/>
