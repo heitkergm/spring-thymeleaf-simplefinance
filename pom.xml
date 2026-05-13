@@ -53,6 +53,7 @@
         <plexus-compiler-api.version>2.16.2</plexus-compiler-api.version>
         <plexus-compiler-javac.version>2.16.2</plexus-compiler-javac.version>
         <pmd.version>7.22.0</pmd.version>
+        <slf4j.version>2.0.18</slf4j.version>
         <snakeyaml.version>2.5</snakeyaml.version>
         <tomcat.version>10.1.50</tomcat.version>
         <xmlunit2.version>2.11.0</xmlunit2.version>
